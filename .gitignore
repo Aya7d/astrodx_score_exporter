@@ -7,6 +7,10 @@ tools/reversing/dumper/*.exe
 
 # Sample / test cache files
 data/samples/cache
+cache*
+*.bak
+com.Reflektone.AstroDX/
+ios_folder_example/
 
 # Python cache
 __pycache__/
@@ -15,3 +19,4 @@ __pycache__/
 # OS generated files
 .DS_Store
 Thumbs.db
+

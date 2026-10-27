@@ -3,18 +3,18 @@
  * Application Entry Point & Module Orchestrator
  */
 
-import { decodeCacheFile, encodeCacheFile } from './modules/codec.js';
+import { decodeCacheFile, encodeCacheFile, parseAstroDXJson, stringifyAstroDXJson } from './modules/codec.js';
 import { extractRecords, sanitizeTitle } from './modules/extractor.js';
 import {
   exportDXRatingJSON,
   exportExcel,
   exportCSV,
   exportRawDecodedJSON,
+  exportDecodedJSON,
   triggerDownload
 } from './modules/exporters.js';
 import { generatePCLinkAndQR } from './modules/cloud_share.js';
-import { smartMergeCaches } from './modules/migrator.js';
-import { createDemoCacheData } from './modules/demo_data.js';
+import { smartMergeScores, smartMergeCaches } from './modules/migrator.js';
 import {
   showToast,
   markEditsActive,
@@ -52,6 +52,8 @@ const state = {
   mergeOldName: '',
   mergeNewData: null,          // New cache data object
   mergeNewName: '',
+  mergeMode: 'cache',          // Selected merge output format: 'cache', 'dxrating', or 'decoded'
+  lastMergeResult: null,       // Stored result of last merge operation for direct re-downloads
   repackData: null             // Repack JSON data
 };
 
@@ -161,7 +163,6 @@ function initApp() {
   const dropzone = document.getElementById('extractDropzone');
   const cacheFileInput = document.getElementById('cacheFileInput');
   const btnSelectFile = document.getElementById('btnSelectFile');
-  const btnLoadDemo = document.getElementById('btnLoadDemo');
 
   // Prevent browser from navigating away if a user drops a file anywhere on the window
   ['dragenter', 'dragover', 'dragleave', 'drop'].forEach((type) => {
@@ -250,52 +251,6 @@ function initApp() {
     handleCacheBuffer(buf, name);
   });
 
-  // 1-Click Demo Loader
-  btnLoadDemo.addEventListener('click', (e) => {
-    e.stopPropagation();
-    try {
-      const demoData = createDemoCacheData();
-      // Compress with encodeCacheFile first so it passes through the real Deflate decoder
-      const blob = encodeCacheFile(demoData);
-      blob.arrayBuffer().then((buf) => {
-        handleCacheBuffer(buf, 'demo_cache');
-        showToast('Loaded demo AstroDX cache dataset!', 'success');
-      });
-    } catch (err) {
-      console.error(err);
-      showToast('Demo generation failed', 'error');
-    }
-  });
-
-  // 1-Click Real Sample Loader
-  const btnLoadRealSample = document.getElementById('btnLoadRealSample');
-  if (btnLoadRealSample) {
-    btnLoadRealSample.addEventListener('click', async (e) => {
-      e.stopPropagation();
-      try {
-        showToast('Decrypting real AstroDX sample cache...', 'info');
-        const resp = await fetch('./data/samples/cache');
-        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-        const buf = await resp.arrayBuffer();
-        handleCacheBuffer(buf, 'cache (Real 341 Scores)');
-      } catch (err) {
-        console.error(err);
-        showToast('Failed to load sample: ' + err.message, 'error');
-      }
-    });
-  }
-
-  // Auto-load sample if ?sample=true or ?sample=1 in URL
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('sample') === 'true' || urlParams.get('sample') === '1') {
-    fetch('./data/samples/cache')
-      .then((r) => r.ok ? r.arrayBuffer() : null)
-      .then((buf) => {
-        if (buf) handleCacheBuffer(buf, 'cache (Real 341 Scores)');
-      })
-      .catch((err) => console.log('Auto sample load skipped:', err));
-  }
-
   // Prefix sanitizer toggle
   const cleanTitleCheckbox = document.getElementById('cleanTitleCheckbox');
   cleanTitleCheckbox.addEventListener('change', () => {
@@ -354,6 +309,19 @@ function initApp() {
   document.getElementById('btnExportRawJSON').addEventListener('click', () => {
     exportRawDecodedJSON(state.extractedRecords, showToast);
   });
+
+  const btnExportFullJSON = document.getElementById('btnExportFullJSON');
+  if (btnExportFullJSON) {
+    btnExportFullJSON.addEventListener('click', () => {
+      if (!state.cacheData) {
+        showToast('No cache data loaded to export', 'error');
+        return;
+      }
+      const jsonStr = stringifyAstroDXJson(state.cacheData, 2);
+      triggerDownload(jsonStr, 'astrodx_cache_full.json', 'application/json');
+      showToast('Exported full AstroDX cache database (all metadata & chart hashes preserved)', 'success');
+    });
+  }
 
   // Copy PC Share Link
   document.getElementById('btnCopyShareUrl').addEventListener('click', () => {
@@ -461,7 +429,38 @@ function initApp() {
   const btnSelectOldCache = document.getElementById('btnSelectOldCache');
   const btnSelectNewCache = document.getElementById('btnSelectNewCache');
   const btnRunMerge = document.getElementById('btnRunMerge');
-  const btnLoadMergeDemo = document.getElementById('btnLoadMergeDemo');
+  const btnRunMergeText = document.getElementById('btnRunMergeText');
+
+  // Format selection pills
+  const pillModeCache = document.getElementById('pillModeCache');
+  const pillModeDXRating = document.getElementById('pillModeDXRating');
+  const pillModeDecoded = document.getElementById('pillModeDecoded');
+  const modePills = [pillModeCache, pillModeDXRating, pillModeDecoded];
+
+  function updateMergeMode(mode) {
+    state.mergeMode = mode;
+    modePills.forEach(pill => {
+      if (pill) pill.classList.toggle('active', pill.dataset.mode === mode);
+    });
+
+    if (btnRunMergeText) {
+      if (mode === 'cache') {
+        btnRunMergeText.textContent = 'Smart Merge & Download Safe "cache" Binary';
+      } else if (mode === 'dxrating') {
+        btnRunMergeText.textContent = 'Smart Merge & Download DXRating JSON';
+      } else if (mode === 'decoded') {
+        btnRunMergeText.textContent = 'Smart Merge & Download Decoded JSON';
+      }
+    }
+  }
+
+  modePills.forEach(pill => {
+    if (pill) {
+      pill.addEventListener('click', () => {
+        updateMergeMode(pill.dataset.mode);
+      });
+    }
+  });
 
   btnSelectOldCache.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -480,15 +479,16 @@ function initApp() {
     try {
       state.mergeOldData = decodeCacheFile(buf);
       state.mergeOldName = name;
+      const { records } = extractRecords(state.mergeOldData);
       const status = document.getElementById('mergeOldStatus');
-      status.textContent = `✓ ${name} loaded`;
+      status.textContent = `✓ ${name} (${records.length} scores detected)`;
       status.className = 'file-loaded-status has-file';
       mergeOldDropzone.classList.add('loaded');
       checkMergeReady();
-      showToast('Old cache loaded successfully', 'success');
+      showToast(`Old device file loaded (${records.length} charts found)`, 'success');
     } catch (err) {
       console.error(err);
-      showToast('Failed to decode old cache', 'error');
+      showToast('Failed to decode old device file', 'error');
     }
   });
 
@@ -496,66 +496,145 @@ function initApp() {
     try {
       state.mergeNewData = decodeCacheFile(buf);
       state.mergeNewName = name;
+      const { records } = extractRecords(state.mergeNewData);
       const status = document.getElementById('mergeNewStatus');
-      status.textContent = `✓ ${name} loaded`;
+      status.textContent = `✓ ${name} (${records.length} scores detected)`;
       status.className = 'file-loaded-status has-file';
       mergeNewDropzone.classList.add('loaded');
       checkMergeReady();
-      showToast('New cache loaded successfully', 'success');
+      showToast(`New device file loaded (${records.length} charts found)`, 'success');
     } catch (err) {
       console.error(err);
-      showToast('Failed to decode new cache', 'error');
+      showToast('Failed to decode new device file', 'error');
     }
   });
 
-  btnLoadMergeDemo.addEventListener('click', () => {
-    // Create old demo data with scores
-    const oldDemo = createDemoCacheData();
-    // Create new demo data with fresh paths and 0 scores
-    const newDemo = JSON.parse(JSON.stringify(oldDemo));
-    for (const k of Object.keys(newDemo.scores)) {
-      for (const diff of Object.keys(newDemo.scores[k].scores)) {
-        newDemo.scores[k].scores[diff].achievement = 0;
-        if (newDemo.scores[k].scores[diff].combo) newDemo.scores[k].scores[diff].combo = 0;
+  // Render score comparison log table
+  function renderMergeLogTable(scoreDeltas, filterTerm = '') {
+    const tbody = document.getElementById('mergeLogTableBody');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+
+    const cleanFilter = filterTerm.trim().toLowerCase();
+    const filtered = cleanFilter
+      ? scoreDeltas.filter(d => d.title.toLowerCase().includes(cleanFilter) || d.difficulty.toLowerCase().includes(cleanFilter))
+      : scoreDeltas;
+
+    if (filtered.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted py-3">No matching chart comparisons found</td></tr>';
+      return;
+    }
+
+    const fragment = document.createDocumentFragment();
+    filtered.forEach(d => {
+      const tr = document.createElement('tr');
+
+      const oldText = d.oldScore !== null ? `${d.oldScore.toFixed(4)}%` : '<span class="text-dim">-</span>';
+      const newText = d.newScore !== null ? `${d.newScore.toFixed(4)}%` : '<span class="text-dim">-</span>';
+      const mergedText = `<strong>${d.mergedScore.toFixed(4)}%</strong>`;
+
+      let badgeHtml = '';
+      if (d.status === 'updated_from_old') {
+        badgeHtml = '<span class="status-badge-tag updated">🛡️ Preserved Old High</span>';
+      } else if (d.status === 'kept_new_high') {
+        badgeHtml = '<span class="status-badge-tag kept">⚡ Preserved New High</span>';
+      } else if (d.status === 'equal') {
+        badgeHtml = '<span class="status-badge-tag equal">✓ Identical High</span>';
+      } else if (d.status === 'old_only') {
+        badgeHtml = '<span class="status-badge-tag single">➕ Old Device Only</span>';
+      } else {
+        badgeHtml = '<span class="status-badge-tag single">➕ New Device Only</span>';
       }
-    }
 
-    state.mergeOldData = oldDemo;
-    state.mergeOldName = 'demo_old_cache';
-    const statusOld = document.getElementById('mergeOldStatus');
-    statusOld.textContent = '✓ demo_old_cache (with scores)';
-    statusOld.className = 'file-loaded-status has-file';
-    mergeOldDropzone.classList.add('loaded');
+      tr.innerHTML = `
+        <td><strong>${d.title}</strong></td>
+        <td><span class="diff-badge diff-${d.difficulty}">${d.difficulty.toUpperCase()}</span></td>
+        <td>${oldText}</td>
+        <td>${newText}</td>
+        <td>${mergedText}</td>
+        <td>${badgeHtml}</td>
+      `;
+      fragment.appendChild(tr);
+    });
 
-    state.mergeNewData = newDemo;
-    state.mergeNewName = 'demo_new_target_cache';
-    const statusNew = document.getElementById('mergeNewStatus');
-    statusNew.textContent = '✓ demo_new_target_cache (fresh scans)';
-    statusNew.className = 'file-loaded-status has-file';
-    mergeNewDropzone.classList.add('loaded');
+    tbody.appendChild(fragment);
+  }
 
-    checkMergeReady();
-    showToast('Loaded demo migration pair!', 'success');
-  });
+  // Setup comparison log search filter
+  const mergeLogSearch = document.getElementById('mergeLogSearch');
+  if (mergeLogSearch) {
+    mergeLogSearch.addEventListener('input', (e) => {
+      if (state.lastMergeResult && state.lastMergeResult.stats) {
+        renderMergeLogTable(state.lastMergeResult.stats.scoreDeltas, e.target.value);
+      }
+    });
+  }
+
+  // Direct download buttons in the summary banner
+  const btnDownloadMergedCache = document.getElementById('btnDownloadMergedCache');
+  const btnDownloadMergedDXRating = document.getElementById('btnDownloadMergedDXRating');
+  const btnDownloadMergedDecoded = document.getElementById('btnDownloadMergedDecoded');
+
+  if (btnDownloadMergedCache) {
+    btnDownloadMergedCache.addEventListener('click', () => {
+      if (!state.lastMergeResult) return;
+      const blob = encodeCacheFile(state.lastMergeResult.mergedData, { format: 'deflate' });
+      triggerDownload(blob, 'cache', 'application/octet-stream');
+      showToast('Downloaded safe raw Deflate binary "cache" for AstroDX', 'success');
+    });
+  }
+
+  if (btnDownloadMergedDXRating) {
+    btnDownloadMergedDXRating.addEventListener('click', () => {
+      if (!state.lastMergeResult) return;
+      const jsonStr = JSON.stringify(state.lastMergeResult.mergedDXRating, null, 2);
+      triggerDownload(jsonStr, 'dxrating_import.json', 'application/json');
+      showToast(`Exported ${state.lastMergeResult.mergedDXRating.length} records to dxrating_import.json`, 'success');
+    });
+  }
+
+  if (btnDownloadMergedDecoded) {
+    btnDownloadMergedDecoded.addEventListener('click', () => {
+      if (!state.lastMergeResult) return;
+      exportDecodedJSON(state.lastMergeResult.mergedDecodedJson, showToast);
+    });
+  }
 
   btnRunMerge.addEventListener('click', () => {
     if (!state.mergeOldData || !state.mergeNewData) return;
 
     try {
-      const { mergedData, stats } = smartMergeCaches(state.mergeOldData, state.mergeNewData);
-      
-      // Show report
+      const result = smartMergeScores(state.mergeOldData, state.mergeNewData, { server: state.serverRegion });
+      state.lastMergeResult = result;
+      const { stats } = result;
+
+      // Update report stats
       const reportBox = document.getElementById('mergeReportBox');
       document.getElementById('mergeMatchedCount').textContent = stats.matchedCount;
-      document.getElementById('mergeUpdatedCount').textContent = stats.updatedCount;
-      document.getElementById('mergeNewChartsCount').textContent = stats.newChartsCount;
-      document.getElementById('mergeUnmatchedCount').textContent = stats.unmatchedCount;
+      document.getElementById('mergeUpdatedCount').textContent = stats.updatedFromOld;
+      document.getElementById('mergeKeptCount').textContent = stats.keptNewHigh;
+      document.getElementById('mergePreventedCount').textContent = stats.preventedDowngrades;
+      document.getElementById('mergeTotalCount').textContent = stats.totalMerged;
+
+      const badgeCount = document.getElementById('mergeLogCountBadge');
+      if (badgeCount) badgeCount.textContent = `${stats.totalMerged} charts`;
+
+      // Render table
+      renderMergeLogTable(stats.scoreDeltas, '');
       reportBox.hidden = false;
 
-      // Compress and download merged cache
-      const blob = encodeCacheFile(mergedData);
-      triggerDownload(blob, 'cache', 'application/octet-stream');
-      showToast(`Smart merge complete! Overwrote 0 scores with ${stats.updatedCount} high scores.`, 'success');
+      // Automatically download chosen merge format
+      if (state.mergeMode === 'dxrating') {
+        const jsonStr = JSON.stringify(result.mergedDXRating, null, 2);
+        triggerDownload(jsonStr, 'dxrating_import.json', 'application/json');
+        showToast(`Smart merge complete! Exported ${result.mergedDXRating.length} records to dxrating_import.json with zero downgrades.`, 'success');
+      } else if (state.mergeMode === 'decoded') {
+        exportDecodedJSON(result.mergedDecodedJson, showToast);
+      } else {
+        const blob = encodeCacheFile(result.mergedData, { format: 'deflate' });
+        triggerDownload(blob, 'cache', 'application/octet-stream');
+        showToast(`Smart merge complete! Overwrote lower scores with ${stats.updatedFromOld} high scores (Zero Downgrades).`, 'success');
+      }
     } catch (err) {
       console.error(err);
       showToast('Merge failed: ' + err.message, 'error');
@@ -568,33 +647,48 @@ function initApp() {
   const btnSelectRepackJson = document.getElementById('btnSelectRepackJson');
   const btnRunRepack = document.getElementById('btnRunRepack');
 
-  btnSelectRepackJson.addEventListener('click', () => repackJsonInput.click());
+  btnSelectRepackJson.addEventListener('click', (e) => {
+    e.stopPropagation();
+    repackJsonInput.click();
+  });
 
-  repackJsonInput.addEventListener('change', (e) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (ev) => {
-        try {
-          state.repackData = JSON.parse(ev.target.result);
-          repackDropzone.classList.add('loaded');
-          repackDropzone.querySelector('p').textContent = `✓ Selected: ${file.name}`;
-          btnRunRepack.disabled = false;
-          showToast('JSON validated successfully', 'success');
-        } catch (err) {
-          showToast('Invalid JSON file', 'error');
-        }
-      };
-      reader.readAsText(file);
+  setupDropzone(repackDropzone, repackJsonInput, (buf, name) => {
+    try {
+      const text = new TextDecoder('utf-8').decode(buf);
+      const parsed = parseAstroDXJson(text);
+      if (Array.isArray(parsed)) {
+        state.repackData = null;
+        repackDropzone.classList.remove('loaded');
+        repackDropzone.querySelector('p').innerHTML = `⚠️ <strong>"${name}" is a summary list, not a full AstroDX cache database!</strong><br><small style="color:var(--text-muted)">AstroDX requires an object with <code>level_metadata</code> and chart hashes. Please use the Full Cache Database JSON or Smart Merge.</small>`;
+        btnRunRepack.disabled = true;
+        showToast('Cannot repack summary list. AstroDX requires a full cache database with level_metadata.', 'error');
+        return;
+      }
+      if (!parsed || typeof parsed !== 'object' || !parsed.level_metadata) {
+        state.repackData = null;
+        repackDropzone.classList.remove('loaded');
+        repackDropzone.querySelector('p').textContent = `⚠️ Invalid format: Missing "level_metadata" in "${name}".`;
+        btnRunRepack.disabled = true;
+        showToast('Invalid AstroDX cache JSON: missing level_metadata', 'error');
+        return;
+      }
+      state.repackData = parsed;
+      const songCount = Object.keys(parsed.level_metadata).length;
+      repackDropzone.classList.add('loaded');
+      repackDropzone.querySelector('p').textContent = `✓ Valid AstroDX Cache Database: ${songCount} songs loaded from ${name}`;
+      btnRunRepack.disabled = false;
+      showToast(`Valid AstroDX cache loaded (${songCount} songs)`, 'success');
+    } catch (err) {
+      showToast('Invalid JSON file: ' + err.message, 'error');
     }
   });
 
   btnRunRepack.addEventListener('click', () => {
     if (!state.repackData) return;
     try {
-      const blob = encodeCacheFile(state.repackData);
+      const blob = encodeCacheFile(state.repackData, { format: 'deflate' });
       triggerDownload(blob, 'cache', 'application/octet-stream');
-      showToast('Compressed and downloaded AstroDX "cache" binary!', 'success');
+      showToast('Compressed and downloaded AstroDX raw Deflate "cache" binary!', 'success');
     } catch (err) {
       showToast('Repack error: ' + err.message, 'error');
     }
@@ -611,20 +705,6 @@ function initApp() {
     });
   }
 
-  // Online / Offline Status Badge
-  function updateOnlineBadge() {
-    const badge = document.getElementById('pwaStatusBadge');
-    if (!badge) return;
-    if (navigator.onLine) {
-      badge.innerHTML = '<span class="status-dot"></span> Offline Ready';
-      badge.className = 'badge badge-pwa';
-    } else {
-      badge.innerHTML = '<span class="status-dot" style="background:#ffb703; box-shadow:0 0 10px #ffb703;"></span> Offline Mode';
-      badge.className = 'badge';
-    }
-  }
-  window.addEventListener('online', updateOnlineBadge);
-  window.addEventListener('offline', updateOnlineBadge);
 }
 
 if (document.readyState === 'loading') {

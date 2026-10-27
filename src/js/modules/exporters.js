@@ -18,7 +18,16 @@ export function buildDXRatingJSON(records, options = {}) {
  * Helper to download data as a browser file.
  */
 export function triggerDownload(blobOrString, filename, mimeType = 'application/json') {
-  const blob = blobOrString instanceof Blob ? blobOrString : new Blob([blobOrString], { type: mimeType });
+  let blob;
+  if (blobOrString instanceof Blob) {
+    if (filename === 'cache' && blobOrString.type !== 'application/octet-stream') {
+      blob = new Blob([blobOrString], { type: 'application/octet-stream' });
+    } else {
+      blob = blobOrString;
+    }
+  } else {
+    blob = new Blob([blobOrString], { type: filename === 'cache' ? 'application/octet-stream' : mimeType });
+  }
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
@@ -129,3 +138,17 @@ export function exportRawDecodedJSON(records, onToast) {
   triggerDownload(jsonStr, 'cache_decrypted.json', 'application/json');
   if (onToast) onToast(`Exported ${playedOnly.length} played scores to cache_decrypted.json`, 'success');
 }
+
+/**
+ * Exports arbitrary object or array as astrodx_cache_decoded.json
+ */
+export function exportDecodedJSON(data, onToast, filename = 'astrodx_cache_decoded.json') {
+  if (!data) {
+    if (onToast) onToast('No data to export', 'error');
+    return;
+  }
+  const jsonStr = JSON.stringify(data, null, 2);
+  triggerDownload(jsonStr, filename, 'application/json');
+  if (onToast) onToast(`Exported ${filename} successfully`, 'success');
+}
+
