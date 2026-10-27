@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AstroDX Exporter</string>
+    <string name="title_activity_main">AstroDX Exporter</string>
+    <string name="package_name">com.aya7d.astrodx_score_exporter</string>
+    <string name="custom_url_scheme">com.aya7d.astrodx_score_exporter</string>
+</resources>

@@ -141,23 +141,41 @@ export function processPayloadData(payloadStr, sourceName = 'iOS_1Tap_Sync') {
 }
 
 /**
+ * Shows the manual paste fallback modal when browser restricts direct clipboard access.
+ */
+export function showManualPasteModal() {
+  const modal = document.getElementById('manualPasteModal');
+  const input = document.getElementById('manualPasteInput');
+  if (modal) {
+    modal.hidden = false;
+    if (input) {
+      input.value = '';
+      setTimeout(() => input.focus(), 80);
+    }
+  }
+}
+
+/**
  * Attempts to read clipboard contents and process as cache payload.
+ * If browser blocks auto-read (e.g. plain HTTP or Safari permissions),
+ * gracefully opens the quick paste box so the user can paste with 1 tap.
  */
 export async function attemptClipboardRead() {
   if (!navigator.clipboard || !navigator.clipboard.readText) {
-    showToast('Clipboard access not supported in this browser. Please drop or select the file manually.', 'warning');
+    showManualPasteModal();
     return;
   }
   try {
     const text = await navigator.clipboard.readText();
     if (!text || !text.trim()) {
-      showToast('Clipboard is empty! Copy your cache data or run the iOS Shortcut first.', 'warning');
+      showToast('Clipboard is empty! Copy your cache or run the iOS Shortcut first.', 'warning');
+      showManualPasteModal();
       return;
     }
     processPayloadData(text, 'iOS_Shortcut_Clipboard');
   } catch (err) {
-    console.warn('Clipboard read error:', err);
-    showToast('Clipboard access blocked. Please tap "Paste from Clipboard" directly to grant permission.', 'warning');
+    console.warn('Clipboard read error (falling back to paste box):', err);
+    showManualPasteModal();
   }
 }
 
@@ -532,7 +550,64 @@ function initApp() {
     });
   }
 
-  // 8. Check for incoming iOS 1-Tap Shortcut payload via URL Hash
+  // 8. Manual Paste Fallback Modal Listeners
+  const manualPasteModal = document.getElementById('manualPasteModal');
+  const manualPasteInput = document.getElementById('manualPasteInput');
+  const btnCloseManualPasteModal = document.getElementById('btnCloseManualPasteModal');
+  const btnCancelManualPaste = document.getElementById('btnCancelManualPaste');
+  const btnSubmitManualPaste = document.getElementById('btnSubmitManualPaste');
+
+  function closeManualPasteModal() {
+    if (manualPasteModal) manualPasteModal.hidden = true;
+  }
+
+  if (btnCloseManualPasteModal) btnCloseManualPasteModal.addEventListener('click', closeManualPasteModal);
+  if (btnCancelManualPaste) btnCancelManualPaste.addEventListener('click', closeManualPasteModal);
+
+  function handleManualPasteContent() {
+    if (!manualPasteInput) return;
+    const text = manualPasteInput.value.trim();
+    if (text.length > 30) {
+      closeManualPasteModal();
+      processPayloadData(text, 'Manual_Pasted_Cache');
+      manualPasteInput.value = '';
+    } else {
+      showToast('Please paste valid AstroDX cache data', 'warning');
+    }
+  }
+
+  if (btnSubmitManualPaste) {
+    btnSubmitManualPaste.addEventListener('click', handleManualPasteContent);
+  }
+
+  if (manualPasteInput) {
+    // Automatically trigger import as soon as user pastes into the box!
+    manualPasteInput.addEventListener('paste', () => {
+      setTimeout(() => {
+        handleManualPasteContent();
+      }, 50);
+    });
+    manualPasteInput.addEventListener('input', () => {
+      if (manualPasteInput.value.trim().length > 100) {
+        handleManualPasteContent();
+      }
+    });
+  }
+
+  // Global window paste listener: paste anywhere to import
+  window.addEventListener('paste', (e) => {
+    const active = document.activeElement;
+    if (active && (active.id === 'tableSearchInput' || active.id === 'modalSongTitle' || active.id === 'modalAchievement')) {
+      return;
+    }
+    const text = e.clipboardData?.getData('text');
+    if (text && text.trim().length > 50) {
+      closeManualPasteModal();
+      processPayloadData(text, 'Direct_Window_Paste');
+    }
+  });
+
+  // 9. Check for incoming iOS 1-Tap Shortcut payload via URL Hash
   const currentHash = window.location.hash;
   if (currentHash.startsWith('#b64=') || currentHash.startsWith('#cache_b64=')) {
     const prefix = currentHash.startsWith('#b64=') ? '#b64=' : '#cache_b64=';
@@ -545,6 +620,51 @@ function initApp() {
   } else if (currentHash === '#clipboard' || currentHash === '#shortcut' || currentHash === '#ios_sync') {
     history.replaceState(null, '', window.location.pathname + window.location.search);
     attemptClipboardRead();
+  }
+
+  // 10. Android Native Capacitor 1-Click Detection & Sync
+  const btnAndroidAutoExtract = document.getElementById('btnAndroidAutoExtract');
+  const btnAndroidAppInfo = document.getElementById('btnAndroidAppInfo');
+
+  const isAndroidApp = typeof window !== 'undefined' &&
+    window.Capacitor &&
+    typeof window.Capacitor.isNativePlatform === 'function' &&
+    window.Capacitor.isNativePlatform();
+
+  if (isAndroidApp && btnAndroidAutoExtract) {
+    btnAndroidAutoExtract.style.display = 'inline-flex';
+    // Hide iOS shortcut button when inside Android native app
+    const iosBtn = document.getElementById('btnIosShortcutModal');
+    if (iosBtn) iosBtn.style.display = 'none';
+
+    btnAndroidAutoExtract.addEventListener('click', async () => {
+      const plugin = window.Capacitor?.Plugins?.AstroDXSync;
+      if (!plugin) {
+        showToast('AstroDX Native Plugin not found', 'error');
+        return;
+      }
+      showToast('⚡ Auto-detecting AstroDX cache...', 'info');
+      try {
+        const res = await plugin.checkAndExtractCache();
+        if (res && res.success && res.base64) {
+          processPayloadData(res.base64, 'Android_Auto_Extract');
+          showToast(`Extracted directly from ${res.path || 'storage'}!`, 'success');
+        } else if (res && res.needsPermission) {
+          showToast('Granting All Files Access in Settings...', 'warning');
+          await plugin.requestAllFilesPermission();
+        } else {
+          showToast(res.message || 'Cache file not found in default paths', 'warning');
+        }
+      } catch (err) {
+        showToast('Native extract error: ' + err.message, 'error');
+      }
+    });
+  }
+
+  if (btnAndroidAppInfo) {
+    btnAndroidAppInfo.addEventListener('click', () => {
+      showToast('Install the AstroDX Exporter APK for instant 1-click extraction without folder browsing!', 'info');
+    });
   }
 
   // ============================================================================

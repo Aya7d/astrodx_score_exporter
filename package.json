@@ -1,0 +1,31 @@
+{
+  "name": "astrodx_score_exporter",
+  "version": "1.0.0",
+  "description": "A zero-backend, client-side Progressive Web App (PWA) that decodes AstroDX (`>= v2.0.0.rc.7`) binary cache files, exports play records to DXRating.net, Excel, CSV, or raw JSON, transfers records wirelessly to your PC via QR code, and safely migrates scores between devices without data loss.",
+  "main": "sw.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "node tools/build_web.js",
+    "cap:sync": "npm run build && npx cap sync android",
+    "cap:build:apk": "npm run build && npx cap sync android && cd android && gradlew.bat assembleDebug && cd .. && node -e \"require('fs').copyFileSync('android/app/build/outputs/apk/debug/app-debug.apk', 'AstroDX_Exporter.apk'); console.log('[Success] APK copied to AstroDX_Exporter.apk')\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aya7d/astrodx_score_exporter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Aya7d/astrodx_score_exporter/issues"
+  },
+  "homepage": "https://github.com/Aya7d/astrodx_score_exporter#readme",
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/cli": "^8.5.3",
+    "@capacitor/core": "^8.5.3"
+  }
+}

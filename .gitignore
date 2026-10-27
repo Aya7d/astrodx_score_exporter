@@ -27,4 +27,14 @@ skills/
 .claude/
 .cursor/
 scratch/
+node_modules/
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+.gradle/
+www/
+*.apk
+
+
 

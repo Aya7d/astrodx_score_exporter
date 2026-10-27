@@ -53,12 +53,22 @@ A zero-backend, client-side Progressive Web App (PWA) that decodes AstroDX (`>= 
   5. Drag and drop it into this web app, or tap **Select Cache File**.
 
 ### Android
-1. Open your preferred file explorer (e.g., **Files by Google**, **MT Manager**, or **ZArchiver**).
-2. Navigate to:
-   ```text
-   Internal Storage/Android/data/com.Reflektone.AstroDX/files/cache
-   ```
-3. *Note for Android 11+:* If Android restricts access to `Android/data`, use **MT Manager**, connect via USB to a PC, or grant folder access via **Shizuku**.
+* **Option A — ⚡ 1-Click Android App (Zero Setup)**:
+  1. Install the standalone **AstroDX Exporter APK** (`app-debug.apk`).
+  2. Open the app and tap **"⚡ 1-Click Auto-Extract"**.
+  3. The native plugin automatically reads your cache from `Android/data/com.Reflektone.AstroDX/files/cache` and exports your scores instantly!
+  *To build the APK locally from this repo:*
+  ```powershell
+  npm run cap:build:apk
+  # Output APK: android/app/build/outputs/apk/debug/app-debug.apk
+  ```
+* **Option B — Web Browser**:
+  1. Open your preferred file explorer (e.g., **Files by Google**, **MT Manager**, or **ZArchiver**).
+  2. Navigate to:
+     ```text
+     Internal Storage/Android/data/com.Reflektone.AstroDX/files/cache
+     ```
+  3. Drag and drop the `cache` file into the web app, or tap **Select Cache File**.
 
 ---
 
