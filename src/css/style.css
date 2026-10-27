@@ -530,6 +530,115 @@ body {
   display: none;
 }
 
+/* --------------------------------------------------------------------------
+   Remembered Cache Banner
+   -------------------------------------------------------------------------- */
+.remembered-cache-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-left: 4px solid #6366f1;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  animation: slideDown 0.25s ease-out;
+  flex-wrap: wrap;
+}
+
+.remembered-cache-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 260px;
+  flex: 1;
+}
+
+.remembered-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #ede9fe;
+  color: #6366f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.remembered-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.remembered-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge-remembered {
+  background: #6366f1;
+  color: #ffffff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.badge-pill-count {
+  background: #e0e7ff;
+  color: #4338ca;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.remembered-time {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.remembered-sub {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.remembered-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-clear-danger:hover {
+  background: #fef2f2 !important;
+  color: #dc2626 !important;
+  border-color: #fca5a5 !important;
+}
+
+.btn-accent-purple {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 6px rgba(124, 58, 237, 0.25);
+}
+
+.btn-accent-purple:hover:not(:disabled) {
+  background: linear-gradient(135deg, #4338ca, #6d28d9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.35);
+}
+
 /* Settings Bar */
 .settings-bar {
   margin-top: 20px;
@@ -538,6 +647,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .custom-toggle {

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'astrodx-exporter-v12';
+const CACHE_NAME = 'astrodx-exporter-v13';
 
 const ASSETS_TO_CACHE = [
   './',
@@ -14,6 +14,7 @@ const ASSETS_TO_CACHE = [
   './src/js/modules/exporters.js',
   './src/js/modules/cloud_share.js',
   './src/js/modules/migrator.js',
+  './src/js/modules/storage.js',
   './src/js/modules/grade.js',
   './src/js/modules/ui.js',
   './manifest.json',

@@ -28,12 +28,22 @@ import {
   getMaimaiDB,
   convertToDXRating
 } from './modules/converters.js';
+import {
+  saveUserCache,
+  loadUserCache,
+  clearUserCache,
+  isRememberCacheEnabled,
+  setRememberCacheEnabled,
+  formatTimeAgo
+} from './modules/storage.js';
 
 // ============================================================================
 // Application State
 // ============================================================================
 const state = {
   cacheData: null,             // In-memory decoded JSON object of the primary cache
+  rawBuffer: null,             // Raw file buffer for persistent local storage
+  savedTimestamp: null,        // Timestamp of saved cache
   extractedRecords: [],        // Array of normalized score objects
   originalFilename: 'cache',   // Source filename
   hasUnsavedEdits: false,      // Flag for in-memory modifications
@@ -57,13 +67,34 @@ const state = {
   repackData: null             // Repack JSON data
 };
 
+/**
+ * Updates the remembered cache status banner at the top of the dropzone.
+ */
+function updateRememberedBanner(filename, scoreCount, timestamp) {
+  const banner = document.getElementById('rememberedCacheBanner');
+  if (!banner) return;
+  if (!isRememberCacheEnabled() || !state.cacheData) {
+    banner.hidden = true;
+    return;
+  }
+  const nameEl = document.getElementById('rememberedFileName');
+  const countEl = document.getElementById('rememberedScoreCount');
+  const timeEl = document.getElementById('rememberedTimeText');
+
+  if (nameEl) nameEl.textContent = filename || 'cache';
+  if (countEl) countEl.textContent = `${scoreCount} Scores`;
+  if (timeEl) timeEl.textContent = timestamp ? `Saved ${formatTimeAgo(timestamp)}` : 'Saved just now';
+  banner.hidden = false;
+}
+
 // ============================================================================
 // File Ingestion Handler
 // ============================================================================
-async function handleCacheBuffer(arrayBuffer, filename = 'cache') {
+async function handleCacheBuffer(arrayBuffer, filename = 'cache', options = {}) {
   try {
     const decoded = decodeCacheFile(arrayBuffer);
     state.cacheData = decoded;
+    state.rawBuffer = arrayBuffer;
     state.originalFilename = filename;
     state.hasUnsavedEdits = false;
     document.getElementById('tableEditedIndicator').hidden = true;
@@ -93,8 +124,46 @@ async function handleCacheBuffer(arrayBuffer, filename = 'cache') {
     });
     updateConversionStatus(matched, records.length, state.serverRegion);
 
-    showToast(`Successfully decoded "${filename}" (${records.length} scores)`, 'success');
-    document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+    // Save to browser IndexedDB if remember is enabled
+    if (!options.isRestored && isRememberCacheEnabled()) {
+      let fileType = 'cache_binary';
+      if (Array.isArray(decoded) && decoded[0]?.sheetId !== undefined) {
+        fileType = 'dxra';
+      } else if (Array.isArray(decoded)) {
+        fileType = 'decoded_json';
+      }
+      saveUserCache({
+        buffer: arrayBuffer,
+        filename,
+        fileType,
+        recordsCount: records.length,
+        scannedCount: scannedChartsCount,
+        cleanTitle
+      }).catch((e) => console.warn('Could not save cache to storage:', e));
+      state.savedTimestamp = Date.now();
+    } else if (options.savedAt) {
+      state.savedTimestamp = options.savedAt;
+    }
+
+    // Update Remembered Cache Banner
+    updateRememberedBanner(filename, records.length, state.savedTimestamp);
+
+    if (options.isRestored) {
+      showToast(`Restored saved cache "${filename}" (${records.length} scores)`, 'info');
+    } else {
+      showToast(`Successfully decoded "${filename}" (${records.length} scores)`, 'success');
+      document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // If autoOpenQR is requested (e.g. from Upload DXRA button or DXRA file drop)
+    if (options.autoOpenQR) {
+      setTimeout(() => {
+        openExportPanel('dxrating', state.extractedRecords, showToast, {
+          server: state.serverRegion
+        });
+        document.getElementById('pcTransferPanel')?.scrollIntoView({ behavior: 'smooth' });
+      }, 120);
+    }
   } catch (err) {
     console.error('Cache decode error:', err);
     showToast(err.message || 'Error decoding cache file', 'error');
@@ -328,8 +397,95 @@ function initApp() {
 
   // Bind Main Extract Dropzone
   setupDropzone(dropzone, cacheFileInput, (buf, name) => {
-    handleCacheBuffer(buf, name);
+    const isDxra = name.toLowerCase().endsWith('.dxra') ||
+                   name.toLowerCase().includes('dxrating') ||
+                   name.toLowerCase().includes('decoded');
+    handleCacheBuffer(buf, name, { autoOpenQR: isDxra });
   });
+
+  // Bind Dedicated Upload DXRA / Decoded RA button & input
+  const btnUploadDxra = document.getElementById('btnUploadDxra');
+  const dxraFileInput = document.getElementById('dxraFileInput');
+  if (btnUploadDxra && dxraFileInput) {
+    btnUploadDxra.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dxraFileInput.click();
+    });
+    setupDropzone(dropzone, dxraFileInput, (buf, name) => {
+      handleCacheBuffer(buf, name, { autoOpenQR: true, source: 'dxra_button' });
+    });
+  }
+
+  // Bind Remembered Cache Banner Actions
+  const btnQuickQRFromBanner = document.getElementById('btnQuickQRFromBanner');
+  if (btnQuickQRFromBanner) {
+    btnQuickQRFromBanner.addEventListener('click', () => {
+      if (!state.extractedRecords || state.extractedRecords.length === 0) {
+        showToast('No scores available to share.', 'warning');
+        return;
+      }
+      openExportPanel('dxrating', state.extractedRecords, showToast, {
+        server: state.serverRegion
+      });
+      document.getElementById('pcTransferPanel')?.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  const btnReplaceSavedCache = document.getElementById('btnReplaceSavedCache');
+  if (btnReplaceSavedCache) {
+    btnReplaceSavedCache.addEventListener('click', () => {
+      cacheFileInput.click();
+    });
+  }
+
+  const btnClearSavedCache = document.getElementById('btnClearSavedCache');
+  if (btnClearSavedCache) {
+    btnClearSavedCache.addEventListener('click', async () => {
+      await clearUserCache();
+      state.cacheData = null;
+      state.rawBuffer = null;
+      state.extractedRecords = [];
+      state.scannedCount = 0;
+      state.savedTimestamp = null;
+      const banner = document.getElementById('rememberedCacheBanner');
+      if (banner) banner.hidden = true;
+      document.getElementById('resultsSection').hidden = true;
+      document.getElementById('pcTransferPanel').hidden = true;
+      resetShareCache();
+      showToast('Saved cache cleared from this browser.', 'info');
+    });
+  }
+
+  // Remember Cache toggle in settings bar
+  const rememberCacheCheckbox = document.getElementById('rememberCacheCheckbox');
+  if (rememberCacheCheckbox) {
+    rememberCacheCheckbox.checked = isRememberCacheEnabled();
+    rememberCacheCheckbox.addEventListener('change', async (e) => {
+      const enabled = e.target.checked;
+      setRememberCacheEnabled(enabled);
+      if (enabled) {
+        if (state.rawBuffer && state.cacheData) {
+          await saveUserCache({
+            buffer: state.rawBuffer,
+            filename: state.originalFilename,
+            recordsCount: state.extractedRecords.length,
+            scannedCount: state.scannedCount,
+            cleanTitle: document.getElementById('cleanTitleCheckbox').checked
+          });
+          state.savedTimestamp = Date.now();
+          updateRememberedBanner(state.originalFilename, state.extractedRecords.length, state.savedTimestamp);
+          showToast('Remember cache enabled: current cache saved.', 'success');
+        } else {
+          showToast('Remember cache enabled for future uploads.', 'info');
+        }
+      } else {
+        await clearUserCache();
+        const banner = document.getElementById('rememberedCacheBanner');
+        if (banner) banner.hidden = true;
+        showToast('Cache memory disabled. Saved data cleared.', 'info');
+      }
+    });
+  }
 
   // Prefix sanitizer toggle
   const cleanTitleCheckbox = document.getElementById('cleanTitleCheckbox');
@@ -1040,7 +1196,21 @@ function initApp() {
     }
   });
 
-  // 8. PWA Service Worker Registration
+  // 8. Restore remembered user cache on initial page load if available
+  if (isRememberCacheEnabled()) {
+    loadUserCache().then((saved) => {
+      if (saved && saved.buffer) {
+        handleCacheBuffer(saved.buffer, saved.filename, {
+          isRestored: true,
+          savedAt: saved.savedAt
+        });
+      }
+    }).catch((err) => {
+      console.warn('Could not restore remembered cache:', err);
+    });
+  }
+
+  // 9. PWA Service Worker Registration
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('./sw.js').then((reg) => {

@@ -352,6 +352,8 @@ export function convertToDXRating(records, options = {}) {
         const fallbackType = normalizeType(item.type, rawName, { level: item.level, difficulty: fallbackDiff, songTitle: officialSong.title });
         sheetId = `${officialSong.title}__dxrt__${fallbackType}__dxrt__${fallbackDiff}`;
       }
+    } else if (item.sheetId && String(item.sheetId).includes('__dxrt__')) {
+      sheetId = String(item.sheetId);
     } else {
       // Unmatched or community custom chart: preserve clean title and chart clues
       const fallbackDiff = normalizeDifficultyName(item.difficulty) || inferDifficultyFromLevel(item.level) || 'master';
