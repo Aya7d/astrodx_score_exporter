@@ -1,6 +1,6 @@
 # AstroDX Score Exporter, DXRating Converter & Device Migrator (PWA)
 
-A zero-backend, client-side Progressive Web App (PWA) that decodes AstroDX (`>= v2.0.0.rc.7`) binary cache files, exports play records to DXRating.net, Excel, CSV, or raw JSON, transfers records wirelessly to your PC via QR code, and safely migrates scores between devices without data loss.
+A vibe-coded, zero-backend, client-side Progressive Web App (PWA) that decodes AstroDX (`>= v2.0.0.rc.7`) binary cache files, exports play records to DXRating.net, Excel, CSV, or raw JSON, transfers records wirelessly to your PC via QR code, and safely migrates scores between devices without data loss. 
 
 ![AstroDX Exporter Icon](assets/icon.png)
 
