@@ -792,35 +792,39 @@ body {
   transform: translateY(-1px);
 }
 
-/* DXRating Exporter Button */
-.btn-glow-dxrt {
-  background: #1e293b;
-  color: #ffffff;
-  border: 1px solid #334155;
-  box-shadow: var(--shadow-sm);
-  text-align: left;
-}
-
-.btn-glow-dxrt:hover {
-  background: #0f172a;
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-}
-
-/* PC Transfer Link Button */
-.btn-glow-cloud {
+/* Export Action Buttons with Dynamic Active State */
+.action-buttons-grid .btn {
   background: #ffffff;
   color: var(--text-main);
   border: 1px solid var(--border-medium);
   box-shadow: var(--shadow-xs);
   text-align: left;
+  transition: all var(--transition-fast);
 }
 
-.btn-glow-cloud:hover {
+.action-buttons-grid .btn:hover:not(:disabled) {
   background: var(--bg-subtle);
   border-color: #64748b;
   transform: translateY(-1px);
-  box-shadow: var(--shadow-sm);
+}
+
+.action-buttons-grid .btn.active {
+  background: #1e293b !important;
+  color: #ffffff !important;
+  border-color: #334155 !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.action-buttons-grid .btn.active svg {
+  stroke: #ffffff !important;
+}
+
+.action-buttons-grid .btn.active strong {
+  color: #ffffff !important;
+}
+
+.action-buttons-grid .btn.active small {
+  color: #cbd5e1 !important;
 }
 
 .action-buttons-grid .btn div {
@@ -880,6 +884,20 @@ body {
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-sm);
   display: inline-block;
+}
+
+.file-icon-box {
+  background: #ffffff;
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .qr-caption {

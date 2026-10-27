@@ -250,7 +250,7 @@
           </div>
 
           <div class="action-buttons-grid">
-            <button type="button" class="btn btn-glow-dxrt" id="btnGenerateDXRatingLink">
+            <button type="button" class="btn export-btn active" id="btnGenerateDXRatingLink">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
@@ -262,18 +262,18 @@
               </div>
             </button>
 
-            <button type="button" class="btn btn-glow-cloud" id="btnGenerateCachedLink">
+            <button type="button" class="btn export-btn" id="btnGenerateCachedLink">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="16 18 22 12 16 6"></polyline>
                 <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
               <div>
                 <strong>Cached JSON Link &amp; QR</strong>
-                <small>Full stats (Acid Bot ready)</small>
+                <small>Full stats &amp; judgments</small>
               </div>
             </button>
 
-            <button type="button" class="btn btn-secondary" id="btnExportExcel">
+            <button type="button" class="btn export-btn" id="btnExportExcel">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
@@ -287,7 +287,7 @@
               </div>
             </button>
 
-            <button type="button" class="btn btn-secondary" id="btnExportCSV">
+            <button type="button" class="btn export-btn" id="btnExportCSV">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -304,8 +304,9 @@
           <!-- PC Transfer Link & QR Code Box (Conditional) -->
           <div id="pcTransferPanel" class="pc-transfer-panel" hidden>
             <div class="pc-transfer-card">
-              <div class="qr-code-wrapper">
+              <div class="qr-code-wrapper" id="qrCodeWrapper">
                 <div id="qrcodeContainer" class="qrcode-box"></div>
+                <div id="fileIconContainer" class="file-icon-box" style="display:none;"></div>
                 <span class="qr-caption" id="qrCaptionText">Scan with phone or PC camera</span>
               </div>
               <div class="pc-transfer-info">

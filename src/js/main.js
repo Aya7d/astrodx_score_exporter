@@ -13,7 +13,7 @@ import {
   exportDecodedJSON,
   triggerDownload
 } from './modules/exporters.js';
-import { generatePCLinkAndQR, downloadActiveShareJSON, resetShareCache } from './modules/cloud_share.js';
+import { openExportPanel, generatePCLinkAndQR, downloadActiveShareItem, resetShareCache } from './modules/cloud_share.js';
 import { smartMergeScores, smartMergeCaches } from './modules/migrator.js';
 import {
   showToast,
@@ -387,12 +387,11 @@ function initApp() {
     });
   }
 
-  // 5. Exporters & Link Generation (UI has only link buttons, download button inside dropdown panel)
+  // 5. Exporters & Link Generation (UI opens dropdown panel with download button, no direct download)
   const btnDXLink = document.getElementById('btnGenerateDXRatingLink');
   if (btnDXLink) {
     btnDXLink.addEventListener('click', () => {
-      generatePCLinkAndQR(state.extractedRecords, showToast, {
-        format: 'dxrating',
+      openExportPanel('dxrating', state.extractedRecords, showToast, {
         server: state.serverRegion,
         triggerButton: btnDXLink
       });
@@ -402,19 +401,18 @@ function initApp() {
   const btnCachedLink = document.getElementById('btnGenerateCachedLink');
   if (btnCachedLink) {
     btnCachedLink.addEventListener('click', () => {
-      generatePCLinkAndQR(state.extractedRecords, showToast, {
-        format: 'cached',
+      openExportPanel('cached', state.extractedRecords, showToast, {
         server: state.serverRegion,
         triggerButton: btnCachedLink
       });
     });
   }
 
-  // In-Panel Download JSON Button
+  // In-Panel Download Button (Handles JSON, Excel, and CSV depending on active format)
   const btnDownloadPanel = document.getElementById('btnDownloadFromPanel');
   if (btnDownloadPanel) {
     btnDownloadPanel.addEventListener('click', () => {
-      downloadActiveShareJSON(showToast);
+      downloadActiveShareItem(state.extractedRecords, showToast);
     });
   }
 
@@ -422,8 +420,7 @@ function initApp() {
   const pillDX = document.getElementById('pillFormatDXRating');
   if (pillDX) {
     pillDX.addEventListener('click', () => {
-      generatePCLinkAndQR(state.extractedRecords, showToast, {
-        format: 'dxrating',
+      openExportPanel('dxrating', state.extractedRecords, showToast, {
         server: state.serverRegion
       });
     });
@@ -432,8 +429,7 @@ function initApp() {
   const pillCached = document.getElementById('pillFormatCached');
   if (pillCached) {
     pillCached.addEventListener('click', () => {
-      generatePCLinkAndQR(state.extractedRecords, showToast, {
-        format: 'cached',
+      openExportPanel('cached', state.extractedRecords, showToast, {
         server: state.serverRegion
       });
     });
@@ -472,18 +468,18 @@ function initApp() {
     });
   }
 
-  // Excel & CSV Exporters
+  // Excel & CSV Exporters (Opens dropdown container with download button, no direct download)
   const btnExportExcel = document.getElementById('btnExportExcel');
   if (btnExportExcel) {
     btnExportExcel.addEventListener('click', () => {
-      exportExcel(state.extractedRecords, showToast);
+      openExportPanel('excel', state.extractedRecords, showToast);
     });
   }
 
   const btnExportCSV = document.getElementById('btnExportCSV');
   if (btnExportCSV) {
     btnExportCSV.addEventListener('click', () => {
-      exportCSV(state.extractedRecords, showToast);
+      openExportPanel('csv', state.extractedRecords, showToast);
     });
   }
 

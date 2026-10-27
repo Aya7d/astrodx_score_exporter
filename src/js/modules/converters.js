@@ -424,7 +424,7 @@ const CONVERTER_REGISTRY = {
   cached: {
     id: 'cached',
     name: 'Cached JSON Format',
-    description: 'AstroDX played scores and detailed stats (for Acid Bot / Repacker)',
+    description: 'AstroDX played scores and detailed stats (for external tools & repacker)',
     extension: 'json',
     mimeType: 'application/json',
     filename: 'cache_decrypted.json',
