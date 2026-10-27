@@ -1,0 +1,17 @@
+# Reversing binaries and memory dumps
+tools/reversing/dumps/*.so
+tools/reversing/dumps/*.dat
+tools/reversing/dumps/*.bin
+tools/reversing/dumps/*.zip
+tools/reversing/dumper/*.exe
+
+# Sample / test cache files
+data/samples/cache
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS generated files
+.DS_Store
+Thumbs.db

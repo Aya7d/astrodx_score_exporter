@@ -1,0 +1,18 @@
+{
+  "name": "AstroDX Score Exporter & Device Migrator",
+  "short_name": "AstroDX Exporter",
+  "description": "Decode AstroDX cache files, export scores to DXRating.net, Excel, CSV, or raw JSON, transfer to PC via QR code, and safely migrate scores between devices.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "./assets/icon.png",
+      "sizes": "344x344",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

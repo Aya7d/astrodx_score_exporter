@@ -1,0 +1,5942 @@
+[
+    {
+        "sheetId": "前前前世__dxrt__std__dxrt__basic",
+        "achievementRate": 57.9335,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "壱雫空__dxrt__dx__dxrt__basic",
+        "achievementRate": 100.75,
+        "comboFlag": "ap",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Hello, Hologram__dxrt__dx__dxrt__basic",
+        "achievementRate": 59.9583,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "デッドマンズバラッド__dxrt__dx__dxrt__basic",
+        "achievementRate": 90.7098,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "源平大戦絵巻テーマソング__dxrt__std__dxrt__basic",
+        "achievementRate": 99.798,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "folern__dxrt__dx__dxrt__basic",
+        "achievementRate": 101,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "廻廻奇譚__dxrt__dx__dxrt__advanced",
+        "achievementRate": 49.0909,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "INTERNET OVERDOSE__dxrt__dx__dxrt__advanced",
+        "achievementRate": 100.8049,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Freak Out Hr.__dxrt__dx__dxrt__advanced",
+        "achievementRate": 100.5143,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "QUATTUORUX__dxrt__dx__dxrt__advanced",
+        "achievementRate": 38.4597,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Our Wrenally__dxrt__std__dxrt__advanced",
+        "achievementRate": 91.174,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "PANDORA PARADOXXX__dxrt__std__dxrt__advanced",
+        "achievementRate": 95.879,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "系ぎて__dxrt__dx__dxrt__advanced",
+        "achievementRate": 96.2587,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Don't Fight The Music__dxrt__dx__dxrt__advanced",
+        "achievementRate": 94.5194,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アイドル__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.1623,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "ビビデバ__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.9609,
+        "comboFlag": "ap",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "前前前世__dxrt__std__dxrt__expert",
+        "achievementRate": 97.8097,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "唱__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.7002,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "阿修羅ちゃん__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.2754,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "踊__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.0726,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "だから僕は音楽を辞めた__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.3029,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "廻廻奇譚__dxrt__dx__dxrt__expert",
+        "achievementRate": 94.6863,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "春を告げる__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.0803,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "シカ色デイズ__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.6203,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "壱雫空__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.2335,
+        "comboFlag": "fc",
+        "syncFlag": "fs"
+    },
+    {
+        "sheetId": "愛包ダンスホール__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.7755,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "INTERNET YAMERO__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.1891,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "INTERNET OVERDOSE__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.1961,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "はんぶんこ__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.354,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "モンダイナイトリッパー！__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.6005,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "過去を喰らう__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.6645,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Burn My Soul__dxrt__dx__dxrt__expert",
+        "achievementRate": 95.8803,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Princess♂__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.9979,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ドラゴンエネルギー__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.8982,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "ウッーウッーウマウマ(ﾟ∀ﾟ)__dxrt__std__dxrt__expert",
+        "achievementRate": 88.9698,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "インドア系ならトラックメイカー__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.2764,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "メズマライザー__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.4763,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "サイエンス__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.8302,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "ウィーアーピコピコハンマーズ!!!!__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.9514,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "オーバーライド__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.6242,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "きゅうくらりん__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.0562,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "フォニイ__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.2589,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "星界ちゃんと可不ちゃんのおつかい合騒曲__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.616,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "人マニア__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.4341,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "イガク__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.9365,
+        "comboFlag": "ap",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "トンデモワンダーズ__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.7564,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "セカイ__dxrt__dx__dxrt__expert",
+        "achievementRate": 94.4505,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "劣等上等__dxrt__dx__dxrt__expert",
+        "achievementRate": 80.9672,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "帝国少女__dxrt__dx__dxrt__expert",
+        "achievementRate": 101,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "抜錨__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.7173,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "好きな惣菜発表ドラゴン__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.9883,
+        "comboFlag": "ap",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "M@GICAL☆CURE! LOVE ♥ SHOT!__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.1294,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "月光__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.9259,
+        "comboFlag": "ap",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "熱異常__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.679,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "1000年生きてる__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.3499,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ハオ__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.8696,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "ラビットホール__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.044,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ヴァンパイア__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.1219,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アンドロイドガール__dxrt__dx__dxrt__expert",
+        "achievementRate": 95.634,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ヒバナ__dxrt__std__dxrt__expert",
+        "achievementRate": 100.4106,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ゴーストルール__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.9756,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "酔いどれ知らず__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.3783,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "QUEEN__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.044,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "EYE__dxrt__dx__dxrt__expert",
+        "achievementRate": 92.033,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "KING__dxrt__dx__dxrt__expert",
+        "achievementRate": 91.0478,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "初音ミクの激唱__dxrt__std__dxrt__expert",
+        "achievementRate": 98.2532,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "初音ミクの消失__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.0823,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "初音ミクの消失__dxrt__std__dxrt__expert",
+        "achievementRate": 95.7804,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "デッドマンズバラッド__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.892,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "終点__dxrt__std__dxrt__expert",
+        "achievementRate": 98.5162,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ダーリンダンス__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.355,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アルカリレットウセイ__dxrt__std__dxrt__expert",
+        "achievementRate": 94.3348,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "匿名M__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.2489,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "マーシャル・マキシマイザー__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.3103,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "強風オールバック__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.0739,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "寝起きヤシの木__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.8854,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ゼロトーキング__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.9122,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "メルティランドナイトメア__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.3523,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "スティールユー__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.6549,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アスノヨゾラ哨戒班__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.0999,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "キミノヨゾラ哨戒班__dxrt__std__dxrt__expert",
+        "achievementRate": 90.0491,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "命に嫌われている__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.9756,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "サイバーサンダーサイダー__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.4704,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "おくすり飲んで寝よう__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.5361,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Freak Out Hr.__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.7273,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "ロキ__dxrt__std__dxrt__expert",
+        "achievementRate": 97.8961,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ダンスロボットダンス__dxrt__dx__dxrt__expert",
+        "achievementRate": 95.1474,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "脳漿炸裂ガール__dxrt__std__dxrt__expert",
+        "achievementRate": 99.2799,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ウミユリ海底譚__dxrt__std__dxrt__expert",
+        "achievementRate": 100.337,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Seyana. ～何でも言うことを聞いてくれるアカネチャン～__dxrt__std__dxrt__expert",
+        "achievementRate": 96.2096,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "デンパラダイム__dxrt__dx__dxrt__expert",
+        "achievementRate": 90.7734,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "六兆年と一夜物語__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.8948,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "六兆年と一夜物語__dxrt__std__dxrt__expert",
+        "achievementRate": 99.1794,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "敗北の少年__dxrt__std__dxrt__expert",
+        "achievementRate": 97.1559,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "拝啓ドッペルゲンガー__dxrt__std__dxrt__expert",
+        "achievementRate": 99.2931,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Hand in Hand__dxrt__std__dxrt__expert",
+        "achievementRate": 92.9752,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "チュルリラ・チュルリラ・ダッダッダ！__dxrt__std__dxrt__expert",
+        "achievementRate": 100.0919,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "深海少女__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.5114,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "天ノ弱__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.9972,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Nyan Cat EX__dxrt__std__dxrt__expert",
+        "achievementRate": 97.8984,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "magician's operation__dxrt__std__dxrt__expert",
+        "achievementRate": 96.9887,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "インターネットサバイバー__dxrt__dx__dxrt__expert",
+        "achievementRate": 7.6137,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ナイト・オブ・ナイツ (Cranky Remix)__dxrt__dx__dxrt__expert",
+        "achievementRate": 96.9418,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ナイト・オブ・ナイツ__dxrt__dx__dxrt__expert",
+        "achievementRate": 95.9567,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "疾走あんさんぶる__dxrt__std__dxrt__expert",
+        "achievementRate": 95.0338,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "サドマミホリック__dxrt__std__dxrt__expert",
+        "achievementRate": 98.0852,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "最終鬼畜妹フランドール・S__dxrt__std__dxrt__expert",
+        "achievementRate": 97.9963,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "最終鬼畜妹・一部声__dxrt__std__dxrt__expert",
+        "achievementRate": 92.4519,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "LOSTPHANTASIA__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.1351,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "さよならヒストリー__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.5981,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "三妖精SAY YA!!!__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.3777,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Idoratrize World__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.9017,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Scream out! -maimai SONIC WASHER Edit-__dxrt__std__dxrt__expert",
+        "achievementRate": 99.9862,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Bad Apple!! feat.nomico (Tetsuya Komuro Remix)__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.7057,
+        "comboFlag": "fc",
+        "syncFlag": "fs"
+    },
+    {
+        "sheetId": "Re:Unknown X__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.0012,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "チルノのパーフェクトさんすう教室__dxrt__std__dxrt__expert",
+        "achievementRate": 91.5367,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "紅に染まる恋の花__dxrt__dx__dxrt__expert",
+        "achievementRate": 95.6072,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "月に叢雲華に風__dxrt__dx__dxrt__expert",
+        "achievementRate": 91.8678,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Armageddon__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.4351,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Calamity Fortune__dxrt__std__dxrt__expert",
+        "achievementRate": 100.6537,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Destiny Runner__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.8285,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Bad Apple!! feat.nomico__dxrt__std__dxrt__expert",
+        "achievementRate": 97.0247,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Doll Judgment__dxrt__std__dxrt__expert",
+        "achievementRate": 100.4358,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Little \"Sister\" Bitch__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.0826,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Imperishable Night 2006 (2016 Refine)__dxrt__std__dxrt__expert",
+        "achievementRate": 99.8449,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "もうみんなしねばいいのに__dxrt__std__dxrt__expert",
+        "achievementRate": 100.2611,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "零號車輛__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.8504,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Synthesis.__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.3974,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Overjoy ★ OVERDOSE!!__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.1561,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "New York Back Raise__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.9494,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Chronomia__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.0914,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Luminaria__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.0964,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "MYTH Re：LEASE__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.8487,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "QUATTUORUX__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.243,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "INFiNiTE ENERZY -Overdoze-__dxrt__dx__dxrt__expert",
+        "achievementRate": 94.5918,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "神威__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.8485,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ozma__dxrt__dx__dxrt__expert",
+        "achievementRate": 96.5477,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Good Bye, Mr. Jack__dxrt__std__dxrt__expert",
+        "achievementRate": 100.218,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "麒麟__dxrt__std__dxrt__expert",
+        "achievementRate": 97.2721,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Maboroshi__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.1855,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Luminescence__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.9312,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "tiny tales continue__dxrt__dx__dxrt__expert",
+        "achievementRate": 95.3279,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ouroboros -twin stroke of the end-__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.1655,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "FUJIN Rumble__dxrt__std__dxrt__expert",
+        "achievementRate": 93.1169,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "with U__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.497,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "DANGEROOOOUS JUNGLE__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.7881,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Let you DIVE!__dxrt__dx__dxrt__expert",
+        "achievementRate": 94.2938,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "僕の和風本当上手__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.0279,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Cthugha__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.6865,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Löschen__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.2545,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Abstruse Dilemma__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.1163,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "最強STRONGER__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.0349,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Lost Desire__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.4906,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Alice's Suitcase__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.331,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Aegleseeker__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.1606,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Ether Strike__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.7956,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Cyaegha__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.8522,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "セイクリッド　ルイン__dxrt__std__dxrt__expert",
+        "achievementRate": 100.3158,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "ENERGY SYNERGY MATRIX__dxrt__std__dxrt__expert",
+        "achievementRate": 100.8985,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "PUPA__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.6511,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "田中__dxrt__dx__dxrt__expert",
+        "achievementRate": 96.2438,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "竹__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.3815,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Sound Chimera__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.2806,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Grievous Lady__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.2388,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "FREEDOM DiVE (tpz Overcute Remix)__dxrt__std__dxrt__expert",
+        "achievementRate": 100.5427,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "BOOM! BOOM!! BOOM!!!__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.088,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "BATTLE NO.1__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.1166,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Halcyon__dxrt__dx__dxrt__expert",
+        "achievementRate": 94.5364,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Altale__dxrt__std__dxrt__expert",
+        "achievementRate": 100.5944,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "エナドリおいしいソング__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.3373,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Southern Cross__dxrt__dx__dxrt__expert",
+        "achievementRate": 95.0734,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "CHAOS__dxrt__dx__dxrt__expert",
+        "achievementRate": 95.5163,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Brain Power__dxrt__std__dxrt__expert",
+        "achievementRate": 95.7741,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Re：End of a Dream__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.0698,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "もぺもぺ__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.9525,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "felys -final remix-__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.2205,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アトロポスと最果の探究者__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.9912,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "End Time__dxrt__std__dxrt__expert",
+        "achievementRate": 100.0042,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Credits__dxrt__std__dxrt__expert",
+        "achievementRate": 93.4228,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Maxi__dxrt__std__dxrt__expert",
+        "achievementRate": 97.1971,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Sakura Fubuki__dxrt__std__dxrt__expert",
+        "achievementRate": 93.8094,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "METATRON__dxrt__std__dxrt__expert",
+        "achievementRate": 96.6409,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "DRAGONLADY__dxrt__std__dxrt__expert",
+        "achievementRate": 95.9424,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "YA･DA･YO [Reborn]__dxrt__std__dxrt__expert",
+        "achievementRate": 95.6134,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "DO RORO DERODERO ON DO RORO__dxrt__std__dxrt__expert",
+        "achievementRate": 96.2865,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "ばかみたい【Taxi Driver Edition】__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.5584,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Back 2 Back__dxrt__std__dxrt__expert",
+        "achievementRate": 90.3744,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "忙シー日__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.2891,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "BLACK ROSE__dxrt__dx__dxrt__expert",
+        "achievementRate": 93.6612,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "咲キ誇レ常世ノ華__dxrt__std__dxrt__expert",
+        "achievementRate": 99.2798,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Get U ♭ack__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.5746,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Customized Justice__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.2062,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "184億回のマルチトニック__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.2302,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "星空パーティーチューン__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.098,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "NOIZY BOUNCE__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.7442,
+        "comboFlag": "fc",
+        "syncFlag": "fs"
+    },
+    {
+        "sheetId": "ミルキースター・シューティングスター__dxrt__dx__dxrt__expert",
+        "achievementRate": 94.9714,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "RIFFRAIN__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.2942,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "サンバディ！__dxrt__dx__dxrt__expert",
+        "achievementRate": 95.177,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Kairos__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.8874,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "宵の鳥__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.742,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "ツムギボシ__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.1126,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ホシシズク__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.4761,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "ヨミビトシラズ__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.2195,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "トリアージ__dxrt__dx__dxrt__expert",
+        "achievementRate": 89.3637,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "とびだせ！TO THE COSMIC!!__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.4905,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "♡マイマイマイラブ♡__dxrt__dx__dxrt__expert",
+        "achievementRate": 96.4025,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "welcome to maimai!! with マイマイマー__dxrt__std__dxrt__expert",
+        "achievementRate": 98.5009,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Scarlet Wings__dxrt__dx__dxrt__expert",
+        "achievementRate": 95.7147,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "花と、雪と、ドラムンベース。__dxrt__std__dxrt__expert",
+        "achievementRate": 96.2421,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "スリップフリップ__dxrt__std__dxrt__expert",
+        "achievementRate": 97.0104,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "QuiQ__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.304,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Valsqotch__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.2147,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Divide et impera!__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.6237,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "mystique as iris__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.6065,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "TEmPTaTiON__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.8921,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "SILENT BLUE__dxrt__std__dxrt__expert",
+        "achievementRate": 98.1596,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "雨露霜雪__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.7405,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "WiPE OUT MEMORIES__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.1298,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "QZKago Requiem__dxrt__std__dxrt__expert",
+        "achievementRate": 99.4656,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Our Wrenally__dxrt__std__dxrt__expert",
+        "achievementRate": 99.5524,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Contrapasso -paradiso-__dxrt__std__dxrt__expert",
+        "achievementRate": 98.818,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Oshama Scramble!__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.7408,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Garakuta Doll Play__dxrt__std__dxrt__expert",
+        "achievementRate": 98.8254,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Deicide__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.4695,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "勦滅__dxrt__dx__dxrt__expert",
+        "achievementRate": 92.336,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "RondeauX of RagnaroQ__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.5789,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Ether Second__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.7997,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Energizing Flame__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.6886,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Straight into the lights__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.9181,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "The Great Banquet__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.2347,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Latent Kingdom__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.128,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Swift Swing__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.9062,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "raputa__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.1993,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "the EmpErroR__dxrt__std__dxrt__expert",
+        "achievementRate": 98.2339,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ガラテアの螺旋__dxrt__std__dxrt__expert",
+        "achievementRate": 97.3676,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Redemption__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.1493,
+        "comboFlag": "fc",
+        "syncFlag": "fs"
+    },
+    {
+        "sheetId": "KHYMΞXΛ__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.0339,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "oboro__dxrt__std__dxrt__expert",
+        "achievementRate": 98.6428,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "超熊猫的周遊記（ワンダーパンダートラベラー）__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.4547,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "VeRForTe αRtE:VEiN__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.5499,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "VIIIbit Explorer__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.8376,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "康莊大道__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.5122,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Rising on the horizon__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.8825,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "\"411Ψ892\"__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.294,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "チューリングの跡__dxrt__dx__dxrt__expert",
+        "achievementRate": 96.5519,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "白花の天使__dxrt__dx__dxrt__expert",
+        "achievementRate": 96.7994,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Sage__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.8477,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Cryptarithm__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.6064,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Metamorphosism__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.0227,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "PANDORA PARADOXXX__dxrt__std__dxrt__expert",
+        "achievementRate": 97.1773,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "天火明命__dxrt__std__dxrt__expert",
+        "achievementRate": 100.049,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "World's end loneliness__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.333,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Yorugao__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.3871,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "GIGANTØMAKHIA__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.2817,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "BREaK! BREaK! BREaK!__dxrt__dx__dxrt__expert",
+        "achievementRate": 96.5659,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Raven Emperor__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.1496,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Lia=Fail__dxrt__dx__dxrt__expert",
+        "achievementRate": 95.2816,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "華の集落、秋のお届け__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.3177,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "華の集落、秋のお届け__dxrt__std__dxrt__expert",
+        "achievementRate": 99.7495,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Trick tear__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.1676,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "星詠みとデスペラード__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.8983,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "BLACK SWAN__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.8384,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "躯樹の墓守__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.4686,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Alea jacta est!__dxrt__std__dxrt__expert",
+        "achievementRate": 98.8082,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "AMABIE__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.2237,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Heavenly Blast__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.1396,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Glorious Crown__dxrt__std__dxrt__expert",
+        "achievementRate": 97.4092,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Aiolos__dxrt__std__dxrt__expert",
+        "achievementRate": 99.11,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Regulus__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.9844,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Streak__dxrt__std__dxrt__expert",
+        "achievementRate": 93.3294,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "アポカリプスに反逆の焔を焚べろ__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.1527,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Life Feels Good__dxrt__std__dxrt__expert",
+        "achievementRate": 95.8871,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Jumble Rumble__dxrt__std__dxrt__expert",
+        "achievementRate": 97.3125,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Get Happy__dxrt__std__dxrt__expert",
+        "achievementRate": 97.0818,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "System “Z”__dxrt__std__dxrt__expert",
+        "achievementRate": 94.3731,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "雷切-RAIKIRI-__dxrt__std__dxrt__expert",
+        "achievementRate": 95.7861,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "魔ジョ狩リ__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.0527,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Excalibur ～Revived resolution～__dxrt__std__dxrt__expert",
+        "achievementRate": 99.0175,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "LANCE__dxrt__std__dxrt__expert",
+        "achievementRate": 98.1689,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Beat of getting entangled__dxrt__std__dxrt__expert",
+        "achievementRate": 95.1125,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "GEMINI -M-__dxrt__std__dxrt__expert",
+        "achievementRate": 94.4827,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Fragrance__dxrt__std__dxrt__expert",
+        "achievementRate": 92.726,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Blows Up Everything__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.3426,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "AMAZING MIGHTYYYY!!!!__dxrt__std__dxrt__expert",
+        "achievementRate": 96.9762,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "larva__dxrt__std__dxrt__expert",
+        "achievementRate": 98.969,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "HERA__dxrt__std__dxrt__expert",
+        "achievementRate": 98.0812,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Cider P@rty__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.677,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ViRTUS__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.5542,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "U&iVERSE -銀河鸞翔-__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.5073,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ℝ∈Χ LUNATiCA__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.5187,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ほしぞらスペクタクル__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.0622,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "封焔の135秒__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.5722,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "≠彡\"/了→__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.2312,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "系ぎて__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.9653,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "sølips__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.5571,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "VERTeX (rintaro soma deconstructed remix)__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.2291,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "氷滅の135小節__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.2634,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "有明/Ariake__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.5633,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "宙天__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.0166,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Xaleid◆scopiX__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.9769,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Ref:rain (for 7th Heaven)__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.7974,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Transcend Lights__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.8521,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "美夜月鏡__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.4146,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "MarbleBlue.__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.6591,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Ai C__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.2272,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Apollo__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.8746,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "LAMIA__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.6209,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "FLUFFY FLASH__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.9203,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Titania__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.2367,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "YURUSHITE__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.1844,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Desperado Waltz__dxrt__dx__dxrt__expert",
+        "achievementRate": 93.3673,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "MEGATON BLAST__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.8201,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "脳天直撃__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.2535,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Falsum Atlantis.__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.8736,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "エータ・ベータ・イータ__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.0318,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Good bye, Merry-Go-Round.__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.1897,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "SUPER AMBULANCE__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.4253,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Don't Fight The Music__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.1808,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ドキドキDREAM!!!__dxrt__std__dxrt__expert",
+        "achievementRate": 99.3996,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Still__dxrt__std__dxrt__expert",
+        "achievementRate": 100.7163,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "DETARAME ROCK&ROLL THEORY__dxrt__std__dxrt__expert",
+        "achievementRate": 96.1993,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "あねぺったん__dxrt__std__dxrt__expert",
+        "achievementRate": 100.1343,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Elemental Ethnic__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.258,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Trrricksters!!__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.1264,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "蜘蛛の糸__dxrt__dx__dxrt__expert",
+        "achievementRate": 97.9178,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "電光石火__dxrt__dx__dxrt__expert",
+        "achievementRate": 98.1436,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "folern__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.5693,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "レーイレーイ__dxrt__dx__dxrt__expert",
+        "achievementRate": 82.83,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "その群青が愛しかったようだった__dxrt__std__dxrt__expert",
+        "achievementRate": 93.4698,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "The wheel to the right__dxrt__std__dxrt__expert",
+        "achievementRate": 99.9572,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "World Vanquisher__dxrt__std__dxrt__expert",
+        "achievementRate": 97.2524,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "We Gonna Journey__dxrt__std__dxrt__expert",
+        "achievementRate": 97.7066,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "My First Phone__dxrt__std__dxrt__expert",
+        "achievementRate": 100.0874,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "TiamaT:F minor__dxrt__std__dxrt__expert",
+        "achievementRate": 98.4473,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Kattobi KEIKYU Rider__dxrt__std__dxrt__expert",
+        "achievementRate": 98.5632,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "玩具狂奏曲 -終焉-__dxrt__dx__dxrt__expert",
+        "achievementRate": 99.3811,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "エンドマークに希望と涙を添えて__dxrt__std__dxrt__expert",
+        "achievementRate": 100.5495,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アイドル__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0548,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "どんぐりGAME__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5189,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "モエチャッカファイア__dxrt__dx__dxrt__master",
+        "achievementRate": 99.0229,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "前前前世__dxrt__std__dxrt__master",
+        "achievementRate": 99.3588,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "阿修羅ちゃん__dxrt__dx__dxrt__master",
+        "achievementRate": 100.3968,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "うぇいびー__dxrt__dx__dxrt__master",
+        "achievementRate": 100.7458,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "RED__dxrt__dx__dxrt__master",
+        "achievementRate": 99.9438,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "BlackFlagBreaker!!__dxrt__dx__dxrt__master",
+        "achievementRate": 96.5487,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "だから僕は音楽を辞めた__dxrt__dx__dxrt__master",
+        "achievementRate": 94.0802,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "シカ色デイズ__dxrt__dx__dxrt__master",
+        "achievementRate": 99.3797,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "壱雫空__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5698,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "マヌルネコのうた__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6478,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "スナネコのうた__dxrt__dx__dxrt__master",
+        "achievementRate": 100.1275,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "愛包ダンスホール__dxrt__dx__dxrt__master",
+        "achievementRate": 100.7482,
+        "comboFlag": null,
+        "syncFlag": "fs"
+    },
+    {
+        "sheetId": "Hello, Hologram__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6129,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ヒトガタ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.7163,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "INTERNET YAMERO__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0748,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "INTERNET OVERDOSE__dxrt__dx__dxrt__master",
+        "achievementRate": 100.8307,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "きゅびずむ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.6204,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "きゅびびびびずむ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.6545,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Baddest__dxrt__dx__dxrt__master",
+        "achievementRate": 100.221,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "モンダイナイトリッパー！__dxrt__dx__dxrt__master",
+        "achievementRate": 99.2943,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "メイトなやつら（FEAT. 天開司, 佐藤ホームズ, あっくん大魔王 & 歌衣メイカ）__dxrt__dx__dxrt__master",
+        "achievementRate": 84.1653,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "夢現妄想世界__dxrt__dx__dxrt__master",
+        "achievementRate": 97.9256,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "偉大なる悪魔は実は大天使パトラちゃん様なのだ！__dxrt__dx__dxrt__master",
+        "achievementRate": 100.6078,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "シュガーホリック__dxrt__dx__dxrt__master",
+        "achievementRate": 96.9272,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "過去を喰らう__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0047,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "あつすぎの歌__dxrt__dx__dxrt__master",
+        "achievementRate": 96.0736,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ハム太郎とっとこうた__dxrt__dx__dxrt__master",
+        "achievementRate": 100.2283,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "ネ！コ！__dxrt__std__dxrt__master",
+        "achievementRate": 99.43,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ウッーウッーウマウマ(ﾟ∀ﾟ)__dxrt__std__dxrt__master",
+        "achievementRate": 97.4555,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "きらっせ☆ウッド村ファーム__dxrt__std__dxrt__master",
+        "achievementRate": 100.4208,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "にじよめちゃん体操第一億__dxrt__std__dxrt__master",
+        "achievementRate": 94.3864,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "インドア系ならトラックメイカー__dxrt__dx__dxrt__master",
+        "achievementRate": 98.8687,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Let's ミクササイズ！！__dxrt__dx__dxrt__master",
+        "achievementRate": 99.0082,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "初音ミクの暴走__dxrt__dx__dxrt__master",
+        "achievementRate": 98.0787,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "はじまりの未来__dxrt__dx__dxrt__master",
+        "achievementRate": 99.3699,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Worlders__dxrt__dx__dxrt__master",
+        "achievementRate": 100.8762,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "サイエンス__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5469,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ヒアソビ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5387,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "電光刹歌__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0051,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ウィーアーピコピコハンマーズ!!!!__dxrt__dx__dxrt__master",
+        "achievementRate": 98.7841,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "トレジャーガーデン__dxrt__dx__dxrt__master",
+        "achievementRate": 99.5156,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "最愛人生ランナー__dxrt__dx__dxrt__master",
+        "achievementRate": 100.451,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "しゅ～しん？変身☆ハカイシンzzZ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5696,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "おべんきょうたいむ__dxrt__dx__dxrt__master",
+        "achievementRate": 97.1205,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "オーバーライド__dxrt__dx__dxrt__master",
+        "achievementRate": 100.556,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "のだ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.104,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "きゅうくらりん__dxrt__dx__dxrt__master",
+        "achievementRate": 100.6042,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "フォニイ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.2453,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "星界ちゃんと可不ちゃんのおつかい合騒曲__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5501,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "イガク__dxrt__dx__dxrt__master",
+        "achievementRate": 94.8287,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ももいろの鍵__dxrt__dx__dxrt__master",
+        "achievementRate": 100.7443,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "トンデモワンダーズ__dxrt__dx__dxrt__master",
+        "achievementRate": 98.7009,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ザムザ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5636,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "群青讃歌__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5707,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "needLe__dxrt__dx__dxrt__master",
+        "achievementRate": 98.2359,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "RAD DOGS__dxrt__dx__dxrt__master",
+        "achievementRate": 99.0336,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "にっこり^^調査隊のテーマ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0641,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アイディスマイル__dxrt__dx__dxrt__master",
+        "achievementRate": 98.4279,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "帝国少女__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5109,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "空回りライブラリ__dxrt__dx__dxrt__master",
+        "achievementRate": 99.5362,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "お呪い__dxrt__dx__dxrt__master",
+        "achievementRate": 100.4078,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ありきたりな恋の歌__dxrt__dx__dxrt__master",
+        "achievementRate": 99.0061,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "抜錨__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0276,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "M@GICAL☆CURE! LOVE ♥ SHOT!__dxrt__dx__dxrt__master",
+        "achievementRate": 100.632,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ゆりかご__dxrt__dx__dxrt__master",
+        "achievementRate": 99.9205,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "月光__dxrt__dx__dxrt__master",
+        "achievementRate": 100.3057,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "1000年生きてる__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5736,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "IMAWANOKIWA__dxrt__dx__dxrt__master",
+        "achievementRate": 96.9384,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "バベル__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5773,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "あいたい星人__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5393,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ハオ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.7283,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "デビルじゃないもん__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5338,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ラビットホール__dxrt__dx__dxrt__master",
+        "achievementRate": 98.7003,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アニマル__dxrt__dx__dxrt__master",
+        "achievementRate": 94.592,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ヴァンパイア__dxrt__dx__dxrt__master",
+        "achievementRate": 98.4448,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "乙女解剖__dxrt__dx__dxrt__master",
+        "achievementRate": 99.469,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "妄想感傷代償連盟__dxrt__std__dxrt__master",
+        "achievementRate": 98.9,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ゴーストルール__dxrt__dx__dxrt__master",
+        "achievementRate": 96.2245,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ゴーストルール__dxrt__std__dxrt__master",
+        "achievementRate": 98.3736,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "モザイクロール__dxrt__dx__dxrt__master",
+        "achievementRate": 100.1349,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "弱虫モンブラン__dxrt__std__dxrt__master",
+        "achievementRate": 95.4622,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "MIRA__dxrt__dx__dxrt__master",
+        "achievementRate": 99.1471,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "酔いどれ知らず__dxrt__dx__dxrt__master",
+        "achievementRate": 98.6406,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "QUEEN__dxrt__dx__dxrt__master",
+        "achievementRate": 99.0589,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "エンヴィーベイビー__dxrt__dx__dxrt__master",
+        "achievementRate": 100.3273,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "KING__dxrt__dx__dxrt__master",
+        "achievementRate": 99.8581,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "㋰責任集合体__dxrt__dx__dxrt__master",
+        "achievementRate": 99.2811,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ウルトラトレーラー__dxrt__dx__dxrt__master",
+        "achievementRate": 98.1097,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "初音ミクの激唱__dxrt__std__dxrt__master",
+        "achievementRate": 97.8045,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "初音ミクの消失__dxrt__dx__dxrt__master",
+        "achievementRate": 97.9076,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "初音ミクの消失__dxrt__std__dxrt__master",
+        "achievementRate": 96.1187,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "デッドマンズバラッド__dxrt__dx__dxrt__master",
+        "achievementRate": 100.408,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "終点__dxrt__std__dxrt__master",
+        "achievementRate": 100.6536,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "病み垢ステロイド__dxrt__dx__dxrt__master",
+        "achievementRate": 100.611,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "マネマネサイコトロピック__dxrt__dx__dxrt__master",
+        "achievementRate": 99.4346,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "失敗作少女__dxrt__dx__dxrt__master",
+        "achievementRate": 94.8833,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アルカリレットウセイ__dxrt__std__dxrt__master",
+        "achievementRate": 97.3824,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "匿名M__dxrt__dx__dxrt__master",
+        "achievementRate": 100.2081,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "魔法少女とチョコレゐト__dxrt__dx__dxrt__master",
+        "achievementRate": 100.2116,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アルティメットセンパイ__dxrt__dx__dxrt__master",
+        "achievementRate": 91.9825,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "頓珍漢の宴__dxrt__std__dxrt__master",
+        "achievementRate": 98.0871,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ラヴィ__dxrt__dx__dxrt__master",
+        "achievementRate": 99.8514,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "エゴロック__dxrt__dx__dxrt__master",
+        "achievementRate": 97.9827,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "リアライズ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0997,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "マーシャル・マキシマイザー__dxrt__dx__dxrt__master",
+        "achievementRate": 99.993,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "強風オールバック__dxrt__dx__dxrt__master",
+        "achievementRate": 99.3089,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "寝起きヤシの木__dxrt__dx__dxrt__master",
+        "achievementRate": 97.7753,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ゼロトーキング__dxrt__dx__dxrt__master",
+        "achievementRate": 100.6646,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ドーナツホール__dxrt__std__dxrt__master",
+        "achievementRate": 97.1113,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "砂の惑星 feat. HATSUNE MIKU__dxrt__std__dxrt__master",
+        "achievementRate": 90.8856,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "シャルル__dxrt__std__dxrt__master",
+        "achievementRate": 98.6601,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ずんだパーリナイ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.7265,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "＊ハロー、プラネット。__dxrt__dx__dxrt__master",
+        "achievementRate": 99.086,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "グリーンライツ・セレナーデ__dxrt__dx__dxrt__master",
+        "achievementRate": 94.2311,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アスノヨゾラ哨戒班__dxrt__dx__dxrt__master",
+        "achievementRate": 97.7233,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "命に嫌われている__dxrt__dx__dxrt__master",
+        "achievementRate": 96.4675,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "右に曲ガール__dxrt__dx__dxrt__master",
+        "achievementRate": 100.1239,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "おくすり飲んで寝よう__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5446,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "バカ通信__dxrt__dx__dxrt__master",
+        "achievementRate": 100.8662,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Freak Out Hr.__dxrt__dx__dxrt__master",
+        "achievementRate": 100.6105,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ラグトレイン__dxrt__dx__dxrt__master",
+        "achievementRate": 100.8951,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "フラジール__dxrt__std__dxrt__master",
+        "achievementRate": 99.8925,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ダンスロボットダンス__dxrt__dx__dxrt__master",
+        "achievementRate": 91.586,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "オシオキGIMMICK!!__dxrt__dx__dxrt__master",
+        "achievementRate": 97.965,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "スイートマジック__dxrt__std__dxrt__master",
+        "achievementRate": 96.9097,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "さよならプリンセス__dxrt__dx__dxrt__master",
+        "achievementRate": 100.3872,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "白ゆき__dxrt__std__dxrt__master",
+        "achievementRate": 100.5301,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ウミユリ海底譚__dxrt__std__dxrt__master",
+        "achievementRate": 100.944,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "恋愛裁判__dxrt__std__dxrt__master",
+        "achievementRate": 99.3745,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "裏表ラバーズ__dxrt__std__dxrt__master",
+        "achievementRate": 98.2079,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ローリンガール__dxrt__std__dxrt__master",
+        "achievementRate": 96.3353,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ロールプレイングゲーム__dxrt__std__dxrt__master",
+        "achievementRate": 95.0005,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "エイプリルスター__dxrt__dx__dxrt__master",
+        "achievementRate": 100.6222,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "六兆年と一夜物語__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5949,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "六兆年と一夜物語__dxrt__std__dxrt__master",
+        "achievementRate": 99.1857,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "拝啓ドッペルゲンガー__dxrt__std__dxrt__master",
+        "achievementRate": 97.9473,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "チュルリラ・チュルリラ・ダッダッダ！__dxrt__std__dxrt__master",
+        "achievementRate": 97.7527,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "深海少女__dxrt__std__dxrt__master",
+        "achievementRate": 91.5089,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "トルコ行進曲 - オワタ＼(^o^)／__dxrt__std__dxrt__master",
+        "achievementRate": 98.6573,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "天ノ弱__dxrt__dx__dxrt__master",
+        "achievementRate": 98.0991,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "おねがいダーリン__dxrt__std__dxrt__master",
+        "achievementRate": 90.0882,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "幸せになれる隠しコマンドがあるらしい__dxrt__std__dxrt__master",
+        "achievementRate": 99.2265,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "しねばいいのに__dxrt__std__dxrt__master",
+        "achievementRate": 99.2191,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ロストワンの号哭__dxrt__std__dxrt__master",
+        "achievementRate": 96.7156,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "吉原ラメント__dxrt__std__dxrt__master",
+        "achievementRate": 98.9348,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ECHO__dxrt__std__dxrt__master",
+        "achievementRate": 98.7014,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Nyan Cat EX__dxrt__std__dxrt__master",
+        "achievementRate": 92.7588,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "おちゃめ機能__dxrt__std__dxrt__master",
+        "achievementRate": 97.2021,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "超最終鬼畜妹フランドール・S__dxrt__dx__dxrt__master",
+        "achievementRate": 99.9969,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "リスペク風神__dxrt__dx__dxrt__master",
+        "achievementRate": 98.3092,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "マツヨイナイトバグ__dxrt__dx__dxrt__master",
+        "achievementRate": 99.7176,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ナイト・オブ・ナイツ (Cranky Remix)__dxrt__dx__dxrt__master",
+        "achievementRate": 98.6199,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ナイト・オブ・ナイツ__dxrt__dx__dxrt__master",
+        "achievementRate": 93.595,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ナイト・オブ・ナイツ__dxrt__std__dxrt__master",
+        "achievementRate": 95.6515,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "サドマミホリック__dxrt__std__dxrt__master",
+        "achievementRate": 97.9661,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "最終鬼畜妹フランドール・S__dxrt__std__dxrt__master",
+        "achievementRate": 99.1087,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "LOSTPHANTASIA__dxrt__dx__dxrt__master",
+        "achievementRate": 98.9925,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "さよならヒストリー__dxrt__dx__dxrt__master",
+        "achievementRate": 95.1782,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "三妖精SAY YA!!!__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5544,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ゆけむり魂温泉 II__dxrt__dx__dxrt__master",
+        "achievementRate": 100.6508,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "大輪の魂 (feat. AO, 司芭扶)__dxrt__dx__dxrt__master",
+        "achievementRate": 97.3445,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "天狗の落とし文 feat. ｙｔｒ__dxrt__std__dxrt__master",
+        "achievementRate": 96.307,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Idoratrize World__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6465,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Dive into The Sky ～initialized～__dxrt__dx__dxrt__master",
+        "achievementRate": 97.7158,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Ultimate taste__dxrt__dx__dxrt__master",
+        "achievementRate": 100.1744,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Bad Apple!! feat.nomico (Tetsuya Komuro Remix)__dxrt__dx__dxrt__master",
+        "achievementRate": 97.2351,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Re:Unknown X__dxrt__dx__dxrt__master",
+        "achievementRate": 98.3431,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "HANIPAGANDA__dxrt__dx__dxrt__master",
+        "achievementRate": 97.725,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "スカーレット警察のゲットーパトロール24時__dxrt__dx__dxrt__master",
+        "achievementRate": 100.626,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "チルノのパーフェクトさんすう教室__dxrt__std__dxrt__master",
+        "achievementRate": 97.9278,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "月に叢雲華に風__dxrt__dx__dxrt__master",
+        "achievementRate": 99.5952,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "色は匂へど散りぬるを__dxrt__std__dxrt__master",
+        "achievementRate": 95.8813,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Phantasm Brigade__dxrt__std__dxrt__master",
+        "achievementRate": 98.3575,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Armageddon__dxrt__dx__dxrt__master",
+        "achievementRate": 97.5412,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Calamity Fortune__dxrt__std__dxrt__master",
+        "achievementRate": 90.2508,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Destiny Runner__dxrt__dx__dxrt__master",
+        "achievementRate": 98.6408,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Bad Apple!! feat.nomico__dxrt__std__dxrt__master",
+        "achievementRate": 94.6081,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "少女幻葬戦慄曲 ～ Necro Fantasia__dxrt__std__dxrt__master",
+        "achievementRate": 97.1646,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "妖精村の月誕祭 ～Lunate Elf__dxrt__std__dxrt__master",
+        "achievementRate": 94.4122,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "幽闇に目醒めしは__dxrt__std__dxrt__master",
+        "achievementRate": 99.808,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ネクロファンタジア～Arr.Demetori__dxrt__std__dxrt__master",
+        "achievementRate": 97.9868,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Doll Judgment__dxrt__std__dxrt__master",
+        "achievementRate": 99.0946,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Little \"Sister\" Bitch__dxrt__dx__dxrt__master",
+        "achievementRate": 100.1449,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Imperishable Night 2006 (2016 Refine)__dxrt__std__dxrt__master",
+        "achievementRate": 97.2325,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "彩りキャンバス__dxrt__dx__dxrt__master",
+        "achievementRate": 100.8138,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Hurtling Boys__dxrt__dx__dxrt__master",
+        "achievementRate": 91.0087,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Restricted Access__dxrt__dx__dxrt__master",
+        "achievementRate": 100.2024,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "胡蝶乃舞__dxrt__dx__dxrt__master",
+        "achievementRate": 99.7404,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "零號車輛__dxrt__dx__dxrt__master",
+        "achievementRate": 96.4858,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "JINGLE DEATH__dxrt__dx__dxrt__master",
+        "achievementRate": 97.3697,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Synthesis.__dxrt__dx__dxrt__master",
+        "achievementRate": 99.8209,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Destined Marionette__dxrt__dx__dxrt__master",
+        "achievementRate": 98.266,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Overjoy ★ OVERDOSE!!__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5552,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "DATAERR0R__dxrt__dx__dxrt__master",
+        "achievementRate": 99.79,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "New York Back Raise__dxrt__dx__dxrt__master",
+        "achievementRate": 98.264,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "NightTheater__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0107,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Chronomia__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0336,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Luminaria__dxrt__dx__dxrt__master",
+        "achievementRate": 99.5227,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "MYTH Re：LEASE__dxrt__dx__dxrt__master",
+        "achievementRate": 99.0006,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "QUATTUORUX__dxrt__dx__dxrt__master",
+        "achievementRate": 99.0669,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "INFiNiTE ENERZY -Overdoze-__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0355,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "How To Make 音ゲ～曲！__dxrt__dx__dxrt__master",
+        "achievementRate": 99.2631,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "神威__dxrt__dx__dxrt__master",
+        "achievementRate": 98.3906,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ozma__dxrt__dx__dxrt__master",
+        "achievementRate": 94.2531,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "麒麟__dxrt__std__dxrt__master",
+        "achievementRate": 99.6461,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "お願い！コンコンお稲荷さま__dxrt__dx__dxrt__master",
+        "achievementRate": 98.1711,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "いっぱい食べる君が好きだよ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.7509,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ピポピポ -People People- feat. ななひら__dxrt__dx__dxrt__master",
+        "achievementRate": 98.7766,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ベースラインやってる？笑__dxrt__dx__dxrt__master",
+        "achievementRate": 99.7817,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Maboroshi__dxrt__dx__dxrt__master",
+        "achievementRate": 97.3902,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "NO ONE YES MAN__dxrt__dx__dxrt__master",
+        "achievementRate": 100.2101,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Leave All Behind__dxrt__dx__dxrt__master",
+        "achievementRate": 100.3941,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Retribution ～ Cycle of Redemption ～__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6557,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Luminescence__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5033,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ouroboros -twin stroke of the end-__dxrt__dx__dxrt__master",
+        "achievementRate": 97.8166,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "OMAKENO Stroke__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5924,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Got more raves？__dxrt__std__dxrt__master",
+        "achievementRate": 95.402,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Scarlet Lance__dxrt__std__dxrt__master",
+        "achievementRate": 95.2949,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "with U__dxrt__dx__dxrt__master",
+        "achievementRate": 99.8564,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "DANGEROOOOUS JUNGLE__dxrt__dx__dxrt__master",
+        "achievementRate": 97.2009,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "天使光輪__dxrt__dx__dxrt__master",
+        "achievementRate": 99.807,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Final Step!__dxrt__dx__dxrt__master",
+        "achievementRate": 100.4723,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "僕の和風本当上手__dxrt__dx__dxrt__master",
+        "achievementRate": 99.8972,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Cthugha__dxrt__dx__dxrt__master",
+        "achievementRate": 100.1826,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Empire of Winter__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5264,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "迷える音色は恋の唄__dxrt__dx__dxrt__master",
+        "achievementRate": 100.2942,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Löschen__dxrt__dx__dxrt__master",
+        "achievementRate": 98.771,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Abstruse Dilemma__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5546,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "最強STRONGER__dxrt__dx__dxrt__master",
+        "achievementRate": 95.7369,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Lost Desire__dxrt__dx__dxrt__master",
+        "achievementRate": 98.6369,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Alice's Suitcase__dxrt__dx__dxrt__master",
+        "achievementRate": 98.6657,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Aegleseeker__dxrt__dx__dxrt__master",
+        "achievementRate": 95.7256,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Ether Strike__dxrt__dx__dxrt__master",
+        "achievementRate": 99.1777,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Cyaegha__dxrt__dx__dxrt__master",
+        "achievementRate": 100.4028,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Scars of FAUNA__dxrt__std__dxrt__master",
+        "achievementRate": 98.4822,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "極圏__dxrt__std__dxrt__master",
+        "achievementRate": 95.9069,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "セイクリッド　ルイン__dxrt__std__dxrt__master",
+        "achievementRate": 95.6978,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "夜明けまであと３秒__dxrt__std__dxrt__master",
+        "achievementRate": 94.766,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ULTRA SYNERGY MATRIX__dxrt__dx__dxrt__master",
+        "achievementRate": 100.2884,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ENERGY SYNERGY MATRIX__dxrt__dx__dxrt__master",
+        "achievementRate": 92.2295,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ENERGY SYNERGY MATRIX__dxrt__std__dxrt__master",
+        "achievementRate": 99.298,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "PUPA__dxrt__dx__dxrt__master",
+        "achievementRate": 99.235,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "竹__dxrt__dx__dxrt__master",
+        "achievementRate": 96.2428,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Sound Chimera__dxrt__dx__dxrt__master",
+        "achievementRate": 95.6456,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Grievous Lady__dxrt__dx__dxrt__master",
+        "achievementRate": 98.1613,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Make Up Your World feat. キョンシーのCiちゃん & らっぷびと__dxrt__dx__dxrt__master",
+        "achievementRate": 96.8685,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "FREEDOM DiVE (tpz Overcute Remix)__dxrt__std__dxrt__master",
+        "achievementRate": 100.3923,
+        "comboFlag": "fc",
+        "syncFlag": "fs"
+    },
+    {
+        "sheetId": "Knight Rider__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5512,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "BULK UP (GAME EXCLUSIVE EDIT)__dxrt__dx__dxrt__master",
+        "achievementRate": 99.7868,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Big Daddy__dxrt__dx__dxrt__master",
+        "achievementRate": 98.6023,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "はげしこの夜 -Psylent Crazy Night-__dxrt__dx__dxrt__master",
+        "achievementRate": 98.2283,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Trust__dxrt__dx__dxrt__master",
+        "achievementRate": 79.5012,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ミラクルポップ☆アドベンチャー!!!!!__dxrt__dx__dxrt__master",
+        "achievementRate": 97.5975,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Halcyon__dxrt__std__dxrt__master",
+        "achievementRate": 97.2249,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Vallista__dxrt__dx__dxrt__master",
+        "achievementRate": 99.4079,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Altale__dxrt__std__dxrt__master",
+        "achievementRate": 100.616,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Destr0yer__dxrt__std__dxrt__master",
+        "achievementRate": 97.9062,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "コンティニュー！ feat. 藍月なくる__dxrt__dx__dxrt__master",
+        "achievementRate": 99.4511,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "エナドリおいしいソング__dxrt__dx__dxrt__master",
+        "achievementRate": 96.1525,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Estahv__dxrt__dx__dxrt__master",
+        "achievementRate": 99.1408,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Love's Theme of BADASS ～バッド・アス 愛のテーマ～__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6906,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "enchanted love__dxrt__dx__dxrt__master",
+        "achievementRate": 99.8487,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "CHAOS__dxrt__dx__dxrt__master",
+        "achievementRate": 96.3067,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Brain Power__dxrt__std__dxrt__master",
+        "achievementRate": 98.3853,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "CO5M1C R4ILR0AD__dxrt__dx__dxrt__master",
+        "achievementRate": 97.358,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Re：End of a Dream__dxrt__dx__dxrt__master",
+        "achievementRate": 97.4251,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "もぺもぺ__dxrt__dx__dxrt__master",
+        "achievementRate": 96.8881,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "felys -final remix-__dxrt__dx__dxrt__master",
+        "achievementRate": 96.9269,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Arty Party__dxrt__dx__dxrt__master",
+        "achievementRate": 97.3001,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "c.s.q.n.__dxrt__dx__dxrt__master",
+        "achievementRate": 97.5757,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アトロポスと最果の探究者__dxrt__dx__dxrt__master",
+        "achievementRate": 100.3792,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "End Time__dxrt__std__dxrt__master",
+        "achievementRate": 96.4208,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Credits__dxrt__std__dxrt__master",
+        "achievementRate": 94.937,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "GO BACK 2 YOUR RAVE__dxrt__std__dxrt__master",
+        "achievementRate": 95.6601,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "人里に下ったアタイがいつの間にか社畜になっていた件__dxrt__std__dxrt__master",
+        "achievementRate": 96.3543,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Maxi__dxrt__std__dxrt__master",
+        "achievementRate": 92.5211,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "conflict__dxrt__std__dxrt__master",
+        "achievementRate": 97.5364,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Sakura Fubuki__dxrt__std__dxrt__master",
+        "achievementRate": 99.375,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "METATRON__dxrt__std__dxrt__master",
+        "achievementRate": 91.7349,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "DRAGONLADY__dxrt__std__dxrt__master",
+        "achievementRate": 89.0502,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Garden Of The Dragon__dxrt__std__dxrt__master",
+        "achievementRate": 96.9536,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "天国と地獄__dxrt__std__dxrt__master",
+        "achievementRate": 98.5301,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "源平大戦絵巻テーマソング__dxrt__std__dxrt__master",
+        "achievementRate": 96.6853,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "セガサターン起動音[H.][Remix]__dxrt__std__dxrt__master",
+        "achievementRate": 100.3309,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Urban Crusher [Remix]__dxrt__std__dxrt__master",
+        "achievementRate": 97.6918,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "怪盗Rのテーマ__dxrt__std__dxrt__master",
+        "achievementRate": 96.8999,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ばかみたい【Taxi Driver Edition】__dxrt__dx__dxrt__master",
+        "achievementRate": 98.8714,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Outlaw's Lullaby__dxrt__std__dxrt__master",
+        "achievementRate": 95.565,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Brand-new Japanesque__dxrt__std__dxrt__master",
+        "achievementRate": 98.7205,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "鼓動__dxrt__std__dxrt__master",
+        "achievementRate": 98.8265,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "神室雪月花__dxrt__std__dxrt__master",
+        "achievementRate": 97.4626,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "KONNANじゃないっ！__dxrt__std__dxrt__master",
+        "achievementRate": 98.2268,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Reach For The Stars__dxrt__std__dxrt__master",
+        "achievementRate": 93.2414,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Break The Speakers__dxrt__dx__dxrt__master",
+        "achievementRate": 98.4814,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "CiRCLE CAMPAiGN__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5327,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "地獄__dxrt__dx__dxrt__master",
+        "achievementRate": 98.2045,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "シスターシスター__dxrt__dx__dxrt__master",
+        "achievementRate": 100.7008,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "パーフェクション__dxrt__dx__dxrt__master",
+        "achievementRate": 98.4157,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ステップアンドライム__dxrt__dx__dxrt__master",
+        "achievementRate": 97.7856,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "咲キ誇レ常世ノ華__dxrt__std__dxrt__master",
+        "achievementRate": 98.2023,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "言ノ葉遊戯__dxrt__std__dxrt__master",
+        "achievementRate": 100.0449,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "りばーぶ__dxrt__std__dxrt__master",
+        "achievementRate": 100.3459,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ミクマリ__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6011,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "雲外蒼電 -Dreaming Voltage-__dxrt__dx__dxrt__master",
+        "achievementRate": 97.793,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "鬼女紅妖__dxrt__dx__dxrt__master",
+        "achievementRate": 98.8669,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "華天月兎__dxrt__dx__dxrt__master",
+        "achievementRate": 97.7628,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "真空都市__dxrt__dx__dxrt__master",
+        "achievementRate": 99.8696,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Eternal Return__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6426,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ぱぱぱらビーチ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5082,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Get U ♭ack__dxrt__dx__dxrt__master",
+        "achievementRate": 98.1399,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "殿ッ！？ご乱心！？__dxrt__dx__dxrt__master",
+        "achievementRate": 99.5904,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Magical Paradox__dxrt__dx__dxrt__master",
+        "achievementRate": 99.4605,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "False Amber (from the Black Bazaar, Or by A Kervan Trader from the Lands Afar, Or Buried Beneath the Shifting Sands That Lead Everywhere but Nowhere)__dxrt__dx__dxrt__master",
+        "achievementRate": 91.7055,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Customized Justice__dxrt__dx__dxrt__master",
+        "achievementRate": 98.8908,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "概して過誤__dxrt__dx__dxrt__master",
+        "achievementRate": 99.5987,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Unfinished Epic__dxrt__dx__dxrt__master",
+        "achievementRate": 98.8033,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "パラドクスイヴ__dxrt__dx__dxrt__master",
+        "achievementRate": 98.7415,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "YKWTD__dxrt__dx__dxrt__master",
+        "achievementRate": 99.2845,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "184億回のマルチトニック__dxrt__dx__dxrt__master",
+        "achievementRate": 94.9948,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "エスオーエス__dxrt__dx__dxrt__master",
+        "achievementRate": 99.8917,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "チエルカ／エソテリカ__dxrt__dx__dxrt__master",
+        "achievementRate": 98.8736,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "星空パーティーチューン__dxrt__dx__dxrt__master",
+        "achievementRate": 100.6164,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ミルキースター・シューティングスター__dxrt__dx__dxrt__master",
+        "achievementRate": 99.042,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ふらふらふら、__dxrt__dx__dxrt__master",
+        "achievementRate": 99.2064,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ピリオドサイン__dxrt__dx__dxrt__master",
+        "achievementRate": 97.223,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "プリズム△▽リズム__dxrt__dx__dxrt__master",
+        "achievementRate": 100.6513,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "プリズム△▽リズム__dxrt__std__dxrt__master",
+        "achievementRate": 96.9272,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "IMBRUED:FLUX__dxrt__dx__dxrt__master",
+        "achievementRate": 97.6236,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "ウタヒメナイトストーム__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5368,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Ourania__dxrt__dx__dxrt__master",
+        "achievementRate": 99.4335,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Geranium__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5537,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "DEVOTION__dxrt__dx__dxrt__master",
+        "achievementRate": 97.8404,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "サンバディ！__dxrt__dx__dxrt__master",
+        "achievementRate": 87.4243,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Kairos__dxrt__dx__dxrt__master",
+        "achievementRate": 100.1392,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "宵の鳥__dxrt__dx__dxrt__master",
+        "achievementRate": 99.7888,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アンバークロニクル__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6357,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "リフヴェイン__dxrt__dx__dxrt__master",
+        "achievementRate": 100.2216,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ツムギボシ__dxrt__dx__dxrt__master",
+        "achievementRate": 99.5614,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Rainbow Rush Story__dxrt__dx__dxrt__master",
+        "achievementRate": 99.9963,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "群青シグナル__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5213,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ホシシズク__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5454,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Jouez Avec Moi?__dxrt__dx__dxrt__master",
+        "achievementRate": 92.3441,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ｉｓｏｐｈｏｔｅ__dxrt__dx__dxrt__master",
+        "achievementRate": 99.8855,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "前衛的Landscape__dxrt__dx__dxrt__master",
+        "achievementRate": 99.0257,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ヨミビトシラズ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.1528,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "とびだせ！TO THE COSMIC!!__dxrt__dx__dxrt__master",
+        "achievementRate": 99.7166,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Paradisoda__dxrt__dx__dxrt__master",
+        "achievementRate": 98.7088,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "生命不詳__dxrt__dx__dxrt__master",
+        "achievementRate": 99.1228,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "パラボラ__dxrt__dx__dxrt__master",
+        "achievementRate": 98.2886,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Scarlet Wings__dxrt__dx__dxrt__master",
+        "achievementRate": 97.7651,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "夢花火__dxrt__std__dxrt__master",
+        "achievementRate": 97.7435,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Now or Never__dxrt__dx__dxrt__master",
+        "achievementRate": 99.2418,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Justified__dxrt__std__dxrt__master",
+        "achievementRate": 97.9785,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アージェントシンメトリー__dxrt__std__dxrt__master",
+        "achievementRate": 99.4108,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Candy Tall Woman__dxrt__std__dxrt__master",
+        "achievementRate": 98.9755,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Limit Break__dxrt__std__dxrt__master",
+        "achievementRate": 98.3248,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "L'épilogue__dxrt__std__dxrt__master",
+        "achievementRate": 94.1447,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Believe the Rainbow__dxrt__dx__dxrt__master",
+        "achievementRate": 98.7078,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Believe the Rainbow__dxrt__std__dxrt__master",
+        "achievementRate": 100.1361,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "ユビキリ__dxrt__std__dxrt__master",
+        "achievementRate": 91.2361,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ジングルベル__dxrt__std__dxrt__master",
+        "achievementRate": 89.0543,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Fraq__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5809,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Valsqotch__dxrt__dx__dxrt__master",
+        "achievementRate": 94.3114,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "砂の函__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5655,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Amereistr__dxrt__dx__dxrt__master",
+        "achievementRate": 99.2438,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Feel The Luv__dxrt__dx__dxrt__master",
+        "achievementRate": 99.8827,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Divide et impera!__dxrt__dx__dxrt__master",
+        "achievementRate": 95.8548,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Flashback__dxrt__dx__dxrt__master",
+        "achievementRate": 95.1616,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Colorfull:Encounter__dxrt__dx__dxrt__master",
+        "achievementRate": 99.3845,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "mystique as iris__dxrt__dx__dxrt__master",
+        "achievementRate": 92.6612,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "TEmPTaTiON__dxrt__dx__dxrt__master",
+        "achievementRate": 97.7443,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "雨露霜雪__dxrt__dx__dxrt__master",
+        "achievementRate": 99.111,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "TwisteD! XD__dxrt__dx__dxrt__master",
+        "achievementRate": 97.6363,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "QZKago Requiem__dxrt__std__dxrt__master",
+        "achievementRate": 97.3388,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Our Wrenally__dxrt__std__dxrt__master",
+        "achievementRate": 97.3142,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Contrapasso -paradiso-__dxrt__std__dxrt__master",
+        "achievementRate": 95.2332,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Oshama Scramble!__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0042,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Oshama Scramble!__dxrt__std__dxrt__master",
+        "achievementRate": 98.5098,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Tricolor⁂circuS__dxrt__dx__dxrt__master",
+        "achievementRate": 96.0731,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "天蓋__dxrt__dx__dxrt__master",
+        "achievementRate": 99.5008,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Deicide__dxrt__dx__dxrt__master",
+        "achievementRate": 97.5317,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Edelweiss__dxrt__dx__dxrt__master",
+        "achievementRate": 99.7432,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "勦滅__dxrt__dx__dxrt__master",
+        "achievementRate": 93.2887,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "The Cursed Doll__dxrt__dx__dxrt__master",
+        "achievementRate": 100.4592,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "RondeauX of RagnaroQ__dxrt__dx__dxrt__master",
+        "achievementRate": 88.9703,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Energizing Flame__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6357,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Straight into the lights__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5754,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "my flow__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5511,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "The Great Banquet__dxrt__dx__dxrt__master",
+        "achievementRate": 98.6474,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Latent Kingdom__dxrt__dx__dxrt__master",
+        "achievementRate": 96.5205,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Swift Swing__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6319,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Horoscope Express__dxrt__dx__dxrt__master",
+        "achievementRate": 99.3104,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "raputa__dxrt__dx__dxrt__master",
+        "achievementRate": 94.0427,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "the EmpErroR__dxrt__std__dxrt__master",
+        "achievementRate": 98.1901,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ガラテアの螺旋__dxrt__std__dxrt__master",
+        "achievementRate": 92.1941,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Party☆People☆Princess__dxrt__dx__dxrt__master",
+        "achievementRate": 99.4655,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "KHYMΞXΛ__dxrt__dx__dxrt__master",
+        "achievementRate": 96.0025,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "oboro__dxrt__std__dxrt__master",
+        "achievementRate": 97.3175,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ぽわわん劇場__dxrt__dx__dxrt__master",
+        "achievementRate": 98.2063,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "渦状銀河のシンフォニエッタ__dxrt__std__dxrt__master",
+        "achievementRate": 98.8794,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "超熊猫的周遊記（ワンダーパンダートラベラー）__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6367,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Comet Panto Men!__dxrt__dx__dxrt__master",
+        "achievementRate": 98.1835,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "VeRForTe αRtE:VEiN__dxrt__dx__dxrt__master",
+        "achievementRate": 97.1595,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Beat Opera op.1__dxrt__dx__dxrt__master",
+        "achievementRate": 97.3518,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "[X]__dxrt__dx__dxrt__master",
+        "achievementRate": 98.3302,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "VIIIbit Explorer__dxrt__dx__dxrt__master",
+        "achievementRate": 88.347,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "VIIIbit Explorer__dxrt__std__dxrt__master",
+        "achievementRate": 99.5823,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "You Mean the World to Me__dxrt__dx__dxrt__master",
+        "achievementRate": 99.1008,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "VSpook!__dxrt__dx__dxrt__master",
+        "achievementRate": 98.141,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "康莊大道__dxrt__dx__dxrt__master",
+        "achievementRate": 98.0972,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Rising on the horizon__dxrt__dx__dxrt__master",
+        "achievementRate": 97.6947,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "\"411Ψ892\"__dxrt__dx__dxrt__master",
+        "achievementRate": 99.077,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "N3V3R G3T OV3R__dxrt__dx__dxrt__master",
+        "achievementRate": 94.7901,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "HAGAKIRI__dxrt__dx__dxrt__master",
+        "achievementRate": 97.7862,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Strive against fate__dxrt__dx__dxrt__master",
+        "achievementRate": 95.6198,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "白花の天使__dxrt__dx__dxrt__master",
+        "achievementRate": 99.9241,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "HECATONCHEIR__dxrt__dx__dxrt__master",
+        "achievementRate": 97.8368,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Sage__dxrt__dx__dxrt__master",
+        "achievementRate": 97.3107,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Cryptarithm__dxrt__dx__dxrt__master",
+        "achievementRate": 97.2565,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Metamorphosism__dxrt__dx__dxrt__master",
+        "achievementRate": 91.8136,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "PANDORA PARADOXXX__dxrt__std__dxrt__master",
+        "achievementRate": 96.6021,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "天火明命__dxrt__std__dxrt__master",
+        "achievementRate": 98.1427,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "7thSense__dxrt__std__dxrt__master",
+        "achievementRate": 96.9805,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "World's end loneliness__dxrt__dx__dxrt__master",
+        "achievementRate": 94.9165,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "パラマウント☆ショータイム！！__dxrt__dx__dxrt__master",
+        "achievementRate": 100.4174,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Yorugao__dxrt__dx__dxrt__master",
+        "achievementRate": 95.9413,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "GIGANTØMAKHIA__dxrt__dx__dxrt__master",
+        "achievementRate": 98.8316,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "BREaK! BREaK! BREaK!__dxrt__dx__dxrt__master",
+        "achievementRate": 97.412,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Raven Emperor__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6631,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Lia=Fail__dxrt__dx__dxrt__master",
+        "achievementRate": 94.1487,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "華の集落、秋のお届け__dxrt__dx__dxrt__master",
+        "achievementRate": 99.8267,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "華の集落、秋のお届け__dxrt__std__dxrt__master",
+        "achievementRate": 97.247,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Trick tear__dxrt__dx__dxrt__master",
+        "achievementRate": 99.839,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "星詠みとデスペラード__dxrt__dx__dxrt__master",
+        "achievementRate": 98.7619,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "BLACK SWAN__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5684,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "躯樹の墓守__dxrt__dx__dxrt__master",
+        "achievementRate": 97.9708,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Starry Colors__dxrt__dx__dxrt__master",
+        "achievementRate": 97.4745,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "STEEL TRANSONIC__dxrt__dx__dxrt__master",
+        "achievementRate": 100.1249,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Alea jacta est!__dxrt__std__dxrt__master",
+        "achievementRate": 98.4894,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "蒼穹舞楽__dxrt__dx__dxrt__master",
+        "achievementRate": 94.489,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Xenovcipher__dxrt__dx__dxrt__master",
+        "achievementRate": 98.741,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Never Give Up!__dxrt__dx__dxrt__master",
+        "achievementRate": 94.4023,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "AMABIE__dxrt__dx__dxrt__master",
+        "achievementRate": 97.1902,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Last Samurai__dxrt__dx__dxrt__master",
+        "achievementRate": 98.2105,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Heavenly Blast__dxrt__dx__dxrt__master",
+        "achievementRate": 98.0815,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Glorious Crown__dxrt__std__dxrt__master",
+        "achievementRate": 96.3716,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ワンダーシャッフェンの法則__dxrt__dx__dxrt__master",
+        "achievementRate": 98.9043,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Regulus__dxrt__dx__dxrt__master",
+        "achievementRate": 94.4319,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アポカリプスに反逆の焔を焚べろ__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5392,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "We Gonna Party__dxrt__std__dxrt__master",
+        "achievementRate": 95.1218,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "四月の雨__dxrt__std__dxrt__master",
+        "achievementRate": 96.3311,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "FFT__dxrt__std__dxrt__master",
+        "achievementRate": 99.9475,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Panopticon__dxrt__std__dxrt__master",
+        "achievementRate": 99.6238,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "CITRUS MONSTER__dxrt__std__dxrt__master",
+        "achievementRate": 94.8525,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "MAXRAGE__dxrt__dx__dxrt__master",
+        "achievementRate": 95.6134,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Jumble Rumble__dxrt__std__dxrt__master",
+        "achievementRate": 91.0785,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "keep hopping__dxrt__std__dxrt__master",
+        "achievementRate": 97.0431,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ATLAS RUSH__dxrt__dx__dxrt__master",
+        "achievementRate": 98.1334,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "雷切-RAIKIRI-__dxrt__std__dxrt__master",
+        "achievementRate": 97.1486,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Mare Maris__dxrt__std__dxrt__master",
+        "achievementRate": 98.6931,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "魔ジョ狩リ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.6257,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Excalibur ～Revived resolution～__dxrt__std__dxrt__master",
+        "achievementRate": 96.3012,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Caliburne ～Story of the Legendary sword～__dxrt__std__dxrt__master",
+        "achievementRate": 97.7244,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Schwarzschild__dxrt__std__dxrt__master",
+        "achievementRate": 93.967,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Fragrance__dxrt__std__dxrt__master",
+        "achievementRate": 94.9878,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Blows Up Everything__dxrt__dx__dxrt__master",
+        "achievementRate": 97.7109,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "AMAZING MIGHTYYYY!!!!__dxrt__std__dxrt__master",
+        "achievementRate": 96.6753,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "larva__dxrt__std__dxrt__master",
+        "achievementRate": 96.9788,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "HERA__dxrt__std__dxrt__master",
+        "achievementRate": 96.8589,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Cider P@rty__dxrt__dx__dxrt__master",
+        "achievementRate": 97.5194,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "VERTeX__dxrt__std__dxrt__master",
+        "achievementRate": 97.1045,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ViRTUS__dxrt__dx__dxrt__master",
+        "achievementRate": 98.6976,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "U&iVERSE -銀河鸞翔-__dxrt__dx__dxrt__master",
+        "achievementRate": 92.7421,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ℝ∈Χ LUNATiCA__dxrt__dx__dxrt__master",
+        "achievementRate": 97.2324,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ほしぞらスペクタクル__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5911,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "封焔の135秒__dxrt__dx__dxrt__master",
+        "achievementRate": 96.0847,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "モ°ルモ°ル (MZK Skippin' Remix)__dxrt__dx__dxrt__master",
+        "achievementRate": 99.7161,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "系ぎて__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5944,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "sølips__dxrt__dx__dxrt__master",
+        "achievementRate": 96.7905,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "VERTeX (rintaro soma deconstructed remix)__dxrt__dx__dxrt__master",
+        "achievementRate": 96.657,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "果ての空、僕らが見た光。__dxrt__dx__dxrt__master",
+        "achievementRate": 99.1367,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "氷滅の135小節__dxrt__dx__dxrt__master",
+        "achievementRate": 95.3593,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "有明/Ariake__dxrt__dx__dxrt__master",
+        "achievementRate": 96.2833,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "宙天__dxrt__dx__dxrt__master",
+        "achievementRate": 92.1556,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Åntinomiε__dxrt__dx__dxrt__master",
+        "achievementRate": 98.9085,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "FLΛME/FRΦST__dxrt__dx__dxrt__master",
+        "achievementRate": 95.2005,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "World's end BLACKBOX__dxrt__dx__dxrt__master",
+        "achievementRate": 93.6454,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "AFTER PANDORA__dxrt__std__dxrt__master",
+        "achievementRate": 98.0313,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Xaleid◆scopiX__dxrt__dx__dxrt__master",
+        "achievementRate": 97.5306,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Ref:rain (for 7th Heaven)__dxrt__dx__dxrt__master",
+        "achievementRate": 100.4219,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "全世界共通リズム感テスト__dxrt__std__dxrt__master",
+        "achievementRate": 75.6286,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Galaxy Blaster__dxrt__dx__dxrt__master",
+        "achievementRate": 98.4883,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ラストピースに祝福と栄光を__dxrt__dx__dxrt__master",
+        "achievementRate": 99.9814,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "イーヴィルガール__dxrt__dx__dxrt__master",
+        "achievementRate": 98.963,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Dazzle hop__dxrt__dx__dxrt__master",
+        "achievementRate": 98.1859,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "いちげき！のテーマ__dxrt__dx__dxrt__master",
+        "achievementRate": 97.8904,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Splash Dance!!__dxrt__dx__dxrt__master",
+        "achievementRate": 98.2773,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Transcend Lights__dxrt__dx__dxrt__master",
+        "achievementRate": 100.9281,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "撩乱乙女†無双劇__dxrt__dx__dxrt__master",
+        "achievementRate": 99.552,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "最っ高のエンタメだ!!__dxrt__dx__dxrt__master",
+        "achievementRate": 97.801,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Y.Y.Y.計画!!!!__dxrt__dx__dxrt__master",
+        "achievementRate": 100.738,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Resolution__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0322,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Catch Me If You Can__dxrt__dx__dxrt__master",
+        "achievementRate": 99.5818,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "まっすぐ→→→ストリーム！__dxrt__dx__dxrt__master",
+        "achievementRate": 99.1978,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Zitronectar__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0892,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Radiance__dxrt__dx__dxrt__master",
+        "achievementRate": 99.9978,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "R'N'R Monsta__dxrt__dx__dxrt__master",
+        "achievementRate": 100.07,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "美夜月鏡__dxrt__dx__dxrt__master",
+        "achievementRate": 99.5667,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "MarbleBlue.__dxrt__dx__dxrt__master",
+        "achievementRate": 99.3947,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Ai C__dxrt__dx__dxrt__master",
+        "achievementRate": 98.7572,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Apollo__dxrt__dx__dxrt__master",
+        "achievementRate": 96.886,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "LAMIA__dxrt__dx__dxrt__master",
+        "achievementRate": 97.6811,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Last Kingdom__dxrt__dx__dxrt__master",
+        "achievementRate": 100.6075,
+        "comboFlag": null,
+        "syncFlag": "fs"
+    },
+    {
+        "sheetId": "FLUFFY FLASH__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0682,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Titania__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6511,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "YURUSHITE__dxrt__dx__dxrt__master",
+        "achievementRate": 98.456,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Desperado Waltz__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5608,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "MEGATON BLAST__dxrt__dx__dxrt__master",
+        "achievementRate": 99.0695,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "脳天直撃__dxrt__dx__dxrt__master",
+        "achievementRate": 99.074,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Falsum Atlantis.__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6828,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "See The Light__dxrt__dx__dxrt__master",
+        "achievementRate": 92.0448,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "エータ・ベータ・イータ__dxrt__dx__dxrt__master",
+        "achievementRate": 94.0037,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Good bye, Merry-Go-Round.__dxrt__dx__dxrt__master",
+        "achievementRate": 98.1575,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "SUPER AMBULANCE__dxrt__dx__dxrt__master",
+        "achievementRate": 100.3008,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Don't Fight The Music__dxrt__dx__dxrt__master",
+        "achievementRate": 99.5239,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "無敵We are one!!__dxrt__std__dxrt__master",
+        "achievementRate": 100.7773,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Session High⤴__dxrt__std__dxrt__master",
+        "achievementRate": 98.0178,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "crazy (about you)__dxrt__dx__dxrt__master",
+        "achievementRate": 100.1899,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "サウンドプレイヤー__dxrt__dx__dxrt__master",
+        "achievementRate": 98.1069,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "猫祭り__dxrt__std__dxrt__master",
+        "achievementRate": 100.4051,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "猛進ソリストライフ！__dxrt__std__dxrt__master",
+        "achievementRate": 98.932,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "奏者はただ背中と提琴で語るのみ__dxrt__std__dxrt__master",
+        "achievementRate": 98.5339,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "管弦楽組曲 第3番 ニ長調「第2曲（G線上のアリア）」BWV.1068-2__dxrt__dx__dxrt__master",
+        "achievementRate": 99.1823,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Limits__dxrt__dx__dxrt__master",
+        "achievementRate": 99.4992,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Drivessover__dxrt__dx__dxrt__master",
+        "achievementRate": 98.1368,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Supersonic Generation__dxrt__dx__dxrt__master",
+        "achievementRate": 99.2198,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Elemental Ethnic__dxrt__dx__dxrt__master",
+        "achievementRate": 97.0026,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Λzure Vixen__dxrt__dx__dxrt__master",
+        "achievementRate": 98.816,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "SQUAD-Phvntom-__dxrt__dx__dxrt__master",
+        "achievementRate": 98.8309,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "インパアフェクシオン・ホワイトガアル__dxrt__dx__dxrt__master",
+        "achievementRate": 100.1279,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "WE'RE BACK!!__dxrt__dx__dxrt__master",
+        "achievementRate": 98.497,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Trrricksters!!__dxrt__dx__dxrt__master",
+        "achievementRate": 97.7123,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "蜘蛛の糸__dxrt__dx__dxrt__master",
+        "achievementRate": 97.1486,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ピュグマリオンの咒文__dxrt__dx__dxrt__master",
+        "achievementRate": 97.8264,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Hainuwele__dxrt__dx__dxrt__master",
+        "achievementRate": 99.5457,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "folern__dxrt__dx__dxrt__master",
+        "achievementRate": 98.2766,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "閃鋼のブリューナク__dxrt__std__dxrt__master",
+        "achievementRate": 87.9941,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "宿星審判__dxrt__dx__dxrt__master",
+        "achievementRate": 97.1995,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ハードコア・シンドローム__dxrt__dx__dxrt__master",
+        "achievementRate": 93.9908,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ハジマリノピアノ__dxrt__dx__dxrt__master",
+        "achievementRate": 96.965,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Climax__dxrt__dx__dxrt__master",
+        "achievementRate": 97.0141,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "その群青が愛しかったようだった__dxrt__std__dxrt__master",
+        "achievementRate": 99.5603,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "光線チューニング__dxrt__std__dxrt__master",
+        "achievementRate": 97.9738,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "My First Phone__dxrt__std__dxrt__master",
+        "achievementRate": 99.0529,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "TiamaT:F minor__dxrt__std__dxrt__master",
+        "achievementRate": 96.2528,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "エンドマークに希望と涙を添えて__dxrt__std__dxrt__master",
+        "achievementRate": 98.8883,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アイドル__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.1674,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "勇者__dxrt__dx__dxrt__remaster",
+        "achievementRate": 99.0691,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "はいよろこんで__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.51,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ビビデバ__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.0353,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "唱__dxrt__dx__dxrt__remaster",
+        "achievementRate": 99.6486,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "踊__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.1647,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "おとせサンダー__dxrt__dx__dxrt__remaster",
+        "achievementRate": 98.7019,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "INTERNET YAMERO__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.3392,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Virtual to LIVE__dxrt__dx__dxrt__remaster",
+        "achievementRate": 93.9483,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "シリウスの輝きのように__dxrt__dx__dxrt__remaster",
+        "achievementRate": 99.7934,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "プラネタリウム・レヴュー__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.6978,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "テトリス__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.6878,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "メズマライザー__dxrt__dx__dxrt__remaster",
+        "achievementRate": 99.4268,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "モニタリング__dxrt__dx__dxrt__remaster",
+        "achievementRate": 99.4292,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "フォニイ__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.5325,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "バグ__dxrt__dx__dxrt__remaster",
+        "achievementRate": 99.452,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "熱異常__dxrt__dx__dxrt__remaster",
+        "achievementRate": 99.5089,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ラビットホール__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.0215,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ヴァンパイア__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.1237,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ヒバナ__dxrt__std__dxrt__remaster",
+        "achievementRate": 99.992,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "妄想感傷代償連盟__dxrt__std__dxrt__remaster",
+        "achievementRate": 100.6275,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "酔いどれ知らず__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.0446,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ダーリンダンス__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.5476,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "神っぽいな__dxrt__dx__dxrt__remaster",
+        "achievementRate": 98.9211,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "カゲロウデイズ__dxrt__std__dxrt__remaster",
+        "achievementRate": 98.1899,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "だんだん早くなる__dxrt__std__dxrt__remaster",
+        "achievementRate": 99.0507,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "はやくそれになりたい！__dxrt__std__dxrt__remaster",
+        "achievementRate": 97.0801,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "サドマミホリック__dxrt__std__dxrt__remaster",
+        "achievementRate": 90.2704,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "最終鬼畜妹フランドール・S__dxrt__std__dxrt__remaster",
+        "achievementRate": 97.1538,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "幻想に咲いた花__dxrt__dx__dxrt__remaster",
+        "achievementRate": 99.1815,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "明星ロケット__dxrt__std__dxrt__remaster",
+        "achievementRate": 95.5257,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "緋色のDance__dxrt__std__dxrt__remaster",
+        "achievementRate": 95.3679,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Bad Apple!! feat.nomico__dxrt__std__dxrt__remaster",
+        "achievementRate": 96.7407,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "CYBER Sparks__dxrt__std__dxrt__remaster",
+        "achievementRate": 97.4056,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Unwelcome School__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.0717,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Southern Cross__dxrt__dx__dxrt__remaster",
+        "achievementRate": 96.5706,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "檄！帝国華撃団(改)__dxrt__std__dxrt__remaster",
+        "achievementRate": 98.5889,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "In Chaos__dxrt__std__dxrt__remaster",
+        "achievementRate": 90.7254,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アンビバレンス__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.1975,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "FEEL the BEATS__dxrt__std__dxrt__remaster",
+        "achievementRate": 96.2483,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "一か罰__dxrt__dx__dxrt__remaster",
+        "achievementRate": 99.1406,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Now or Never__dxrt__dx__dxrt__remaster",
+        "achievementRate": 98.4677,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "花と、雪と、ドラムンベース。__dxrt__std__dxrt__remaster",
+        "achievementRate": 100.0495,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Limit Break__dxrt__std__dxrt__remaster",
+        "achievementRate": 97.4479,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "記憶、記録__dxrt__std__dxrt__remaster",
+        "achievementRate": 90.8517,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "QZKago Requiem__dxrt__std__dxrt__remaster",
+        "achievementRate": 97.6713,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ガラテアの螺旋__dxrt__std__dxrt__remaster",
+        "achievementRate": 96.8828,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "PANDORA PARADOXXX__dxrt__std__dxrt__remaster",
+        "achievementRate": 90.3597,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Alea jacta est!__dxrt__std__dxrt__remaster",
+        "achievementRate": 94.5532,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Never Give Up!__dxrt__dx__dxrt__remaster",
+        "achievementRate": 100.7072,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "雷切-RAIKIRI-__dxrt__std__dxrt__remaster",
+        "achievementRate": 97.2986,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Death Scythe__dxrt__std__dxrt__remaster",
+        "achievementRate": 84.7712,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Beat of getting entangled__dxrt__std__dxrt__remaster",
+        "achievementRate": 94.8097,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "AMAZING MIGHTYYYY!!!!__dxrt__std__dxrt__remaster",
+        "achievementRate": 95.2661,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "air's gravity__dxrt__std__dxrt__remaster",
+        "achievementRate": 93.6905,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "系ぎて__dxrt__dx__dxrt__remaster",
+        "achievementRate": 84.7818,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Xaleid◆scopiX__dxrt__dx__dxrt__remaster",
+        "achievementRate": 89.3992,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "華天月兎__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.4638,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "うい麦畑でつかまえて__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0685,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "忙シー日__dxrt__dx__dxrt__master",
+        "achievementRate": 95.147,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "分からない__dxrt__std__dxrt__master",
+        "achievementRate": 95.5472,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Sqlupp (Camellia's \"Sqleipd*Hiytex\" Remix)__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6824,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "Panopticon__dxrt__std__dxrt__remaster",
+        "achievementRate": 100.1726,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Revive The Rave__dxrt__std__dxrt__remaster",
+        "achievementRate": 100.1622,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "勝手に生きましょ__dxrt__dx__dxrt__master",
+        "achievementRate": 100.471,
+        "comboFlag": "fc",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ULTRA POWER__dxrt__dx__dxrt__master",
+        "achievementRate": 99.9955,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "新人類__dxrt__dx__dxrt__master",
+        "achievementRate": 100.5077,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "メランコリック__dxrt__std__dxrt__master",
+        "achievementRate": 100.7291,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "FFT__dxrt__std__dxrt__remaster",
+        "achievementRate": 97.5535,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "み　む　かｩ　わ　ナ　イ　ス　ト　ラ　イ__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.9045,
+        "comboFlag": null,
+        "syncFlag": null
+    },
+    {
+        "sheetId": "化けの花__dxrt__dx__dxrt__expert",
+        "achievementRate": 100.9375,
+        "comboFlag": "ap",
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "INTJINTPENTJENTPINFJENFJINFPENFPISTJISFJESTJESFJESTPISTPISFPESFP__dxrt__dx__dxrt__master",
+        "achievementRate": 99.41,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "さくゆいたいそう__dxrt__dx__dxrt__master",
+        "achievementRate": 99.9506,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "み　む　かｩ　わ　ナ　イ　ス　ト　ラ　イ__dxrt__dx__dxrt__master",
+        "achievementRate": 98.5623,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "アイアイ傘__dxrt__dx__dxrt__master",
+        "achievementRate": 98.8104,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "化けの花__dxrt__dx__dxrt__master",
+        "achievementRate": 99.6837,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "熱異常__dxrt__dx__dxrt__master",
+        "achievementRate": 99.7759,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "WARNING×WARNING×WARNING__dxrt__dx__dxrt__master",
+        "achievementRate": 100.0527,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "ニルヴの心臓__dxrt__dx__dxrt__master",
+        "achievementRate": 96.238,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "月面基地__dxrt__dx__dxrt__master",
+        "achievementRate": 99.2603,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "MEGATON KICK__dxrt__dx__dxrt__master",
+        "achievementRate": 97.1754,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Upshift__dxrt__dx__dxrt__master",
+        "achievementRate": 99.0023,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "RIFFRAIN__dxrt__dx__dxrt__master",
+        "achievementRate": 100.2699,
+        "comboFlag": "fc",
+        "syncFlag": null
+    },
+    {
+        "sheetId": "maimaiちゃんのテーマ__dxrt__std__dxrt__master",
+        "achievementRate": 100.4017,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "WiPE OUT MEMORIES__dxrt__dx__dxrt__master",
+        "achievementRate": 95.3826,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Mutation__dxrt__dx__dxrt__master",
+        "achievementRate": 97.6522,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Alcyone__dxrt__dx__dxrt__master",
+        "achievementRate": 98.8996,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Aiolos__dxrt__std__dxrt__master",
+        "achievementRate": 97.6568,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Ultranova__dxrt__std__dxrt__master",
+        "achievementRate": 94.0874,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "MYTHOS__dxrt__std__dxrt__master",
+        "achievementRate": 93.3235,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Nitrous Fury__dxrt__std__dxrt__master",
+        "achievementRate": 92.8065,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "LiftOff__dxrt__dx__dxrt__master",
+        "achievementRate": 100.2519,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "JIGOKU STATION CENTRAL GATE__dxrt__dx__dxrt__master",
+        "achievementRate": 97.0129,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "We Gonna Journey__dxrt__std__dxrt__master",
+        "achievementRate": 96.6085,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    },
+    {
+        "sheetId": "Fragrance__dxrt__std__dxrt__remaster",
+        "achievementRate": 94.6255,
+        "comboFlag": null,
+        "syncFlag": "sync"
+    }
+]

@@ -1,0 +1,84 @@
+## 4. Detailed Feature Specifications
+
+### Feature A: Binary Cache Decoder & Encoder (app.js)
+decodeCacheFile(arrayBuffer):
+- Convert ArrayBuffer to Uint8Array.
+- Try pako.inflateRaw(uint8Array, { to: 'string' }) first, then JSON.parse().
+- If that throws, try pako.inflate(uint8Array, { to: 'string' }), then JSON.parse().
+- If that throws, try new TextDecoder('utf-8').decode(uint8Array), then JSON.parse().
+- Return the parsed JavaScript object/dictionary.
+
+encodeCacheFile(jsonObject):
+- Serialize jsonObject via JSON.stringify(jsonObject) (compact, no whitespace).
+- Encode string to UTF-8 Uint8Array.
+- Compress via pako.deflateRaw(utf8Bytes, { level: 6 }).
+- Return Blob with MIME type application/octet-stream and exact filename cache (no extension).
+
+### Feature B: Recursive Score Extractor & Song Title Sanitizer (app.js)
+AstroDX cache schemas can nest song metadata and scores by folder path or chart collection. Implement extractRecords(cacheData):
+- Recursively traverse all objects and arrays in cacheData.
+- Detect score nodes by checking case-insensitively for keys: achievement, achievements, achievementrate, score, bestscore, scores.
+- Extract fields for each played chart (achievementRate > 0):
+  - title: Extract from title, name, songName, or fallback to the parent key's folder basename.
+  - cleanTitle: Provide an optional toggle "Clean folder prefixes for DXRating" that strips common charter prefixes like [DX], [STD], [宴], or leading track numbers so titles match official dxrating.net song names.
+  - type: Map std, standard, sd to "std"; default everything else to "dx".
+  - difficulty: Map 0 -> basic, 1 -> advanced, 2 -> expert, 3 -> master, 4 -> remaster (and string equivalents like "re:master" -> "remaster").
+  - achievementRate: Normalize values. If stored as a ratio <= 1.01 (e.g., 1.005123), multiply by 100 (100.5123). Round to 4 decimal places.
+  - rawPath: Store the internal dictionary key/path for debugging and migration matching.
+
+### Feature C: DXRating.net, Excel (.xlsx), CSV, and Raw JSON Exporters (app.js)
+- DXRating.net JSON (dxrating_import.json):
+  Must follow the exact gekichumai/dxrating import schema: (MARKED as temporary format, after this module complete I will request another module that will convert extracted data format into my specialize json format)
+  ```json
+  [
+    {
+      "sheetId": "<title>__dxrt__<dx|std>__dxrt__<difficulty>",
+      "achievementRate": 100.5123
+    }
+  ]
+  ```
+  Deduplicate by sheetId, keeping only the highest achievementRate for each unique chart.
+- Excel (astrodx_scores.xlsx):
+  Use XLSX.utils.json_to_sheet(records) and XLSX.writeFile(workbook, 'astrodx_scores.xlsx').
+- CSV (astrodx_scores.csv):
+  Prepend UTF-8 BOM (\uFEFF) so Japanese/Chinese song titles open properly in Microsoft Excel without garbled text.
+- Raw Decoded Cache (astrodx_cache_decoded.json):
+  Pretty-printed JSON.stringify(cacheData, null, 2).
+
+### Feature D: Tablet-to-PC Instant Link & QR Code (app.js)
+Users running the app on a tablet want to open the exported JSON on their PC immediately:
+- Add a "Generate Link & QR for PC" button.
+- When clicked, POST the generated dxrating_import.json string to https://dpaste.com/api/v2/ (Content-Type: application/x-www-form-urlencoded, parameters: content, syntax=json, expiry_days=1).
+- Append .txt to the returned URL so opening it on a PC returns the raw JSON directly.
+- Add a fallback to https://bytebin.lucko.me/post (POST JSON with Content-Type: application/json, returns { "key": "..." } accessible at https://bytebin.lucko.me/<key>) in case the first service is unreachable.
+- Render the returned short URL in a large selectable box, provide a Copy Link button, and render a QR Code next to it using QRCode.
+
+### Feature E: Safe Device Migration & Score Updater (app.js)
+Direct file replacement of cache fails when migrating across devices if folder paths differ. Build a 3-mode migration panel:
+- Mode 1: Smart Merge (Old Device cache + New Device cache -> Merged cache)
+  - User selects Old Device cache (contains their play records) and New Device cache (generated after installing songs and opening AstroDX once on the new device).
+  - The merger walks the New Device cache, matches charts against the Old Device cache by normalized Song Title + Difficulty (or chart hash/maidata key, ignoring folder path differences), and copies the highest score/achievement fields into the New Device's structure.
+  - Outputs a freshly compressed cache binary ready to overwrite the new device's cache file without triggering AstroDX's orphan-purge.
+- Mode 2: Interactive Score Table Editor
+  - Render extracted scores in an editable HTML table (search bar + inline input for achievementRate, type, and title).
+  - Edits immediately update the in-memory JSON and allow re-downloading dxrating_import.json or repacking cache.
+- Mode 3: JSON-to-Cache Repacker
+  - User uploads any manually edited astrodx_cache_decoded.json and downloads the re-compressed raw Deflate cache binary.
+
+## 5. UI/UX Layout (index.html & style.css)
+- Header: App title, offline PWA status badge, and collapsible helper guide showing where to find cache:
+  - iOS / iPadOS: Files App -> On My iPad / iPhone -> AstroDX -> cache
+  - Android: Android/data/com.Reflektone.AstroDX/files/cache
+- Tab 1: Extract & Send to PC:
+  - Drag-and-drop / File picker zone for cache.
+  - Summary cards: Total Charts Scanned, Played Charts Extracted, Highest Achievement Rate.
+  - Action bar with 5 buttons:
+    - Download DXRating.net JSON
+    - Generate Link & QR for PC
+    - Download Excel (.xlsx)
+    - Download CSV
+    - Download Raw Cache JSON
+  - Interactive search & filter table of extracted records (with inline Title & Achievement editing).
+- Tab 2: Device Migration & Repack:
+  - Smart Merger Card: Two file inputs (Old Device Cache + New Device Cache) -> Merge & Download Safe "cache" File button.
+  - Direct Repacker Card: File input for astrodx_cache_decoded.json -> Compress to AstroDX "cache" Binary button.
