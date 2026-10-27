@@ -2023,3 +2023,212 @@ body {
   color: #0284c7;
 }
 
+/* --------------------------------------------------------------------------
+   iOS 1-Tap Shortcut Modal & Promo Elements
+   -------------------------------------------------------------------------- */
+.shortcut-promo-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #f1f5f9;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  margin-bottom: 14px;
+}
+
+.promo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.promo-info p {
+  font-size: 0.875rem;
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.badge-shortcut {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #0ea5e9;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  width: fit-content;
+  letter-spacing: 0.02em;
+}
+
+.modal-card-wide {
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-title-with-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-icon-box.sm {
+  width: 38px;
+  height: 38px;
+}
+
+.modal-sub {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.modal-body-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.shortcut-flow-summary {
+  background: var(--bg-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 0.875rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.shortcut-steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shortcut-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--neutral-dark);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-detail {
+  flex: 1;
+}
+
+.step-detail h4 {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.step-detail p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.action-block-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.action-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 0.84375rem;
+  line-height: 1.45;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.action-badge {
+  display: inline-block;
+  background: #e2e8f0;
+  color: #334155;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+  width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.url-copy-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0;
+  background: #f8fafc;
+  padding: 6px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  overflow-x: auto;
+}
+
+.url-copy-box code {
+  flex: 1;
+  font-family: var(--font-mono);
+  font-size: 0.78125rem;
+  color: var(--neutral-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shortcut-tip-box {
+  display: flex;
+  gap: 12px;
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: #92400e;
+}
+
+.shortcut-tip-box p {
+  margin: 2px 0 0 0;
+}
+
+.tip-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .shortcut-promo-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+

@@ -100,6 +100,67 @@ async function handleCacheBuffer(arrayBuffer, filename = 'cache') {
   }
 }
 
+/**
+ * Safely decodes base64 string or raw text payload from iOS Shortcut or Clipboard
+ * and feeds it directly into handleCacheBuffer.
+ */
+export function processPayloadData(payloadStr, sourceName = 'iOS_1Tap_Sync') {
+  if (!payloadStr || typeof payloadStr !== 'string') return;
+  const trimmed = payloadStr.trim();
+  if (!trimmed) return;
+
+  // 1. If payload is direct JSON text (e.g. pasted decoded JSON)
+  if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
+    const buf = new TextEncoder().encode(trimmed).buffer;
+    handleCacheBuffer(buf, sourceName);
+    return;
+  }
+
+  // 2. Base64 payload (Deflate binary or AES encrypted text)
+  try {
+    let cleanB64 = decodeURIComponent(trimmed).trim();
+    if (cleanB64.includes(',')) cleanB64 = cleanB64.split(',')[1];
+    cleanB64 = cleanB64.replace(/-/g, '+').replace(/_/g, '/');
+    while (cleanB64.length % 4 !== 0) cleanB64 += '=';
+
+    const binaryStr = atob(cleanB64);
+    const bytes = new Uint8Array(binaryStr.length);
+    for (let i = 0; i < binaryStr.length; i++) {
+      bytes[i] = binaryStr.charCodeAt(i);
+    }
+    handleCacheBuffer(bytes.buffer, sourceName);
+  } catch (err) {
+    // 3. Fallback: direct UTF-8 buffer if not base64
+    try {
+      const buf = new TextEncoder().encode(trimmed).buffer;
+      handleCacheBuffer(buf, sourceName);
+    } catch (err2) {
+      showToast('Could not decode payload: ' + err.message, 'error');
+    }
+  }
+}
+
+/**
+ * Attempts to read clipboard contents and process as cache payload.
+ */
+export async function attemptClipboardRead() {
+  if (!navigator.clipboard || !navigator.clipboard.readText) {
+    showToast('Clipboard access not supported in this browser. Please drop or select the file manually.', 'warning');
+    return;
+  }
+  try {
+    const text = await navigator.clipboard.readText();
+    if (!text || !text.trim()) {
+      showToast('Clipboard is empty! Copy your cache data or run the iOS Shortcut first.', 'warning');
+      return;
+    }
+    processPayloadData(text, 'iOS_Shortcut_Clipboard');
+  } catch (err) {
+    console.warn('Clipboard read error:', err);
+    showToast('Clipboard access blocked. Please tap "Paste from Clipboard" directly to grant permission.', 'warning');
+  }
+}
+
 // ============================================================================
 // Event Listeners & Initialization
 // ============================================================================
@@ -419,6 +480,73 @@ function initApp() {
     showToast(`Added custom score for "${cleanTitle}"`, 'success');
   });
 
+  // 7. iOS 1-Tap Shortcut Modal & Clipboard Listeners
+  const iosShortcutModal = document.getElementById('iosShortcutModal');
+  const btnIosShortcutModal = document.getElementById('btnIosShortcutModal');
+  const btnIosGuideShortcut = document.getElementById('btnIosGuideShortcut');
+  const btnCloseIosShortcutModal = document.getElementById('btnCloseIosShortcutModal');
+  const btnDoneIosShortcut = document.getElementById('btnDoneIosShortcut');
+  const btnCopyShortcutUrl = document.getElementById('btnCopyShortcutUrl');
+  const shortcutTargetUrlPreview = document.getElementById('shortcutTargetUrlPreview');
+  const btnPasteClipboard = document.getElementById('btnPasteClipboard');
+  const btnTestClipboardModal = document.getElementById('btnTestClipboardModal');
+
+  function openIosShortcutModal() {
+    if (!iosShortcutModal) return;
+    const cleanUrl = window.location.origin + window.location.pathname.replace(/\/+$/, '') + '/#b64=';
+    if (shortcutTargetUrlPreview) {
+      shortcutTargetUrlPreview.textContent = cleanUrl;
+    }
+    iosShortcutModal.hidden = false;
+  }
+
+  function closeIosShortcutModal() {
+    if (iosShortcutModal) iosShortcutModal.hidden = true;
+  }
+
+  if (btnIosShortcutModal) btnIosShortcutModal.addEventListener('click', openIosShortcutModal);
+  if (btnIosGuideShortcut) btnIosGuideShortcut.addEventListener('click', openIosShortcutModal);
+  if (btnCloseIosShortcutModal) btnCloseIosShortcutModal.addEventListener('click', closeIosShortcutModal);
+  if (btnDoneIosShortcut) btnDoneIosShortcut.addEventListener('click', closeIosShortcutModal);
+
+  if (btnCopyShortcutUrl) {
+    btnCopyShortcutUrl.addEventListener('click', async () => {
+      const urlToCopy = window.location.origin + window.location.pathname.replace(/\/+$/, '') + '/#b64=';
+      try {
+        await navigator.clipboard.writeText(urlToCopy);
+        showToast('Base URL copied to clipboard!', 'success');
+      } catch (e) {
+        showToast('Could not auto-copy, please copy manually', 'warning');
+      }
+    });
+  }
+
+  if (btnPasteClipboard) {
+    btnPasteClipboard.addEventListener('click', () => attemptClipboardRead());
+  }
+
+  if (btnTestClipboardModal) {
+    btnTestClipboardModal.addEventListener('click', () => {
+      closeIosShortcutModal();
+      attemptClipboardRead();
+    });
+  }
+
+  // 8. Check for incoming iOS 1-Tap Shortcut payload via URL Hash
+  const currentHash = window.location.hash;
+  if (currentHash.startsWith('#b64=') || currentHash.startsWith('#cache_b64=')) {
+    const prefix = currentHash.startsWith('#b64=') ? '#b64=' : '#cache_b64=';
+    const b64Data = currentHash.slice(prefix.length);
+    if (b64Data) {
+      processPayloadData(b64Data, 'iOS_1Tap_Sync');
+      // Clean hash from URL without reloading
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  } else if (currentHash === '#clipboard' || currentHash === '#shortcut' || currentHash === '#ios_sync') {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+    attemptClipboardRead();
+  }
+
   // ============================================================================
   // Tab 2: Migration & Repacker Listeners
   // ============================================================================
@@ -517,11 +645,15 @@ function initApp() {
 
     const cleanFilter = filterTerm.trim().toLowerCase();
     const filtered = cleanFilter
-      ? scoreDeltas.filter(d => d.title.toLowerCase().includes(cleanFilter) || d.difficulty.toLowerCase().includes(cleanFilter))
+      ? scoreDeltas.filter(d => 
+          d.title.toLowerCase().includes(cleanFilter) || 
+          d.difficulty.toLowerCase().includes(cleanFilter) ||
+          (d.type && d.type.toLowerCase().includes(cleanFilter))
+        )
       : scoreDeltas;
 
     if (filtered.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted py-3">No matching chart comparisons found</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="7" class="text-center text-muted py-3">No matching chart comparisons found</td></tr>';
       return;
     }
 
@@ -546,8 +678,12 @@ function initApp() {
         badgeHtml = '<span class="status-badge-tag single">➕ New Device Only</span>';
       }
 
+      const type = (d.type || 'dx').toLowerCase();
+      const typeBadge = `<span class="type-badge ${type === 'dx' ? 'type-dx' : ''}">${type.toUpperCase()}</span>`;
+
       tr.innerHTML = `
         <td><strong>${d.title}</strong></td>
+        <td>${typeBadge}</td>
         <td><span class="diff-badge diff-${d.difficulty}">${d.difficulty.toUpperCase()}</span></td>
         <td>${oldText}</td>
         <td>${newText}</td>

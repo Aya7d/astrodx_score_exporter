@@ -130,12 +130,10 @@ function buildMergedCacheBinaryObject(sourceNew, sourceOld, mergedRecords) {
   const recordMap = new Map();
   for (const r of mergedRecords) {
     const key = `${r.title.toLowerCase()}__${r.type}__${r.difficulty}`;
-    const altKey = `${r.title.toLowerCase()}__${r.difficulty}`;
     recordMap.set(key, r);
-    if (!recordMap.has(altKey)) recordMap.set(altKey, r);
 
     if (r.diffId !== undefined && r.diffId !== null) {
-      const idKey = `${r.title.toLowerCase()}__id__${r.diffId}`;
+      const idKey = `${r.title.toLowerCase()}__${r.type}__id__${r.diffId}`;
       recordMap.set(idKey, r);
     }
 
@@ -144,7 +142,7 @@ function buildMergedCacheBinaryObject(sourceNew, sourceOld, mergedRecords) {
       const offKey = `${officialSong.title.toLowerCase()}__${r.type}__${r.difficulty}`;
       if (!recordMap.has(offKey)) recordMap.set(offKey, r);
       if (r.diffId !== undefined && r.diffId !== null) {
-        const offIdKey = `${officialSong.title.toLowerCase()}__id__${r.diffId}`;
+        const offIdKey = `${officialSong.title.toLowerCase()}__${r.type}__id__${r.diffId}`;
         if (!recordMap.has(offIdKey)) recordMap.set(offIdKey, r);
       }
     }
@@ -156,6 +154,8 @@ function buildMergedCacheBinaryObject(sourceNew, sourceOld, mergedRecords) {
       if (!songNode || typeof songNode !== 'object') continue;
       const rawTitle = songNode.title || songKey;
       const clean = sanitizeTitle(rawTitle);
+      const officialSong = findOfficialSong(rawTitle);
+      const canonicalTitle = officialSong ? officialSong.title : clean;
 
       const diffList = songNode.difficulties;
       if (Array.isArray(diffList)) {
@@ -164,22 +164,21 @@ function buildMergedCacheBinaryObject(sourceNew, sourceOld, mergedRecords) {
           const diff = (diffNode.alias && normalizeDifficulty(diffNode.alias)) || 
                        normalizeDifficulty(diffNode.id) || 
                        inferDifficultyFromLevel(diffNode.value);
-          const type = normalizeType(null, rawTitle);
+          const type = normalizeType(
+            diffNode.type || songNode.type,
+            [songNode.path, rawTitle].filter(Boolean).join(' '),
+            { level: diffNode.value, notes: diffNode.stats?.totalNotesCount, difficulty: diff, songTitle: canonicalTitle }
+          );
 
-          const idKey = diffNode.id !== undefined && diffNode.id !== null ? `${clean.toLowerCase()}__id__${diffNode.id}` : null;
-          const key = `${clean.toLowerCase()}__${type}__${diff}`;
-          const altKey = `${clean.toLowerCase()}__${diff}`;
-          const officialSong = findOfficialSong(rawTitle);
-          const offKey = officialSong ? `${officialSong.title.toLowerCase()}__${type}__${diff}` : null;
-          const offIdKey = officialSong && diffNode.id !== undefined && diffNode.id !== null ? `${officialSong.title.toLowerCase()}__id__${diffNode.id}` : null;
+          const idKey = diffNode.id !== undefined && diffNode.id !== null ? `${canonicalTitle.toLowerCase()}__${type}__id__${diffNode.id}` : null;
+          const cleanIdKey = diffNode.id !== undefined && diffNode.id !== null ? `${clean.toLowerCase()}__${type}__id__${diffNode.id}` : null;
+          const key = `${canonicalTitle.toLowerCase()}__${type}__${diff}`;
+          const cleanKey = `${clean.toLowerCase()}__${type}__${diff}`;
 
-          let mergedRec = (idKey && recordMap.get(idKey)) || (offIdKey && recordMap.get(offIdKey));
-          if (!mergedRec) {
-            const fallback = recordMap.get(key) || (offKey && recordMap.get(offKey)) || recordMap.get(altKey);
-            if (fallback && (fallback.diffId === undefined || fallback.diffId === null || fallback.diffId === diffNode.id)) {
-              mergedRec = fallback;
-            }
-          }
+          let mergedRec = (idKey && recordMap.get(idKey)) || 
+                          (cleanIdKey && recordMap.get(cleanIdKey)) || 
+                          recordMap.get(key) || 
+                          recordMap.get(cleanKey);
           if (mergedRec && diffNode.stats && typeof diffNode.stats === 'object') {
             const currentRate = normalizeAchievement(diffNode.stats.achievementRate || 0);
             if (mergedRec.achievementRate >= currentRate) {
@@ -256,11 +255,10 @@ function buildMergedCacheBinaryObject(sourceNew, sourceOld, mergedRecords) {
       const type = currentType || 'dx';
 
       const key = `${clean.toLowerCase()}__${type}__${diff}`;
-      const altKey = `${clean.toLowerCase()}__${diff}`;
       const officialSong = findOfficialSong(title);
       const offKey = officialSong ? `${officialSong.title.toLowerCase()}__${type}__${diff}` : null;
 
-      const mergedRec = recordMap.get(key) || (offKey && recordMap.get(offKey)) || recordMap.get(altKey);
+      const mergedRec = recordMap.get(key) || (offKey && recordMap.get(offKey));
 
       if (mergedRec) {
         const currentVal = node[scoreKey];
@@ -389,16 +387,12 @@ export function smartMergeScores(sourceOld, sourceNew, options = {}) {
   const oldMap = new Map();
   for (const r of oldRecords) {
     const key = `${r.title.toLowerCase()}__${r.type}__${r.difficulty}`;
-    const altKey = `${r.title.toLowerCase()}__${r.difficulty}`;
     const officialSong = findOfficialSong(r.rawTitle || r.title);
     const offKey = officialSong ? `${officialSong.title.toLowerCase()}__${r.type}__${r.difficulty}` : null;
 
     const existing = oldMap.get(key);
     if (!existing || r.achievementRate > existing.achievementRate) {
       oldMap.set(key, r);
-      if (altKey && (!oldMap.has(altKey) || r.achievementRate > oldMap.get(altKey).achievementRate)) {
-        oldMap.set(altKey, r);
-      }
       if (offKey && (!oldMap.has(offKey) || r.achievementRate > oldMap.get(offKey).achievementRate)) {
         oldMap.set(offKey, r);
       }
@@ -409,16 +403,12 @@ export function smartMergeScores(sourceOld, sourceNew, options = {}) {
   const newMap = new Map();
   for (const r of newRecords) {
     const key = `${r.title.toLowerCase()}__${r.type}__${r.difficulty}`;
-    const altKey = `${r.title.toLowerCase()}__${r.difficulty}`;
     const officialSong = findOfficialSong(r.rawTitle || r.title);
     const offKey = officialSong ? `${officialSong.title.toLowerCase()}__${r.type}__${r.difficulty}` : null;
 
     const existing = newMap.get(key);
     if (!existing || r.achievementRate > existing.achievementRate) {
       newMap.set(key, r);
-      if (altKey && (!newMap.has(altKey) || r.achievementRate > newMap.get(altKey).achievementRate)) {
-        newMap.set(altKey, r);
-      }
       if (offKey && (!newMap.has(offKey) || r.achievementRate > newMap.get(offKey).achievementRate)) {
         newMap.set(offKey, r);
       }
@@ -452,12 +442,11 @@ export function smartMergeScores(sourceOld, sourceNew, options = {}) {
   let newOnlyCount = 0;
 
   for (const [key, meta] of canonicalChartMap.entries()) {
-    const altKey = `${meta.title.toLowerCase()}__${meta.difficulty}`;
     const officialSong = findOfficialSong(meta.rawTitle || meta.title);
     const offKey = officialSong ? `${officialSong.title.toLowerCase()}__${meta.type}__${meta.difficulty}` : null;
 
-    const rOld = oldMap.get(key) || (offKey && oldMap.get(offKey)) || oldMap.get(altKey);
-    const rNew = newMap.get(key) || (offKey && newMap.get(offKey)) || newMap.get(altKey);
+    const rOld = oldMap.get(key) || (offKey && oldMap.get(offKey));
+    const rNew = newMap.get(key) || (offKey && newMap.get(offKey));
 
     if (rOld && rNew) {
       matchedCount++;

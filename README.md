@@ -41,11 +41,16 @@ A zero-backend, client-side Progressive Web App (PWA) that decodes AstroDX (`>= 
 ## 📁 Where to Find Your `cache` File
 
 ### iOS / iPadOS (Safari / Files App)
-1. Open the native **Files** app on your iPad or iPhone.
-2. Tap **Browse** &rarr; **On My iPad** (or **On My iPhone**).
-3. Open the **AstroDX** folder.
-4. Locate the file named `cache` (no file extension).
-5. Drag and drop it into this web app, or tap **Select Cache File**.
+* **Option A — ⚡ 1-Tap Shortcut (Zero-Browsing)**:
+  1. Set up the 4-step **iOS Shortcut** (tap **"iOS 1-Tap Sync"** inside the app for instructions).
+  2. Add it to your Home Screen.
+  3. Tap the icon anytime: it automatically reads `AstroDX/cache`, encodes it, and opens the app with your scores parsed instantly!
+* **Option B — Manual Selection**:
+  1. Open the native **Files** app on your iPad or iPhone.
+  2. Tap **Browse** &rarr; **On My iPad** (or **On My iPhone**).
+  3. Open the **AstroDX** folder.
+  4. Locate the file named `cache` (no file extension).
+  5. Drag and drop it into this web app, or tap **Select Cache File**.
 
 ### Android
 1. Open your preferred file explorer (e.g., **Files by Google**, **MT Manager**, or **ZArchiver**).

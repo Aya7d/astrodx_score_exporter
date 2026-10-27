@@ -20,3 +20,11 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Agent / AI assistant configs and skills
+.agents/
+skills/
+.gemini/
+.claude/
+.cursor/
+scratch/
+

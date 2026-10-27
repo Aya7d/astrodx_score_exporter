@@ -6,7 +6,7 @@
  * Supports all maimai DX versions & regions (Global, International, Japan, and classic/legacy) with chart metadata & level overrides.
  */
 
-import { inferDifficultyFromLevel } from './extractor.js';
+import { inferDifficultyFromLevel, normalizeType } from './extractor.js';
 
 // In-memory song database cache
 let maimaiDatabase = null;
@@ -93,8 +93,8 @@ export function cleanSongTitle(rawTitle) {
 
   // Strip charter/utage/genre bracket tags: e.g. [DX], [STD], [音], [ST], [宴], [Utage], [13+?], etc.
   title = title.replace(/\[(dx|std|音|st|宴|utage|1\d\+?|.*?)\]/gi, '');
-  title = title.replace(/\((dx|std|st)\)/gi, '');
-  title = title.replace(/でらっくす譜面/g, '');
+  title = title.replace(/\((dx|std|st|deluxe|standard)\)/gi, '');
+  title = title.replace(/でらっくす譜面|でらっくす/g, '');
 
   // Strip leading track numbers: "01. ", "001 - ", etc.
   title = title.replace(/^\d+[\.\-_\s]+\s*/, '');
@@ -181,8 +181,8 @@ export function findBestSheet(song, record, options = {}) {
   const targetNotes = stats.totalNotesCount || record.totalNotesCount || 0;
 
   const nameHint = String(record.song_name || record.rawTitle || record.title || '');
-  const isStdHint = /\[std\]|\(std\)/i.test(nameHint);
-  const isDxHint = /\[dx\]|\(dx\)|でらっくす/i.test(nameHint);
+  const isStdHint = /\[(std|st|standard)\]|\((std|st|standard)\)|\b(std|st|standard)\b/i.test(nameHint);
+  const isDxHint = /\[(dx|deluxe)\]|\((dx|deluxe)\)|でらっくす|\b(dx|deluxe)\b/i.test(nameHint);
 
   const hasExplicitDiff = record.hasExplicitDifficulty !== false && record.hasExplicitDifficulty !== undefined;
   const diffHint = hasExplicitDiff ? normalizeDifficultyName(record.difficulty || record.diffName || record.alias) : null;
@@ -352,13 +352,13 @@ export function convertToDXRating(records, options = {}) {
         sheetId = `${officialSong.title}__dxrt__${bestSheet.type}__dxrt__${bestSheet.diff}`;
       } else {
         const fallbackDiff = normalizeDifficultyName(item.difficulty) || inferDifficultyFromLevel(item.level) || 'master';
-        const fallbackType = /\[std\]/i.test(rawName) ? 'std' : (item.type || 'dx');
+        const fallbackType = normalizeType(item.type, rawName, { level: item.level, difficulty: fallbackDiff, songTitle: officialSong.title });
         sheetId = `${officialSong.title}__dxrt__${fallbackType}__dxrt__${fallbackDiff}`;
       }
     } else {
       // Unmatched or community custom chart: preserve clean title and chart clues
       const fallbackDiff = normalizeDifficultyName(item.difficulty) || inferDifficultyFromLevel(item.level) || 'master';
-      const fallbackType = /\[std\]/i.test(rawName) ? 'std' : (item.type || 'dx');
+      const fallbackType = normalizeType(item.type, rawName, { level: item.level, difficulty: fallbackDiff, songTitle: clean });
       sheetId = `${clean}__dxrt__${fallbackType}__dxrt__${fallbackDiff}`;
     }
 

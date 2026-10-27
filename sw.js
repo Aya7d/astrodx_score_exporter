@@ -1,4 +1,4 @@
-const CACHE_NAME = 'astrodx-exporter-v9';
+const CACHE_NAME = 'astrodx-exporter-v11';
 
 const ASSETS_TO_CACHE = [
   './',

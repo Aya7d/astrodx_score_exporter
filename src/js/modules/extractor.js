@@ -4,16 +4,33 @@
  * normalizing titles, difficulties, types, and achievement percentages.
  */
 
+import { getMaimaiDB, findOfficialSong, cleanSongTitle } from './converters.js';
+
 /**
- * Cleans charter / folder prefixes for DXRating song title matching.
+ * Cleans charter / folder prefixes and tags for DXRating song title matching.
+ * Strips [DX], [STD], [ST], (ST), (STD), (DX), Utage tags, leading numbers, etc.
  */
 export function sanitizeTitle(rawTitle) {
   if (!rawTitle) return '';
   let title = String(rawTitle).trim();
-  // Strip common charter prefixes: [DX], [STD], [宴], [Utage], [14+], etc.
-  title = title.replace(/^\[(DX|STD|宴|Utage|\d+\+?|\w+)\]\s*/i, '');
+
+  // Unicode NFKC normalization
+  if (typeof title.normalize === 'function') {
+    title = title.normalize('NFKC');
+  }
+
+  title = title.replace(/[“”]/g, '"').replace(/[‘’]/g, "'");
+
+  // Strip charter/utage/genre bracket tags and prefixes/suffixes:
+  // e.g. [DX], [STD], [音], [ST], [宴], [Utage], [13+?], (ST), (STD), (DX), (Deluxe), etc.
+  title = title.replace(/^\[(DX|STD|音|ST|宴|Utage|\d+\+?|\w+)\]\s*/i, '');
+  title = title.replace(/\s*\[(dx|std|音|st|宴|utage|1\d\+?|.*?)\]/gi, '');
+  title = title.replace(/\s*\((dx|std|st|deluxe|standard)\)/gi, '');
+  title = title.replace(/でらっくす譜面|でらっくす/g, '');
+
   // Strip leading track numbers: e.g. "01. ", "001 - ", "1 "
   title = title.replace(/^\d+[\.\-_\s]+\s*/, '');
+
   return title.trim();
 }
 
@@ -58,15 +75,68 @@ export function inferDifficultyFromLevel(level) {
 
 /**
  * Normalizes chart type: 'std' or 'dx'
+ * Utilizes explicit type, title/path hints ([ST], (ST), [STD], (STD)),
+ * and maimai database sheet disambiguation (level/notes count matching).
  */
-export function normalizeType(val, titleContext) {
+export function normalizeType(val, titleContext, chartMeta = {}) {
   if (val) {
     const s = String(val).toLowerCase().trim();
-    if (s === 'std' || s === 'standard' || s === 'sd') return 'std';
+    if (s === 'std' || s === 'standard' || s === 'sd' || s === 'st') return 'std';
     if (s === 'dx' || s === 'deluxe') return 'dx';
   }
-  // Check if title has [STD] or [DX]
-  if (titleContext && /\[std\]/i.test(titleContext)) return 'std';
+
+  // Check titleContext (which can be rawTitle, folder/path, etc.)
+  if (titleContext) {
+    const ctx = String(titleContext);
+    if (/\[(std|st|standard)\]|\((std|st|standard)\)|\b(std|st|standard)\b/i.test(ctx)) {
+      return 'std';
+    }
+    if (/\[(dx|deluxe)\]|\((dx|deluxe)\)|でらっくす|\b(dx|deluxe)\b/i.test(ctx)) {
+      return 'dx';
+    }
+  }
+
+  // Check chartMeta against official maimai database
+  const db = getMaimaiDB();
+  const songName = chartMeta.songTitle || (titleContext ? cleanSongTitle(titleContext) : null);
+  if (songName && db && Object.keys(db).length > 0) {
+    const song = findOfficialSong(songName, db);
+    if (song && Array.isArray(song.sheets) && song.sheets.length > 0) {
+      const types = new Set(song.sheets.map(s => s.type));
+      if (types.has('std') && !types.has('dx')) return 'std';
+      if (types.has('dx') && !types.has('std')) return 'dx';
+
+      // Song has both DX and STD! Disambiguate by difficulty + level or note count
+      const diff = chartMeta.diff || chartMeta.difficulty;
+      const lvl = chartMeta.level ? String(chartMeta.level).trim() : null;
+      const notes = chartMeta.notes || chartMeta.totalNotesCount || 0;
+
+      if (diff) {
+        const matchingSheets = song.sheets.filter(s => s.diff === diff);
+        if (matchingSheets.length > 1) {
+          if (lvl) {
+            const exact = matchingSheets.find(s => s.level === lvl || s.intlLevel === lvl);
+            if (exact) return exact.type;
+          }
+          if (notes > 0) {
+            let bestSheet = null;
+            let minDiff = 9999;
+            for (const s of matchingSheets) {
+              const d1 = Math.abs((s.notes || 0) - notes);
+              const d2 = s.intlNotes ? Math.abs(s.intlNotes - notes) : d1;
+              const d = Math.min(d1, d2);
+              if (d < minDiff) {
+                minDiff = d;
+                bestSheet = s;
+              }
+            }
+            if (bestSheet && minDiff <= 5) return bestSheet.type;
+          }
+        }
+      }
+    }
+  }
+
   return 'dx'; // AstroDX / maimai DX default
 }
 
@@ -108,6 +178,11 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
       const parts = String(item.sheetId).split('__dxrt__');
       const rawTitle = parts[0] || 'Unknown Track';
       const clean = options.cleanTitle ? sanitizeTitle(rawTitle) : rawTitle;
+      let canonicalTitle = clean;
+      if (options.cleanTitle) {
+        const official = findOfficialSong(rawTitle) || findOfficialSong(clean);
+        if (official && official.title) canonicalTitle = official.title;
+      }
       const type = normalizeType(parts[1], rawTitle);
       const diff = normalizeDifficulty(parts[2]) || 'master';
       const normRate = normalizeAchievement(item.achievementRate !== undefined ? item.achievementRate : item.achievement);
@@ -118,7 +193,7 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
       else if (item.comboFlag === 'fc') clearType = 2;
       else if (normRate >= 80) clearType = 1;
 
-      const sheetId = `${clean}__dxrt__${type}__dxrt__${diff}`;
+      const sheetId = `${canonicalTitle}__dxrt__${type}__dxrt__${diff}`;
       const stats = {
         clearType,
         achievementRate: normRate,
@@ -131,7 +206,7 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
       records.push({
         sheetId,
         rawTitle,
-        title: clean,
+        title: canonicalTitle,
         song_name: rawTitle,
         type,
         difficulty: diff,
@@ -158,6 +233,11 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
       if (!item || typeof item !== 'object') continue;
       const rawTitle = item.song_name || item.songName || item.title || 'Unknown Track';
       const clean = options.cleanTitle ? sanitizeTitle(rawTitle) : rawTitle;
+      let canonicalTitle = clean;
+      if (options.cleanTitle) {
+        const official = findOfficialSong(rawTitle) || findOfficialSong(clean);
+        if (official && official.title) canonicalTitle = official.title;
+      }
       const normRate = normalizeAchievement(item.achievement !== undefined ? item.achievement : (item.achievementRate !== undefined ? item.achievementRate : item.score));
       if (normRate <= 0) continue;
 
@@ -167,9 +247,14 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
       const rawDiff = hasExplicitDifficulty ? normalizeDifficulty(item.difficulty || item.diff || item.alias) : null;
       const level = item.level !== undefined ? String(item.level) : '';
       const diff = rawDiff || inferDifficultyFromLevel(level);
-      const type = normalizeType(item.type, rawTitle);
-      const sheetId = `${clean}__dxrt__${type}__dxrt__${diff}`;
       const stats = item.stats || item;
+      const type = normalizeType(item.type, rawTitle, {
+        level,
+        notes: stats.totalNotesCount,
+        difficulty: diff,
+        songTitle: canonicalTitle
+      });
+      const sheetId = `${canonicalTitle}__dxrt__${type}__dxrt__${diff}`;
       const clearType = stats.clearType !== undefined ? stats.clearType : (item.clearType !== undefined ? item.clearType : (normRate >= 80 ? 1 : 0));
       const comboFlag = item.comboFlag || (stats.isAllPerfect || clearType >= 4 ? 'ap' : (stats.isFullCombo || clearType >= 2 ? 'fc' : null));
       const syncFlag = item.syncFlag || (stats.sync ? 'sync' : null);
@@ -177,7 +262,7 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
       records.push({
         sheetId,
         rawTitle,
-        title: clean,
+        title: canonicalTitle,
         song_name: rawTitle,
         type,
         difficulty: diff,
@@ -220,11 +305,18 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
       currentTitle = node[titleKey].trim();
     }
 
-    // Detect chart type
+    // Detect path / folder clues
+    let currentPath = context.pathName;
+    const pathKey = lowerKeyMap['path'] || lowerKeyMap['folder'] || lowerKeyMap['directory'];
+    if (pathKey && typeof node[pathKey] === 'string' && node[pathKey].trim()) {
+      currentPath = node[pathKey].trim();
+    }
+
+    // Detect chart type clue at current level
     let currentType = context.type;
     const typeKey = lowerKeyMap['type'] || lowerKeyMap['charttype'] || lowerKeyMap['gametype'];
     if (typeKey && node[typeKey]) {
-      currentType = normalizeType(node[typeKey], currentTitle);
+      currentType = normalizeType(node[typeKey], [currentTitle, currentPath].filter(Boolean).join(' '));
     }
 
     // Detect difficulty clue (supports alias, difficulty, diff, levelindex, id)
@@ -278,15 +370,34 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
 
       if (normRate > 0) {
         // Determine best title
-        let title = currentTitle || getBasename(context.parentKey) || 'Unknown Track';
+        let title = currentTitle || getBasename(currentPath) || getBasename(context.parentKey) || 'Unknown Track';
         const clean = options.cleanTitle ? sanitizeTitle(title) : title;
+        let canonicalTitle = clean;
+        if (options.cleanTitle) {
+          const official = findOfficialSong(title) || findOfficialSong(clean);
+          if (official && official.title) {
+            canonicalTitle = official.title;
+          }
+        }
+
         const hasExplicitDifficulty = currentDiff !== null && currentDiff !== undefined;
         const diff = currentDiff || inferDifficultyFromLevel(currentLevel);
-        const type = currentType || normalizeType(null, title);
+        const stats = node.stats || node;
+
+        const titleContext = [title, currentPath, context.parentKey].filter(Boolean).join(' ');
+        const type = currentType || normalizeType(
+          node.type,
+          titleContext,
+          {
+            level: currentLevel,
+            notes: stats.totalNotesCount,
+            difficulty: diff,
+            songTitle: canonicalTitle
+          }
+        );
 
         // Unique sheetId for DXRating.net
-        const sheetId = `${clean}__dxrt__${type}__dxrt__${diff}`;
-        const stats = node.stats || node;
+        const sheetId = `${canonicalTitle}__dxrt__${type}__dxrt__${diff}`;
         const clearType = stats.clearType !== undefined ? stats.clearType : (node.clearType !== undefined ? node.clearType : (normRate >= 80 ? 1 : 0));
         const comboFlag = node.comboFlag || (stats.isAllPerfect || clearType >= 4 ? 'ap' : (stats.isFullCombo || clearType >= 2 ? 'fc' : null));
         const syncFlag = node.syncFlag || (stats.sync ? 'sync' : null);
@@ -296,7 +407,7 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
         records.push({
           sheetId,
           rawTitle: title,
-          title: clean,
+          title: canonicalTitle,
           type,
           difficulty: diff,
           diffId,
@@ -337,6 +448,7 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
         }
         traverse(item, {
           title: currentTitle,
+          pathName: currentPath,
           type: currentType,
           difficulty: itemDiff,
           level: itemLevel,
@@ -355,9 +467,11 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
           }
 
           const childDiffId = node.id !== undefined ? node.id : context.diffId;
+          const childPath = (node[k] && typeof node[k] === 'object' && node[k].path) ? node[k].path : currentPath;
 
           traverse(node[k], {
             title: currentTitle || (isNaN(k) ? getBasename(k) : null),
+            pathName: childPath,
             type: currentType,
             difficulty: childDiff,
             level: currentLevel,
@@ -372,6 +486,7 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
 
   traverse(cacheData, {
     title: null,
+    pathName: null,
     type: null,
     difficulty: null,
     level: '',

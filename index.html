@@ -58,6 +58,13 @@
           <button class="guide-tab" data-guide="android" id="tabGuideAndroid" type="button">Android</button>
         </div>
         <div class="guide-content active" id="guideIos">
+          <div class="shortcut-promo-banner">
+            <div class="promo-info">
+              <span class="badge-shortcut">⚡ 1-Tap iOS Sync</span>
+              <p>Prefer not browsing folders manually? Use the <strong>Apple Shortcut</strong> to extract with 1 tap from your Home Screen.</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" id="btnIosGuideShortcut">Setup Shortcut</button>
+          </div>
           <ol class="guide-steps">
             <li>Open the native <strong>Files</strong> app on your iPad or iPhone.</li>
             <li>Navigate to: <code>On My iPad (or iPhone) &rarr; AstroDX &rarr; cache</code></li>
@@ -121,6 +128,20 @@
                 <line x1="12" y1="3" x2="12" y2="15"></line>
               </svg>
               Select Cache File
+            </button>
+            <button type="button" class="btn btn-secondary" id="btnIosShortcutModal" title="Setup iOS 1-Tap Shortcut">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+              iOS 1-Tap Sync
+            </button>
+            <button type="button" class="btn btn-secondary" id="btnPasteClipboard" title="Paste & extract cache directly from clipboard">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+              </svg>
+              Paste from Clipboard
             </button>
           </div>
         </div>
@@ -542,7 +563,8 @@
                   <thead>
                     <tr>
                       <th>Song Title</th>
-                      <th>Diff</th>
+                      <th style="width: 80px;">Type</th>
+                      <th style="width: 100px;">Diff</th>
                       <th>Old Device</th>
                       <th>New Device</th>
                       <th>Merged (Highest)</th>
@@ -638,6 +660,103 @@
       </div>
     </div>
 
+    <!-- Modal: iOS 1-Tap Shortcut Setup Guide -->
+    <div id="iosShortcutModal" class="modal-overlay" hidden>
+      <div class="modal-card modal-card-wide">
+        <div class="modal-header">
+          <div class="modal-title-with-badge">
+            <div class="header-icon-box sm">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <div>
+              <h3>iOS 1-Tap Auto-Sync Setup</h3>
+              <p class="modal-sub">Extract your AstroDX scores directly with 1 tap from your Home Screen</p>
+            </div>
+          </div>
+          <button type="button" class="btn-close" id="btnCloseIosShortcutModal">&times;</button>
+        </div>
+
+        <div class="modal-body-content">
+          <div class="shortcut-flow-summary">
+            <p>On iPad or iPhone, Apple's built-in <strong>Shortcuts (快捷指令)</strong> app has permission to read the AstroDX folder. By creating a 4-step shortcut on your Home Screen, you never have to manually browse the Files app again!</p>
+          </div>
+
+          <div class="shortcut-steps-container">
+            <div class="shortcut-step">
+              <div class="step-num">1</div>
+              <div class="step-detail">
+                <h4>Open the "Shortcuts" (快捷指令) App</h4>
+                <p>Tap <strong>+</strong> to create a new shortcut, and name it <strong>"Sync AstroDX"</strong>.</p>
+              </div>
+            </div>
+
+            <div class="shortcut-step">
+              <div class="step-num">2</div>
+              <div class="step-detail">
+                <h4>Add 4 Simple Actions in Order</h4>
+                <div class="action-block-list">
+                  <div class="action-block">
+                    <span class="action-badge">Action 1</span>
+                    <div>
+                      <strong>File (文件)</strong> &rarr; Select <code>On My iPad/iPhone &rarr; AstroDX &rarr; cache</code>
+                      <br><small class="text-muted">(Toggle off "Show Document Picker")</small>
+                    </div>
+                  </div>
+                  <div class="action-block">
+                    <span class="action-badge">Action 2</span>
+                    <div>
+                      <strong>Base64 Encode (Base64 编码)</strong> &rarr; Input: <code>File</code>, Line Breaks: <code>None</code>
+                    </div>
+                  </div>
+                  <div class="action-block">
+                    <span class="action-badge">Action 3</span>
+                    <div>
+                      <strong>URL (网址)</strong> &rarr; Set to:
+                      <div class="url-copy-box">
+                        <code id="shortcutTargetUrlPreview">https://...#b64=</code>
+                        <button type="button" class="btn btn-sm btn-outline" id="btnCopyShortcutUrl">Copy Base URL</button>
+                      </div>
+                      <small class="text-muted">In the URL box, tap right after <code>#b64=</code> and insert the <strong>[Base64 Encoded Text]</strong> variable from Action 2.</small>
+                    </div>
+                  </div>
+                  <div class="action-block">
+                    <span class="action-badge">Action 4</span>
+                    <div>
+                      <strong>Open URLs (打开 URL)</strong> &rarr; Input: <code>URL</code> from Action 3
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="shortcut-step">
+              <div class="step-num">3</div>
+              <div class="step-detail">
+                <h4>Add to Home Screen &amp; Tap to Run!</h4>
+                <p>Tap the share icon in Shortcuts &rarr; <strong>"Add to Home Screen"</strong>. Whenever you want to export your scores, just tap the icon!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="shortcut-tip-box">
+            <span class="tip-icon">💡</span>
+            <div>
+              <strong>Clipboard Backup (For Very Large Databases):</strong>
+              <p>You can also add a <strong>"Copy to Clipboard"</strong> action in your shortcut, and click <strong>"Paste from Clipboard"</strong> here to load instantly without URL length limitations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="btnTestClipboardModal">Paste &amp; Test Now</button>
+          <button type="button" class="btn btn-primary" id="btnDoneIosShortcut">Got it!</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Toast Notification Container -->
     <div id="toastContainer" class="toast-container" aria-live="polite"></div>
 
@@ -649,6 +768,6 @@
   </div>
 
   <!-- Main Modular Application Script -->
-  <script type="module" src="src/js/main.js?v=7"></script>
+  <script type="module" src="src/js/main.js?v=8"></script>
 </body>
 </html>
