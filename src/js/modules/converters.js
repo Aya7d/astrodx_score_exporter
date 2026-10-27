@@ -291,15 +291,12 @@ export function deriveComboFlag(clearType, stats = {}) {
 }
 
 /**
- * Extracts syncFlag ('sync', 'fs', or null) for DXRating export.
+ * Extracts syncFlag for DXRating export.
+ * Note: AstroDX is a single-player game, so AstroDX records never have sync.
+ * Always returns null to ensure no sync flag is generated or retained.
  */
 export function deriveSyncFlag(clearType, stats = {}, options = {}) {
-  if (options.defaultSyncFlag !== undefined) {
-    return options.defaultSyncFlag;
-  }
-  const ct = Number(clearType);
-  // In example_dxrating_export.json, cleared plays (clearType >= 2) usually mark 'sync'
-  if (ct >= 2) return 'sync';
+  // AstroDX is a single-player game; records should not have sync
   return null;
 }
 
@@ -307,7 +304,7 @@ export function deriveSyncFlag(clearType, stats = {}, options = {}) {
  * Converts records into DXRating format matching example_dxrating_export.json.
  *
  * @param {Array} records - Array of played records (either from extractor.js or cache_decrypted.json)
- * @param {Object} options - { server: 'intl' | 'jp', defaultSyncFlag, cleanTitle }
+ * @param {Object} options - { server: 'intl' | 'jp', cleanTitle }
  * @returns {Array} Converted deduplicated records in DXRating schema
  */
 export function convertToDXRating(records, options = {}) {
@@ -340,7 +337,7 @@ export function convertToDXRating(records, options = {}) {
                       (item.originalNode && item.originalNode.clearType !== undefined ? item.originalNode.clearType : 0));
 
     const comboFlag = deriveComboFlag(clearType, stats);
-    const syncFlag = deriveSyncFlag(clearType, stats, options);
+    const syncFlag = null; // AstroDX is single-player: never has sync
 
     // SheetId matching against official database
     let sheetId = null;
@@ -369,7 +366,7 @@ export function convertToDXRating(records, options = {}) {
         sheetId,
         achievementRate: achRate,
         comboFlag,
-        syncFlag
+        syncFlag: null
       });
     } else {
       let bestCombo = existing.comboFlag;
@@ -380,7 +377,7 @@ export function convertToDXRating(records, options = {}) {
         sheetId,
         achievementRate: Math.max(existing.achievementRate, achRate),
         comboFlag: bestCombo,
-        syncFlag: existing.syncFlag || syncFlag
+        syncFlag: null
       });
     }
   }
@@ -391,11 +388,15 @@ export function convertToDXRating(records, options = {}) {
 /**
  * Converts records into discrete Played Scores Cached JSON matching cache_decrypted.json.
  * Retains song_name, difficulty, type, level, achievement, and detailed stats (dxScore, judgments).
+ * AstroDX is a single-player game, so any sync property is wiped out.
  */
 export function convertToCachedScores(records) {
   if (!records || !Array.isArray(records)) return [];
   return records.map((r) => {
-    const statsObj = (r.originalNode && r.originalNode.stats) ? r.originalNode.stats : (r.originalNode || {});
+    const rawStats = (r.originalNode && r.originalNode.stats) ? r.originalNode.stats : (r.originalNode || {});
+    const statsObj = { ...rawStats };
+    delete statsObj.sync;
+    delete statsObj.syncFlag;
     return {
       song_name: r.rawTitle || r.title,
       difficulty: r.difficulty,

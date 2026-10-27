@@ -5,7 +5,7 @@
  */
 
 import { calculateGrade } from './grade.js';
-import { deriveComboFlag, deriveSyncFlag } from './converters.js';
+import { deriveComboFlag } from './converters.js';
 
 export function escapeHtml(str) {
   return String(str)
@@ -135,16 +135,12 @@ export function renderScoreTable(state, onTableChange) {
                       (rec.clearType !== undefined ? rec.clearType : 
                       (rec.originalNode && rec.originalNode.clearType !== undefined ? rec.originalNode.clearType : 0));
     const combo = deriveComboFlag(clearType, stats);
-    const sync = deriveSyncFlag(clearType, stats);
 
     let flagsHtml = '';
     if (combo === 'ap') {
       flagsHtml += '<span class="badge-flag badge-ap" title="All Perfect">AP</span> ';
     } else if (combo === 'fc') {
       flagsHtml += '<span class="badge-flag badge-fc" title="Full Combo">FC</span> ';
-    }
-    if (sync === 'sync') {
-      flagsHtml += '<span class="badge-flag badge-sync" title="Sync Clear">SYNC</span>';
     }
     if (!flagsHtml) {
       flagsHtml = '<span style="color: var(--text-dim); font-size: 0.8125rem;">—</span>';

@@ -126,13 +126,19 @@ export function exportRawDecodedJSON(records, onToast) {
   }
 
   // Format only played songs with exact requested keys:
-  // song_name, level, achievement, and stats
-  const playedOnly = records.map((r) => ({
-    song_name: r.rawTitle || r.title,
-    level: r.level || '',
-    achievement: r.achievementRate,
-    stats: (r.originalNode && r.originalNode.stats) ? r.originalNode.stats : (r.originalNode || {})
-  }));
+  // song_name, level, achievement, and stats (wiping out any sync fields)
+  const playedOnly = records.map((r) => {
+    const rawStats = (r.originalNode && r.originalNode.stats) ? r.originalNode.stats : (r.originalNode || {});
+    const stats = { ...rawStats };
+    delete stats.sync;
+    delete stats.syncFlag;
+    return {
+      song_name: r.rawTitle || r.title,
+      level: r.level || '',
+      achievement: r.achievementRate,
+      stats
+    };
+  });
 
   const jsonStr = JSON.stringify(playedOnly, null, 2);
   triggerDownload(jsonStr, 'cache_decrypted.json', 'application/json');

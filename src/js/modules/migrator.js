@@ -35,15 +35,12 @@ function getBestComboFlag(flagA, flagB) {
 }
 
 /**
- * Resolves the better sync flag: 'fsd' > 'fs' > 'sync' > null
+ * Resolves the better sync flag.
+ * Note: AstroDX is a single-player game, so records never have sync.
+ * Always returns null to ensure any incoming sync flag is wiped out.
  */
-function getBestSyncFlag(syncA, syncB) {
-  const rank = { 'fsd': 3, 'fs': 2, 'sync': 1 };
-  const rA = rank[String(syncA).toLowerCase()] || 0;
-  const rB = rank[String(syncB).toLowerCase()] || 0;
-  if (rA > rB) return syncA;
-  if (rB > rA) return syncB;
-  return syncA || syncB || null;
+function getBestSyncFlag() {
+  return null;
 }
 
 /**
@@ -78,19 +75,13 @@ function detectCacheScoreScale(cacheObj) {
  * Builds the merged AstroDX Decoded JSON array format.
  */
 export function buildMergedDecodedJSON(mergedRecords) {
-  return mergedRecords.map(r => ({
-    song_name: r.rawTitle || r.title,
-    type: r.type,
-    difficulty: r.difficulty,
-    level: r.level || '',
-    achievement: r.achievementRate,
-    stats: {
+  return mergedRecords.map(r => {
+    const s = {
       clearType: r.clearType || 0,
       achievementRate: r.achievementRate,
       dxScore: (r.stats && r.stats.dxScore) || 0,
       maxCombo: (r.stats && r.stats.maxCombo) || 0,
       combo: r.comboFlag || null,
-      sync: r.syncFlag || null,
       isAllPerfect: r.comboFlag === 'ap',
       isFullCombo: r.comboFlag === 'fc' || r.comboFlag === 'ap',
       ...(r.stats && r.stats.criticalCount !== undefined ? {
@@ -100,8 +91,18 @@ export function buildMergedDecodedJSON(mergedRecords) {
         goodCount: r.stats.goodCount,
         totalNotesCount: r.stats.totalNotesCount
       } : {})
-    }
-  }));
+    };
+    delete s.sync;
+    delete s.syncFlag;
+    return {
+      song_name: r.rawTitle || r.title,
+      type: r.type,
+      difficulty: r.difficulty,
+      level: r.level || '',
+      achievement: r.achievementRate,
+      stats: s
+    };
+  });
 }
 
 /**
@@ -207,6 +208,8 @@ function buildMergedCacheBinaryObject(sourceNew, sourceOld, mergedRecords) {
                 diffNode.stats.greatCount = mergedRec.stats.greatCount;
                 diffNode.stats.goodCount = mergedRec.stats.goodCount;
               }
+              delete diffNode.stats.sync;
+              delete diffNode.stats.syncFlag;
             }
           }
         }
@@ -316,6 +319,10 @@ function buildMergedCacheBinaryObject(sourceNew, sourceOld, mergedRecords) {
               node.stats.goodCount = mergedRec.stats.goodCount;
               if (mergedRec.stats.totalNotesCount) node.stats.totalNotesCount = mergedRec.stats.totalNotesCount;
             }
+            delete node.stats.sync;
+            delete node.stats.syncFlag;
+            delete node.sync;
+            delete node.syncFlag;
           }
         }
       }
@@ -468,7 +475,6 @@ export function smartMergeScores(sourceOld, sourceNew, options = {}) {
       }
 
       const bestCombo = getBestComboFlag(rOld.comboFlag, rNew.comboFlag);
-      const bestSync = getBestSyncFlag(rOld.syncFlag, rNew.syncFlag);
       const bestClearType = Math.max(rOld.clearType || 0, rNew.clearType || 0);
       const bestDxScore = Math.max(
         (rOld.stats && rOld.stats.dxScore) || (rOld.originalNode && rOld.originalNode.dxScore) || 0,
@@ -488,10 +494,11 @@ export function smartMergeScores(sourceOld, sourceNew, options = {}) {
         dxScore: bestDxScore,
         maxCombo: bestMaxCombo,
         combo: bestCombo,
-        sync: bestSync,
         isAllPerfect: bestCombo === 'ap',
         isFullCombo: bestCombo === 'fc' || bestCombo === 'ap'
       };
+      delete mergedStats.sync;
+      delete mergedStats.syncFlag;
 
       const finalRec = {
         sheetId: `${meta.title}__dxrt__${meta.type}__dxrt__${meta.difficulty}`,
@@ -505,7 +512,7 @@ export function smartMergeScores(sourceOld, sourceNew, options = {}) {
         achievementRate: bestRate,
         scoreKey: dominantRec.scoreKey || 'achievementRate',
         comboFlag: bestCombo,
-        syncFlag: bestSync,
+        syncFlag: null,
         clearType: bestClearType,
         stats: mergedStats,
         originalNode: dominantRec.originalNode
@@ -525,7 +532,13 @@ export function smartMergeScores(sourceOld, sourceNew, options = {}) {
 
     } else if (rOld && !rNew) {
       oldOnlyCount++;
-      mergedRecords.push(rOld);
+      const sanitizedOld = { ...rOld, syncFlag: null };
+      if (sanitizedOld.stats) {
+        sanitizedOld.stats = { ...sanitizedOld.stats };
+        delete sanitizedOld.stats.sync;
+        delete sanitizedOld.stats.syncFlag;
+      }
+      mergedRecords.push(sanitizedOld);
       scoreDeltas.push({
         title: meta.title,
         difficulty: meta.difficulty,
@@ -538,7 +551,13 @@ export function smartMergeScores(sourceOld, sourceNew, options = {}) {
       });
     } else if (!rOld && rNew) {
       newOnlyCount++;
-      mergedRecords.push(rNew);
+      const sanitizedNew = { ...rNew, syncFlag: null };
+      if (sanitizedNew.stats) {
+        sanitizedNew.stats = { ...sanitizedNew.stats };
+        delete sanitizedNew.stats.sync;
+        delete sanitizedNew.stats.syncFlag;
+      }
+      mergedRecords.push(sanitizedNew);
       scoreDeltas.push({
         title: meta.title,
         difficulty: meta.difficulty,

@@ -698,34 +698,57 @@ function initApp() {
     typeof window.Capacitor.isNativePlatform === 'function' &&
     window.Capacitor.isNativePlatform();
 
-  if (isAndroidApp && btnAndroidAutoExtract) {
-    btnAndroidAutoExtract.style.display = 'inline-flex';
-    // Hide iOS shortcut button when inside Android native app
-    const iosBtn = document.getElementById('btnIosShortcutModal');
-    if (iosBtn) iosBtn.style.display = 'none';
-
-    btnAndroidAutoExtract.addEventListener('click', async () => {
-      const plugin = window.Capacitor?.Plugins?.AstroDXSync;
-      if (!plugin) {
-        showToast('AstroDX Native Plugin not found', 'error');
-        return;
-      }
-      showToast('⚡ Auto-detecting AstroDX cache...', 'info');
-      try {
-        const res = await plugin.checkAndExtractCache();
-        if (res && res.success && res.base64) {
-          processPayloadData(res.base64, 'Android_Auto_Extract');
-          showToast(`Extracted directly from ${res.path || 'storage'}!`, 'success');
-        } else if (res && res.needsPermission) {
-          showToast('Granting All Files Access in Settings...', 'warning');
-          await plugin.requestAllFilesPermission();
-        } else {
-          showToast(res.message || 'Cache file not found in default paths', 'warning');
+  if (isAndroidApp) {
+    const plugin = window.Capacitor?.Plugins?.AstroDXSync;
+    if (plugin) {
+      // 1. Listen for files shared to this app while running
+      plugin.addListener('onFileReceived', (data) => {
+        if (data && data.base64) {
+          processPayloadData(data.base64, data.fileName || 'Shared_Cache');
+          showToast('Cache received via Share!', 'success');
         }
-      } catch (err) {
-        showToast('Native extract error: ' + err.message, 'error');
+      });
+
+      // 2. Check for files received on cold-start launch via Share/Open With
+      if (typeof plugin.getPendingSharedFile === 'function') {
+        plugin.getPendingSharedFile().then((res) => {
+          if (res && res.success && res.base64) {
+            processPayloadData(res.base64, res.fileName || 'Shared_Cache');
+            showToast('Cache loaded from Share!', 'success');
+          }
+        }).catch((e) => console.warn('Pending shared file check failed', e));
       }
-    });
+    }
+
+    if (btnAndroidAutoExtract) {
+      // Temporarily hidden per user preference while manual upload is used
+      btnAndroidAutoExtract.style.display = 'none';
+      // Hide iOS shortcut button when inside Android native app
+      const iosBtn = document.getElementById('btnIosShortcutModal');
+      if (iosBtn) iosBtn.style.display = 'none';
+
+      btnAndroidAutoExtract.addEventListener('click', async () => {
+        if (!plugin) {
+          showToast('AstroDX Native Plugin not found', 'error');
+          return;
+        }
+        showToast('⚡ Auto-detecting AstroDX cache...', 'info');
+        try {
+          const res = await plugin.checkAndExtractCache();
+          if (res && res.success && res.base64) {
+            processPayloadData(res.base64, 'Android_Auto_Extract');
+            showToast(`Extracted directly from ${res.path || 'storage'}!`, 'success');
+          } else if (res && res.needsPermission) {
+            showToast('Granting All Files Access in Settings...', 'warning');
+            await plugin.requestAllFilesPermission();
+          } else {
+            showToast(res.message || 'Cache file not found in default paths', 'warning');
+          }
+        } catch (err) {
+          showToast('Native extract error: ' + err.message, 'error');
+        }
+      });
+    }
   }
 
   if (btnAndroidAppInfo) {

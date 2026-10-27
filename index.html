@@ -74,14 +74,15 @@
         <div class="guide-content" id="guideAndroid">
           <div class="shortcut-promo-banner">
             <div class="promo-info">
-              <span class="badge-shortcut" style="background: #16a34a;">⚡ 1-Click Android App</span>
-              <p>Install the standalone Android App (.apk) for instant 1-click automatic score extraction from <code>Android/data</code>!</p>
+              <span class="badge-shortcut" style="background: #16a34a;">Android Instructions</span>
+              <p>Due to Android 11+ security on <code>Android/data</code>, use manual copy or Share to load scores:</p>
             </div>
             <button type="button" class="btn btn-secondary btn-sm" id="btnAndroidAppInfo">App Info</button>
           </div>
           <ol class="guide-steps">
-            <li><strong>Option A (Android App):</strong> Tap "⚡ 1-Click Auto-Extract" to read directly from internal storage without browsing folders.</li>
-            <li><strong>Option B (Web):</strong> Open your file explorer (e.g. <strong>MT Manager</strong> or <strong>ZArchiver</strong>), navigate to <code>Android/data/com.Reflektone.AstroDX/files/cache</code>, and drop/select the file here.</li>
+            <li><strong>Method 1 (Copy to Download):</strong> In your file explorer, navigate to <code>Android/data/com.Reflektone.AstroDX/files/cache</code>, tap <strong>Copy</strong>, and paste it into your <strong>Download</strong> folder. Then tap <strong>"Select Cache File"</strong> to load!</li>
+            <li><strong>Method 2 (Instant Share):</strong> In your file explorer, select the <code>cache</code> file, tap <strong>Share</strong>, and choose <strong>AstroDX Score Exporter</strong>.</li>
+            <li><em>Why?</em> Modern Android (11+) isolates <code>Android/data</code> for security, so direct background reading is restricted by the OS unless copied or shared.</li>
           </ol>
         </div>
       </div>

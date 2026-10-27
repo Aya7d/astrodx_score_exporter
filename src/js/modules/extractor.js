@@ -198,7 +198,6 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
         clearType,
         achievementRate: normRate,
         combo: item.comboFlag || null,
-        sync: item.syncFlag || null,
         isAllPerfect: item.comboFlag === 'ap',
         isFullCombo: item.comboFlag === 'fc' || item.comboFlag === 'ap'
       };
@@ -215,7 +214,7 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
         achievementRate: normRate,
         scoreKey: 'achievementRate',
         comboFlag: item.comboFlag || null,
-        syncFlag: item.syncFlag || null,
+        syncFlag: null,
         clearType,
         rawPath: [i],
         stats,
@@ -247,7 +246,10 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
       const rawDiff = hasExplicitDifficulty ? normalizeDifficulty(item.difficulty || item.diff || item.alias) : null;
       const level = item.level !== undefined ? String(item.level) : '';
       const diff = rawDiff || inferDifficultyFromLevel(level);
-      const stats = item.stats || item;
+      const rawStats = item.stats || item;
+      const stats = { ...rawStats };
+      delete stats.sync;
+      delete stats.syncFlag;
       const type = normalizeType(item.type, rawTitle, {
         level,
         notes: stats.totalNotesCount,
@@ -257,7 +259,7 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
       const sheetId = `${canonicalTitle}__dxrt__${type}__dxrt__${diff}`;
       const clearType = stats.clearType !== undefined ? stats.clearType : (item.clearType !== undefined ? item.clearType : (normRate >= 80 ? 1 : 0));
       const comboFlag = item.comboFlag || (stats.isAllPerfect || clearType >= 4 ? 'ap' : (stats.isFullCombo || clearType >= 2 ? 'fc' : null));
-      const syncFlag = item.syncFlag || (stats.sync ? 'sync' : null);
+      const syncFlag = null;
 
       records.push({
         sheetId,
@@ -271,7 +273,7 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
         achievementRate: normRate,
         scoreKey: 'achievement',
         comboFlag,
-        syncFlag,
+        syncFlag: null,
         clearType,
         rawPath: [i],
         stats,
@@ -400,7 +402,11 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
         const sheetId = `${canonicalTitle}__dxrt__${type}__dxrt__${diff}`;
         const clearType = stats.clearType !== undefined ? stats.clearType : (node.clearType !== undefined ? node.clearType : (normRate >= 80 ? 1 : 0));
         const comboFlag = node.comboFlag || (stats.isAllPerfect || clearType >= 4 ? 'ap' : (stats.isFullCombo || clearType >= 2 ? 'fc' : null));
-        const syncFlag = node.syncFlag || (stats.sync ? 'sync' : null);
+        const syncFlag = null;
+        if (stats) {
+          delete stats.sync;
+          delete stats.syncFlag;
+        }
 
         const diffId = node.id !== undefined ? node.id : (context.diffId !== undefined ? context.diffId : null);
 
@@ -416,7 +422,7 @@ export function extractRecords(cacheData, options = { cleanTitle: true }) {
           achievementRate: normRate,
           scoreKey: scoreKey,
           comboFlag,
-          syncFlag,
+          syncFlag: null,
           clearType,
           rawPath: [...context.path],
           stats,
