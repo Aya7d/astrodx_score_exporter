@@ -30,6 +30,7 @@ const itemsToCopy = [
   'index.html',
   'manifest.json',
   'favicon.ico',
+  'sw.js',
   'assets',
   'src'
 ];
