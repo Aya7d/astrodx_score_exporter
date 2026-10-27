@@ -13,7 +13,7 @@ import {
   exportDecodedJSON,
   triggerDownload
 } from './modules/exporters.js';
-import { generatePCLinkAndQR } from './modules/cloud_share.js';
+import { generatePCLinkAndQR, downloadActiveShareJSON, resetShareCache } from './modules/cloud_share.js';
 import { smartMergeScores, smartMergeCaches } from './modules/migrator.js';
 import {
   showToast,
@@ -79,6 +79,7 @@ async function handleCacheBuffer(arrayBuffer, filename = 'cache') {
     // Show results
     document.getElementById('resultsSection').hidden = false;
     document.getElementById('pcTransferPanel').hidden = true;
+    resetShareCache();
 
     updateSummaryStats(records, scannedChartsCount);
     renderScoreTable(state, () => {});
@@ -350,7 +351,25 @@ function initApp() {
   if (conversionFormatSelect) {
     conversionFormatSelect.addEventListener('change', (e) => {
       state.conversionFormat = e.target.value;
-      showToast(`Conversion target format set to: ${e.target.selectedOptions[0].text}`, 'info');
+      const formatName = e.target.value === 'cached' ? 'Cached JSON' : 'DXRating.net JSON';
+      showToast(`Conversion target format set to: ${formatName}`, 'info');
+
+      if (state.extractedRecords.length > 0) {
+        const db = getMaimaiDB();
+        let matched = 0;
+        state.extractedRecords.forEach((r) => {
+          if (findOfficialSong(r.rawTitle || r.title, db)) matched++;
+        });
+        updateConversionStatus(matched, state.extractedRecords.length, state.serverRegion, state.conversionFormat);
+      }
+
+      const panel = document.getElementById('pcTransferPanel');
+      if (panel && !panel.hidden && state.extractedRecords.length > 0) {
+        generatePCLinkAndQR(state.extractedRecords, showToast, {
+          format: state.conversionFormat,
+          server: state.serverRegion
+        });
+      }
     });
   }
   if (serverRegionSelect) {
@@ -362,38 +381,70 @@ function initApp() {
         state.extractedRecords.forEach((r) => {
           if (findOfficialSong(r.rawTitle || r.title, db)) matched++;
         });
-        updateConversionStatus(matched, state.extractedRecords.length, state.serverRegion);
+        updateConversionStatus(matched, state.extractedRecords.length, state.serverRegion, state.conversionFormat);
       }
       showToast(`Version / Server set to: ${e.target.selectedOptions[0].text}`, 'info');
     });
   }
 
-  // 5. Exporters
-  document.getElementById('btnExportDXRating').addEventListener('click', () => {
-    exportDXRatingJSON(state.extractedRecords, showToast, { server: state.serverRegion });
-  });
+  // 5. Exporters & Link Generation (UI has only link buttons, download button inside dropdown panel)
+  const btnDXLink = document.getElementById('btnGenerateDXRatingLink');
+  if (btnDXLink) {
+    btnDXLink.addEventListener('click', () => {
+      generatePCLinkAndQR(state.extractedRecords, showToast, {
+        format: 'dxrating',
+        server: state.serverRegion,
+        triggerButton: btnDXLink
+      });
+    });
+  }
 
-  document.getElementById('btnGeneratePCLink').addEventListener('click', () => {
-    generatePCLinkAndQR(state.extractedRecords, showToast, { server: state.serverRegion });
-  });
+  const btnCachedLink = document.getElementById('btnGenerateCachedLink');
+  if (btnCachedLink) {
+    btnCachedLink.addEventListener('click', () => {
+      generatePCLinkAndQR(state.extractedRecords, showToast, {
+        format: 'cached',
+        server: state.serverRegion,
+        triggerButton: btnCachedLink
+      });
+    });
+  }
 
-  document.getElementById('btnExportExcel').addEventListener('click', () => {
-    exportExcel(state.extractedRecords, showToast);
-  });
+  // In-Panel Download JSON Button
+  const btnDownloadPanel = document.getElementById('btnDownloadFromPanel');
+  if (btnDownloadPanel) {
+    btnDownloadPanel.addEventListener('click', () => {
+      downloadActiveShareJSON(showToast);
+    });
+  }
 
-  document.getElementById('btnExportCSV').addEventListener('click', () => {
-    exportCSV(state.extractedRecords, showToast);
-  });
+  // In-Panel Format Switcher Pills
+  const pillDX = document.getElementById('pillFormatDXRating');
+  if (pillDX) {
+    pillDX.addEventListener('click', () => {
+      generatePCLinkAndQR(state.extractedRecords, showToast, {
+        format: 'dxrating',
+        server: state.serverRegion
+      });
+    });
+  }
 
-  document.getElementById('btnExportRawJSON').addEventListener('click', () => {
-    exportRawDecodedJSON(state.extractedRecords, showToast);
-  });
+  const pillCached = document.getElementById('pillFormatCached');
+  if (pillCached) {
+    pillCached.addEventListener('click', () => {
+      generatePCLinkAndQR(state.extractedRecords, showToast, {
+        format: 'cached',
+        server: state.serverRegion
+      });
+    });
+  }
 
-  const btnExportFullJSON = document.getElementById('btnExportFullJSON');
-  if (btnExportFullJSON) {
-    btnExportFullJSON.addEventListener('click', () => {
+  // In-Panel Optional Full Cache Database Download
+  const btnFullCachePanel = document.getElementById('btnDownloadFullCacheFromPanel');
+  if (btnFullCachePanel) {
+    btnFullCachePanel.addEventListener('click', () => {
       if (!state.cacheData) {
-        showToast('No cache data loaded to export', 'error');
+        showToast('No raw cache database loaded to export', 'error');
         return;
       }
       const jsonStr = stringifyAstroDXJson(state.cacheData, 2);
@@ -403,18 +454,38 @@ function initApp() {
   }
 
   // Copy PC Share Link
-  document.getElementById('btnCopyShareUrl').addEventListener('click', () => {
-    const input = document.getElementById('pcShareUrlInput');
-    if (input.value) {
-      navigator.clipboard.writeText(input.value).then(() => {
-        showToast('Share link copied to clipboard!', 'success');
-      }).catch(() => {
-        input.select();
-        document.execCommand('copy');
-        showToast('Link copied to clipboard', 'success');
-      });
-    }
-  });
+  const btnCopyShareUrl = document.getElementById('btnCopyShareUrl');
+  if (btnCopyShareUrl) {
+    btnCopyShareUrl.addEventListener('click', () => {
+      const input = document.getElementById('pcShareUrlInput');
+      if (input && input.value && input.value.startsWith('http')) {
+        navigator.clipboard.writeText(input.value).then(() => {
+          showToast('Share link copied to clipboard!', 'success');
+        }).catch(() => {
+          input.select();
+          document.execCommand('copy');
+          showToast('Link copied to clipboard', 'success');
+        });
+      } else {
+        showToast('No active link to copy', 'warning');
+      }
+    });
+  }
+
+  // Excel & CSV Exporters
+  const btnExportExcel = document.getElementById('btnExportExcel');
+  if (btnExportExcel) {
+    btnExportExcel.addEventListener('click', () => {
+      exportExcel(state.extractedRecords, showToast);
+    });
+  }
+
+  const btnExportCSV = document.getElementById('btnExportCSV');
+  if (btnExportCSV) {
+    btnExportCSV.addEventListener('click', () => {
+      exportCSV(state.extractedRecords, showToast);
+    });
+  }
 
   // 5. Table Search & Filters
   const searchInput = document.getElementById('scoreTableSearch');

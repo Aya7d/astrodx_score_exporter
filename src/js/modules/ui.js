@@ -228,10 +228,7 @@ export function renderScoreTable(state, onTableChange) {
   });
 }
 
-/**
- * Updates the Conversion Profile status banner.
- */
-export function updateConversionStatus(matchedCount, totalCount, server = 'all') {
+export function updateConversionStatus(matchedCount, totalCount, server = 'all', format = 'dxrating') {
   const banner = document.getElementById('conversionStatusBanner');
   const text = document.getElementById('conversionStatusText');
   if (!banner || !text) return;
@@ -248,6 +245,7 @@ export function updateConversionStatus(matchedCount, totalCount, server = 'all')
     detailText = `(100% matched to official ${serverName} charts)`;
   }
 
-  text.innerHTML = `<strong>Auto-converted to DXRating format:</strong> All ${totalCount} / ${totalCount} charts converted ${detailText}.`;
+  const formatName = format === 'cached' ? 'Cached JSON format' : 'DXRating format';
+  text.innerHTML = `<strong>Auto-converted to ${formatName}:</strong> All ${totalCount} / ${totalCount} charts converted ${detailText}.`;
 }
 

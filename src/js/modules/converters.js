@@ -388,6 +388,25 @@ export function convertToDXRating(records, options = {}) {
   return Array.from(map.values());
 }
 
+/**
+ * Converts records into discrete Played Scores Cached JSON matching cache_decrypted.json.
+ * Retains song_name, difficulty, type, level, achievement, and detailed stats (dxScore, judgments).
+ */
+export function convertToCachedScores(records) {
+  if (!records || !Array.isArray(records)) return [];
+  return records.map((r) => {
+    const statsObj = (r.originalNode && r.originalNode.stats) ? r.originalNode.stats : (r.originalNode || {});
+    return {
+      song_name: r.rawTitle || r.title,
+      difficulty: r.difficulty,
+      type: r.type,
+      level: r.level || '',
+      achievement: r.achievementRate,
+      stats: statsObj
+    };
+  });
+}
+
 // ============================================================================
 // Extensible Converter Registry
 // ============================================================================
@@ -401,6 +420,15 @@ const CONVERTER_REGISTRY = {
     mimeType: 'application/json',
     filename: 'dxrating_import.json',
     convert: convertToDXRating
+  },
+  cached: {
+    id: 'cached',
+    name: 'Cached JSON Format',
+    description: 'AstroDX played scores and detailed stats (for Acid Bot / Repacker)',
+    extension: 'json',
+    mimeType: 'application/json',
+    filename: 'cache_decrypted.json',
+    convert: convertToCachedScores
   }
 };
 

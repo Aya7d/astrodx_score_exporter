@@ -221,6 +221,7 @@
                 </label>
                 <select id="conversionFormatSelect" class="select-styled" title="Select Output Conversion Format">
                   <option value="dxrating" selected>Option 1: DXRating.net JSON (Default)</option>
+                  <option value="cached">Option 2: Cached JSON Format (Scores &amp; Stats)</option>
                 </select>
               </div>
 
@@ -249,27 +250,26 @@
           </div>
 
           <div class="action-buttons-grid">
-            <button type="button" class="btn btn-glow-dxrt" id="btnExportDXRating">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="8 17 12 21 16 17"></polyline>
-                <line x1="12" y1="12" x2="12" y2="21"></line>
-                <path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"></path>
-              </svg>
-              <div>
-                <strong>DXRating.net JSON</strong>
-                <small>Official import schema</small>
-              </div>
-            </button>
-
-            <button type="button" class="btn btn-glow-cloud" id="btnGeneratePCLink">
+            <button type="button" class="btn btn-glow-dxrt" id="btnGenerateDXRatingLink">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
               <div>
-                <strong>Generate Link &amp; QR for PC</strong>
-                <small>No cable needed</small>
+                <strong>DXRating.net Link &amp; QR</strong>
+                <small>Cloud share &amp; JSON export</small>
+              </div>
+            </button>
+
+            <button type="button" class="btn btn-glow-cloud" id="btnGenerateCachedLink">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+              <div>
+                <strong>Cached JSON Link &amp; QR</strong>
+                <small>Full stats (Acid Bot ready)</small>
               </div>
             </button>
 
@@ -299,29 +299,6 @@
                 <small>UTF-8 BOM formatted</small>
               </div>
             </button>
-
-            <button type="button" class="btn btn-secondary" id="btnExportRawJSON" title="Export played scores summary list as JSON">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-              <div>
-                <strong>Played Scores JSON</strong>
-                <small>Summary list (scores only)</small>
-              </div>
-            </button>
-
-            <button type="button" class="btn btn-secondary" id="btnExportFullJSON" title="Export full AstroDX cache database (all songs, playlists & chart hashes) for editing or repacking">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                <line x1="12" y1="22.08" x2="12" y2="12"></line>
-              </svg>
-              <div>
-                <strong>Full Cache Database JSON</strong>
-                <small>All songs &amp; chart hashes (For Repacker)</small>
-              </div>
-            </button>
           </div>
 
           <!-- PC Transfer Link & QR Code Box (Conditional) -->
@@ -329,11 +306,17 @@
             <div class="pc-transfer-card">
               <div class="qr-code-wrapper">
                 <div id="qrcodeContainer" class="qrcode-box"></div>
-                <span class="qr-caption">Scan with phone or PC camera</span>
+                <span class="qr-caption" id="qrCaptionText">Scan with phone or PC camera</span>
               </div>
               <div class="pc-transfer-info">
-                <h4>Instant PC Cloud Share Ready!</h4>
-                <p>Open this direct URL on your desktop browser to view and download your <code>dxrating_import.json</code> file:</p>
+                <div class="transfer-header-row">
+                  <h4 id="pcTransferTitle">Instant Cloud Share Ready!</h4>
+                  <div class="panel-format-switcher" id="panelFormatSwitcher">
+                    <button type="button" class="panel-format-pill active" id="pillFormatDXRating" data-format="dxrating">DXRating.net</button>
+                    <button type="button" class="panel-format-pill" id="pillFormatCached" data-format="cached">Cached JSON</button>
+                  </div>
+                </div>
+                <p id="pcTransferDesc">Open this direct URL on your desktop browser to view and download your <code>dxrating_import.json</code> file:</p>
                 <div class="url-copy-group">
                   <input type="text" id="pcShareUrlInput" class="input-text" readonly>
                   <button type="button" class="btn btn-primary" id="btnCopyShareUrl">
@@ -344,10 +327,23 @@
                     Copy Link
                   </button>
                   <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btnOpenShareUrl">Open</a>
+                  <button type="button" class="btn btn-download-panel" id="btnDownloadFromPanel">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span id="downloadBtnText">Download JSON</span>
+                  </button>
                 </div>
-                <div class="instructions-bubble">
-                  <strong>DXRating.net Import Steps:</strong>
-                  <span>1. Open DXRating.net &rarr; 2. Click "Import Scores" &rarr; 3. Choose the downloaded JSON!</span>
+                <div class="instructions-bubble" id="transferInstructionsBubble">
+                  <strong id="instructionTitle">DXRating.net Import Steps:</strong>
+                  <span id="instructionText">1. Open DXRating.net &rarr; 2. Click "Import Scores" &rarr; 3. Choose the downloaded JSON!</span>
+                </div>
+                <div class="panel-extra-actions" id="panelExtraActions">
+                  <button type="button" class="btn-link" id="btnDownloadFullCacheFromPanel">
+                    Need raw cache database for repacking? Download astrodx_cache_full.json &rarr;
+                  </button>
                 </div>
               </div>
             </div>
